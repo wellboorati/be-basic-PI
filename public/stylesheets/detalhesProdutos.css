@@ -1,0 +1,342 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;    
+    height:100vh;
+}
+
+.container {
+    max-width: 1300px;
+    margin:0 auto;
+}
+
+.img-fluid {
+    max-width:100%;
+    height:auto;
+}
+/* ESTILIZANDO HEADER - ROGÉRIO */
+
+.header {
+    background: rgba(196, 196, 196, 0.7);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 120px;
+    position: relative;
+    margin: 0 0 2rem 0;
+}
+
+.header__links {
+    background-color: #fff;
+    height:120px;
+    position: fixed;
+    display:none;
+    width: 100%;
+    top:0;
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__links--active {
+    display:block;
+}
+
+.header__wrap {
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.header__links > .container {
+    position: relative;
+}
+
+.header__links__close {
+    position: absolute;
+    right:0;
+    top:15px;
+    background:transparent;
+    border:0;
+    font-size: 30px;
+    cursor:pointer;
+}
+
+.header__links > .container,
+.header__links__nav {
+    height: 120px;
+}
+
+.header__links__nav__item__link {
+    font-size:20px;
+    text-decoration: none;
+    color: #010101;
+}
+
+.header__links__nav {
+    list-style:none;
+    padding:0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__links__nav__item__link {
+    display:block;
+    padding: 20px 40px;
+    border-radius: 10px;
+    transition: all .4s;
+}
+
+.header__links__nav__item__link:hover {
+    background: #eee;
+
+}
+
+.header__logo {
+    display:block;
+}
+
+.header__menu__mobile {
+    text-indent: -9999px;
+    border:0;
+    background-color: transparent;
+    width:51px;
+    height: 42px;
+    background-image:url(../images/ico-hamburger.png);
+    background-repeat:no-repeat;
+}
+
+@media (min-width: 992px){
+    .header__menu__mobile {
+        flex-grow: .8;
+    }
+}
+
+#header__menu__mobile {
+    cursor:pointer;
+}
+
+.network {
+    list-style:none;
+    padding:0;
+    display:flex;
+    flex-direction: row;
+}
+
+.network__item {
+    width: 64px;
+    display:block;
+    filter: grayscale(100%);
+}
+
+/* ESTILIZANDO FOOTER - ROGÉRIO*/
+
+.footer {
+    background: rgba(196, 196, 196, 0.7);
+    border-top: 1px solid #000000;
+    margin-top: 1rem; 
+}
+
+.footer__wrap {
+    display: grid;
+    grid-template-columns: auto;
+    padding:42px 0;
+}
+
+@media (min-width: 992px){
+    .footer__wrap {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 50px;
+    }
+}
+
+.footer__wrap__col2 {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__wrap__logo {
+    display:block;
+    margin-bottom: 15px;
+}
+
+.footer__copy {
+    padding:20px 0;
+    text-align: center;
+}
+
+.footer__wrap__menu {
+    list-style: none;
+    padding:0;
+}
+
+.footer__wrap__menu__item {
+    margin-bottom:10px;
+}
+
+.footer__wrap__menu__item a {
+    color: #010101;
+    text-decoration:none;
+}
+
+.footer__wrap__menu__item a:hover {
+    text-decoration:underline;
+}
+
+/* ESTILIZANDO MAIN - WELLINGTON */
+ 
+.main__container {
+    padding: 0 15rem;
+    width:100%;
+    margin:0 auto;
+    display: block;
+    
+    /* max-width: 600px; */
+} 
+
+/* USANDO DISPLAY GRID PARA COLOCAR AS IMAGENS UMA AO LADO DA OUTRA */
+.container__img {
+    display: grid;
+    grid-row: auto;
+    justify-content: space-between;
+    }
+
+.first__img {
+    grid-area: first__img;
+}
+
+
+
+/* CONFIGURANDO O GRID PARA FICAR EM 2 LINHAS E 3 COLUNAS */
+.grid__template_area {
+    display: grid;
+    grid-template-areas: 
+    "first__img second__img third__img"
+    "fourth__img text__between_img fifth__img"  
+    ;
+}
+
+.single__img__subtitle {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.single__img__subtitle__price {
+    float: left;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.corPreto{
+    background: black;
+    height: 30px;
+    width: 30px;
+    
+}
+
+.corBranca{
+    background: white;
+    border-style: dashed;
+    border-width: 10px;
+    border-color: black;/*Não funcionou*/
+    height: 30px;
+    width: 30px;
+    
+}
+
+.corAzul{
+    background: blue;
+    height: 30px;
+    width: 30px;
+    
+}
+
+.options{
+    float: right;
+    width: 10px;
+    height: 10px;  
+}
+
+.comprar{
+    
+    height: 30px;
+    text-align: center;
+} 
+
+
+/*Não consegui ajustar a palavra TAMANHO
+.tamanho{
+   
+    float: left;
+    vertical-align: top;
+    padding: 0 5%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    
+}*/
+
+.text__between_img {
+    padding: 0 10%;
+    margin-top: 60px;
+    margin-bottom: 16px;
+    font-size: 48px;
+}
+
+.single__img__subtitle__description {
+    align-items: center;
+    justify-content: center;
+}
+
+.related__products__title {
+    font-size: 64px;
+    width:100%;
+    padding: 0 25%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.wrap__related__products {
+    display: block;
+    width:100%;
+    margin:0 auto;
+}
+
+.container__text {
+    background-color: rgb(241, 218, 216);
+    font-size: 25px;
+    display: block;
+    height: 58rem;
+    padding: 5rem 10rem;
+    width:100%;
+    margin:0 auto;
+    display: block;
+}
+
+.first__line {
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin-bottom: 32px; 
+}
+
+.space__between__p {
+    margin-top: 32px;
+    margin-bottom: 32px; 
+}
+
+.space__top__p {
+    margin-top: 32px;
+}
+
