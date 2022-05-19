@@ -6,10 +6,6 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;    
-    background-image:url(../images/guy.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     height:100vh;
 }
 
@@ -22,6 +18,7 @@ body {
     max-width:100%;
     height:auto;
 }
+/* ESTILIZANDO HEADER - ROGÉRIO */
 
 .header {
     background: rgba(196, 196, 196, 0.7);
@@ -29,6 +26,7 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 120px;
     position: relative;
+    margin: 0 0 2rem 0;
 }
 
 .header__links {
@@ -123,34 +121,6 @@ body {
     cursor:pointer;
 }
 
-.bannerHome {
-    height:616px;
-    position:relative;
-}
-
-.bannerHome__slogan {
-    position:absolute;
-    top:50%;
-    transform: translateY(-50%);
-}
-
-.bannerHome__slogan__title {
-    font-size: 40px;
-}
-
-.bannerHome__slogan__description {
-    font-size: 24px;
-    display:block;
-}
-
-.bannerHome__wrap {
-    padding:40px 0;
-}
-
-.breadcrumb {
-    font-size: 36px;
-}
-
 .network {
     list-style:none;
     padding:0;
@@ -164,9 +134,12 @@ body {
     filter: grayscale(100%);
 }
 
+/* ESTILIZANDO FOOTER - ROGÉRIO*/
+
 .footer {
     background: rgba(196, 196, 196, 0.7);
     border-top: 1px solid #000000;
+    margin-top: 1rem; 
 }
 
 .footer__wrap {
@@ -216,3 +189,121 @@ body {
 .footer__wrap__menu__item a:hover {
     text-decoration:underline;
 }
+
+/* ESTILIZANDO MAIN - WELLINGTON */
+ 
+.main__container {
+    padding: 0 15rem;
+    width:100%;
+    margin:0 auto;
+    display: block;
+    
+    /* max-width: 600px; */
+} 
+
+/* USANDO DISPLAY GRID PARA COLOCAR AS IMAGENS UMA AO LADO DA OUTRA */
+.container__img {
+    display: grid;
+    grid-row: auto;
+    justify-content: space-between;
+    }
+
+.first__img {
+    grid-area: first__img;
+}
+
+.second__img {
+    grid-area: second__img;
+}
+
+.third__img {
+    grid-area: third__img;
+}
+
+.fourth__img {
+    grid-area: fourth__img;
+}
+
+.text__between_img {
+    grid-area: text__between_img;
+}
+
+.fifth__img {
+    grid-area: fifth__img;
+}
+/* CONFIGURANDO O GRID PARA FICAR EM 2 LINHAS E 3 COLUNAS */
+.grid__template_area {
+    display: grid;
+    grid-template-areas: 
+    "first__img second__img third__img"
+    "fourth__img text__between_img fifth__img"  
+    ;
+}
+/* centralizar legenda da imagem sem usar padding, como? */
+.single__img__subtitle {
+    padding: 0 5%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+/* centralizar preço da imagem sem usar padding, como? */
+.single__img__subtitle__price {
+    padding: 0 25%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.text__between_img {
+    padding: 0 10%;
+    margin-top: 60px;
+    margin-bottom: 16px;
+    font-size: 48px;
+}
+
+.single__img__subtitle__description {
+    align-items: center;
+    justify-content: center;
+}
+
+.related__products__title {
+    font-size: 64px;
+    width:100%;
+    padding: 0 25%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.wrap__related__products {
+    display: block;
+    width:100%;
+    margin:0 auto;
+}
+
+.container__text {
+    background-color: rgb(241, 218, 216);
+    font-size: 25px;
+    display: block;
+    height: 58rem;
+    padding: 5rem 10rem;
+    width:100%;
+    margin:0 auto;
+    display: block;
+}
+
+.first__line {
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin-bottom: 32px; 
+}
+
+.space__between__p {
+    margin-top: 32px;
+    margin-bottom: 32px; 
+}
+
+.space__top__p {
+    margin-top: 32px;
+}
+

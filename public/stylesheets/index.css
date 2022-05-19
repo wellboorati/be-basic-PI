@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Khand;
+    background-color: #E5E5E5;
+}
+
+.mestre{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+footer img{
+    width: 40px;
+    height: 40px;
+    
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.menu{
+    justify-content: right;
+    list-style-type: none;
+}
