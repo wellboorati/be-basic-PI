@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<html lang="pt-br">
+
+<% include('partials/head', {title: 'Inicio'}) %>
+
+
+<body class="home">
+
+  <%- include('partials/header') %>
+
+  <header id="header" class="header">
+      <div id="header__links" class="header__links">
+          <div class="container">
+              <button id="header__links__close" class="header__links__close fa-solid fa-rectangle-xmark"></button>
+              <div class="header__links__wrap">
+                  <ul class="header__links__wrap__nav">
+                      <li class="header__links__wrap__nav__item">
+                          <a href="#" class="header__links__wrap__nav__item__link">
+                              <img src="../public/images/ico-login.png" alt="Faça o login">
+                          </a>
+                      </li>
+                      <li class="header__links__wrap__nav__item">
+                          <a href="#" class="header__links__wrap__nav__item__link">
+                              <img src="../public/images/ico-store.png" alt="Loja">
+                          </a>
+                      </li>
+                      <li class="header__links__wrap__nav__item">
+                          <a href="#" class="header__links__wrap__nav__item__link">
+                              Link 3
+                          </a>
+                      </li>
+                      <li class="header__links__wrap__nav__item">
+                          <a href="#" class="header__links__wrap__nav__item__link">
+                              Link 4
+                          </a>
+                      </li>
+                      <li class="header__links__wrap__nav__item">
+                          <a href="#" class="header__links__wrap__nav__item__link">
+                              Link 5
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="header__wrap">
+              <a href="#" class="header__logo">
+                  <img src="../public/images/logo-topo.png" alt="BeBasic T-shirts">
+              </a>
+              <button id="header__menu__mobile" class="header__menu__mobile">Abrir menu</button>
+          </div>            
+      </div>
+  </header>
+
+  <main class="bannerHome">
+      <div class="container">
+          <div class="bannerHome__wrap">
+              <div class="breadcrumb">Home</div>
+              <div class="bannerHome__slogan">
+                  <span class="bannerHome__slogan__title">BeBasic,  praticidade e  leveza.</span><br>
+                  <span class="bannerHome__slogan__description">Camisetas Premium de puro algodão egipcio fairtrade.</span>
+              </div>
+          </div>            
+      </div>
+  </main>
