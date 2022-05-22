@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeBasic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    
+</head>
+<body class="home">
+
+<header>
+    <%- include('partials/header.ejs') %>
+</header>
+
+    <main class="bannerHome">
+        <div class="container">
+            <div class="bannerHome__wrap">
+                <div class="breadcrumb">Home</div>
+                <div class="bannerHome__slogan">
+                    <span class="bannerHome__slogan__title">BeBasic,  praticidade e  leveza.</span><br>
+                    <span class="bannerHome__slogan__description">Camisetas Premium de puro algodão egipcio fairtrade.</span>
+                </div>
+            </div>            
+        </div>
+    </main>
+
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
+   
+<script src="../public/scripts/main.js"></script>
+    
+</body>
 </html>
+
