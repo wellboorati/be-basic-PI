@@ -5,13 +5,12 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/indexRoutes');
-// const usersRouter = require('./routes/usersRoutes');
 
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -21,9 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // rotas que levam para as páginas:
 
-
 app.use('/', indexRouter);
-// app.use('/users', usersRouter); 
 
 app.get('/produto', (req,res) => {res.render('index')})
 
