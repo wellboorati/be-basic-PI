@@ -337,20 +337,22 @@ p {
 /* ESTILIZANDO MAIN - WELLINGTON */
  
 .main__container {
-    padding: 0 15rem;
+    padding: 50px 50px;
     width:100%;
-    margin:0 auto;
     display: block;
-    
-    /* max-width: 600px; */
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin:0 auto;
+    justify-content: space-between;
 } 
 
 /* USANDO DISPLAY GRID PARA COLOCAR AS IMAGENS UMA AO LADO DA OUTRA */
 .container__img {
     display: grid;
     grid-row: auto;
-    justify-content: space-between;
-    }
+    justify-content: center;
+}
 
 .first__img {
     grid-area: first__img;
@@ -383,12 +385,41 @@ p {
     "fourth__img text__between_img fifth__img"  
     ;
 }
+.grid__template_area_1 {
+    display: flexbox;
+
+}
+
+
+/* CONFIGURANDO O GRID PARA FICAR EM 1 LINHA E 4 COLUNAS */
+/* .grid__template_area_1 {
+    display: grid;
+    grid-template-areas: 
+    "sixth__img seventh__img eighth__img nineth__img";
+}
+
+.sixth__img {
+    grid-area: sixth__img
+}
+
+.seventh__img {
+    grid-area: seventh__img
+}
+
+.eighth__img {
+    grid-area: eighth__img
+}
+
+.nineth__img {
+    grid-area: nineth__img
+} */
+
 /* centralizar legenda da imagem sem usar padding, como? */
 .single__img__subtitle {
     padding: 0 5%;
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 /* centralizar preço da imagem sem usar padding, como? */
@@ -419,6 +450,13 @@ p {
     margin-bottom: 2rem;
 }
 
+.container__img img {
+    max-width:84rem;
+    max-height:24rem;
+    width: auto;
+    height: auto;
+}
+
 .wrap__related__products {
     display: block;
     width:100%;
@@ -427,13 +465,14 @@ p {
 
 .container__text {
     background-color: rgb(241, 218, 216);
-    font-size: 25px;
+    font-size: 20px;
     display: block;
-    height: 58rem;
-    padding: 5rem 10rem;
+    height: 50rem;
+    padding: 2rem 10rem;
     width:100%;
-    margin:0 auto;
+    margin:0 0 2rem 0;
     display: block;
+    justify-content: center;
 }
 
 .first__line {
