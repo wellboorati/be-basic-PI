@@ -1,185 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeBasic - Produtos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../stylesheets/ListaDeProdutos.css">
-    <link rel="stylesheet" href="../stylesheets/style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeBasic - Produtos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../stylesheets/style.css">
+<link rel="stylesheet" href="../stylesheets/catalogProducts.css">
 </head>
-<body>
 
+<body>
 <header>
     <%- include('partials/header.ejs') %>
-</header>
+</header> 
 
-    <main>
-         <div class= "main__container" >
-             <div class="container__img">
-                <div>Conheça nossos produtos</div>
-                 <div class="grid__template_area">
-                    <article class="wrap__img">
-                         <picture class="first__img">
-                             <a href="#"><img src="../images/Camiseta-Joss-Corte-a-Fio-Lisa-Branco-Cor-Branco-Tamanho-GG-Genero-Masculino_0 1.png" alt="Camiseta Joss Branca"></a>
-                             <div class="single__img__subtitle">
-                                 <div class="single__img__subtitle__description">
-                                     Camiseta Joss Corte a Fio Liso Branca
-                                 </div>
-                                 <div class="single__img__subtitle__price"> R$127,90</div>
-                             </div>
-                         </picture>
-                     </article>
-
-                     <article class="wrap__img">
-                        <picture class="second__img">
-                            <a href="#"><img src="../images/Camiseta-Arimlap-Branco-Lisa-Camiseta-Arimlap-Branco-Lisa-M_0 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                    Camiseta Arimlap Branco Lisa
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
+<main class="main__products">
+    <div class="container__products">
+        <div class="products__wrap">
+            <div class="img__title">Camisetas feitas para você! </div>
+            <div class= "display__t-shirts">
+                <article class="wrap__img">
+                    <picture class= "first__img">
+                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola O"></a>
+                        <div class="img__subtitle">
+                            <div class="img__subtitle__description">
+                                Camiseta Branca Gola O
                             </div>
-                        </picture>
-                    </article>
-
-                    <article class="wrap-img">
-                        <picture class="third__img">
-                            <a href="#"><img src="../images/camiseta-basica-preta-4 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                    Camiseta Arimlap Preto Lisa
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
+                            <div class="img__subtitle__price"> R$127,90
                             </div>
-                        </picture>
-                    </article>
-
-                    <article class="wrap-img">
-                        <picture class="fourth__img">
-                            <a href="#"><img src="../images/Camiseta-Joss-Corte-a-Fio-Lisa-Preto-Cor-Preto-Tamanho-P-Genero-Masculino_0_clipped_rev_1 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                    Camiseta Joss Corte a Fio Liso Branca
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
-                            </div>
-                        </picture>
-                    </article>
-
-                    <article class="test__here">
-                        <div class="text__between_img">
-                        <p class="space__between__p">BeBasic</p> 
-                        <p class="space__between__p">praticidade e leveza.</p>      
                         </div>
-                    </article>
+                    </picture>
+                </article>
 
-                    <article class="wrap-img">
-                        <picture class="fifth__img">
-                            <a href="#"><img src="../images/Camiseta-Joss-Corte-a-Fio-Lisa-Cinza-Cor-Cinza-Tamanho-P-Genero-Masculino_0 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                   Camiseta Joss Corte a Fio Liso Cinza
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
+                <article class="wrap__img">
+                    <picture class="second__img">
+                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Preta Gola O"></a>
+                        <div class="img__subtitle">
+                            <div class="img__subtitle__description">
+                                Camiseta Preta Gola O
                             </div>
-                        </picture>
-                    </article>
-                  </div>
+                            <div class="img__subtitle__price"> R$127,90</div>
+                        </div>
+                    </picture>
+                </article>
+                </div>
 
-                <!--    INSERIR GRID AQUI -->
-                <div class="grid__template_area_1">
-                  <div class="wrap__related__products">
-                      <section class="related__products">
-                      <h2 class="related__products__title"> Produtos relacionados</h2>
-
-                    <article class="wrap-img">
-                        <picture class="sixth__img">
-                            <a href="#"><img src="../images/camiseta-basica-preta-4 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                    Camiseta Arimlap Preto Lisa
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
+                <div class="img__title">Estilo e simplicidade juntos</div>
+                <div class= "display__t-shirts">
+                <article class="wrap__img">
+                    <picture class="third__img">
+                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Joss Branca"></a>
+                        <div class="img__subtitle">
+                            <div class="img__subtitle__description">
+                                Camiseta Azul Gola V
                             </div>
-                        </picture>
-                    </article>
+                            <div class="img__subtitle__price"> R$127,90</div>
+                        </div>
+                    </picture>
+                </article>
 
-                    <article class="wrap-img">
-                        <picture class="seventh__img">
-                            <a href="#"><img src="../images/camiseta-basica-preta-4 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                    Camiseta Arimlap Preto Lisa
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
+                <article class="wrap__img">
+                    <picture class="fourth__img">
+                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Cinza Gola V"></a>
+                        <div class="img__subtitle">
+                            <div class="img__subtitle__description">
+                                Camiseta Cinza Gola V
                             </div>
-                        </picture>
-                    </article>
-
-                    <article class="wrap-img">
-                        <picture class="eighth__img">
-                            <a href="#"><img src="../images/camiseta-basica-preta-4 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                    Camiseta Arimlap Preto Lisa
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
-                            </div>
-                        </picture>
-                    </article>
-
-                    <article class="wrap-img">
-                        <picture class="nineth__img">
-                            <a href="#"><img src="../images/camiseta-basica-preta-4 1.png" alt="Camiseta Joss Branca"></a>
-                            <div class="single__img__subtitle">
-                                <div class="single__img__subtitle__description">
-                                    Camiseta Arimlap Preto Lisa
-                                </div>
-                                <div class="single__img__subtitle__price"> R$127,90</div>
-                            </div>
-                        </picture>
-                    </article>
-
-
-
-                      <!-- <article class="all__together__img space__between__p">
-                          <a href="#"><img src="../images/frequente mente comprado juntos 1.png" alt="Produtos relacionados"></a>
-                      </article> -->
-                  </section>
-                  </div>
-                               
+                            <div class="img__subtitle__price"> R$127,90</div>
+                        </div>
+                    </picture>
+                </article>
             </div>
 
-             <div class="container__text">
-                <p class="first__line"> O que é a camiseta corte a fio joss? 
+            <div class="benefits__display">
+                <article class="benefits__wrap">
+                    <div class="benefits__text">
+                        <h1>Conforto e Beleza</h1>
+                        <p> Usamos um dos tecidos mais nobres do mundo para a        confecção das nossas Camisetas: O algodão Egípcio!</p> 
+                            
+                        <p>Suas fibras são em média 3x mais resistentes que o algodão comum, o que faz com que seja mais macia e durável.</p>    
+                            
+                         <p>Seu brilho natural faz com que esse tipo de algodão tenha cores mais vivas e conserve sua beleza por muito mais tempo.</p>   
+                            
+                        <p>Descubra por que nossa camiseta é tão querida por milhares de pessoas:</p>    
+                    </div>
+                    <button class="buy__now__button">
+                        Compre agora
+                    </button>
+                </article>
+                    
 
-                    <p class="space__between_p">Ela não apresenta costura nos acabamentos e não desfia, proporcionando muito mais conforto e durabilidade a camiseta</p>
-                    <p class="space__between__p">Olha só que legal...</p>
-                    <p class="space__between__p">A camiseta Joss corte a fio é extremamente confortável e fácil de usar. É feita à mão com a mais recente tecnologia e 100% puro aldogão egípcio, que garante leveza, maciez e durabilidade para vida toda</p>
-                    <p class="space__between__p">Sem falar que garante um estilo JOSS mais despojado e moderno, podendo ser usada em qualquer ocasiõa.</p>
-                    <p class="space__top__p">Composição: 100% aldogão egípcio</p>
-                    <p>Tipo de tecido: Malha 40.1</p>
-                    <p>Gola: Canoa</p>
-                    <p>Tipo de produto: Camiseta</p>
-                    <p>Modelagem: Reta</p>
-                    <p class="space__bottom_p">Manga: Curta</p>
-                    <p class="space__between__p">Compre sem medo, oferecemos a primeira troca sem custo para defeitos, tamanho e modelos.</p>
-                    <p class="space__between__p">Ainda está com dúvidas? Entre em contato, vamos te ajudar.</p></p>
+                <picture class="advertising__img">
+                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola V"></a>
+                </picture>
+            </div>
+
+            <div class="benefits__display">
+                <picture class="advertising__img">
+                    <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola V"></a>
+                </picture>
+                <article class="benefits__wrap">
+                    <div class="benefits__text">
+                        <h1>Conforto e Beleza</h1>
+                        <p> Usamos um dos tecidos mais nobres do mundo para a        confecção das nossas Camisetas: O algodão Egípcio!</p> 
+                            
+                        <p>Suas fibras são em média 3x mais resistentes que o algodão comum, o que faz com que seja mais macia e durável.</p>    
+                            
+                         <p>Seu brilho natural faz com que esse tipo de algodão tenha cores mais vivas e conserve sua beleza por muito mais tempo.</p>   
+                            
+                        <p>Descubra por que nossa camiseta é tão querida por milhares de pessoas:</p>    
+                    </div>
+                    <button class="buy__now__button">
+                        Compre agora
+                    </button>
+                </article>
+                
+            </div>
+
+            <div class="why__bebasic__img">
+                    <picture class="benefits__img">
+                        <a href="#"> <img src="../images/novos-benefícios.jpg" alt=""></a>
+                    </picture>
              </div>
-         </div>
-     </main>
-
+                    
+        </div>
+    </div>
+</main>
     
-     <footer>
-        <%- include('partials/footer.ejs') %>
-    </footer>
-
-    <script src="../main.js"></script>
-
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
 </body>
 </html>
