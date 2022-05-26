@@ -18,8 +18,8 @@ body {
     max-width:100%;
     height:auto;
 }
-/* ESTILIZANDO HEADER - ROGÉRIO */
 
+/* ESTILIZANDO HEADER - ROGÉRIO */
 .header {
     background: rgba(196, 196, 196, 0.7);
     border: 1px solid #000000;
@@ -135,7 +135,6 @@ body {
 }
 
 /* ESTILIZANDO FOOTER - ROGÉRIO*/
-
 .footer {
     background: rgba(196, 196, 196, 0.7);
     border-top: 1px solid #000000;
@@ -191,15 +190,12 @@ body {
 }
 
 /* ESTILIZANDO MAIN - WELLINGTON */
- 
 .main__container {
     padding: 0 15rem;
     width:100%;
     margin:0 auto;
     display: block;
-    
-    /* max-width: 600px; */
-} 
+}
 
 /* USANDO DISPLAY GRID PARA COLOCAR AS IMAGENS UMA AO LADO DA OUTRA */
 .container__img {
@@ -276,17 +272,19 @@ body {
 } 
 
 
-/*Não consegui ajustar a palavra TAMANHO
-.tamanho{
+
+.single__img__subtitle__tamanho{
    
-    float: left;
-    vertical-align: top;
+    display: flex;
+    text-align: left;
+    border: 4px solid rgb(245, 121, 121);
+    /*vertical-align: top;
     padding: 0 5%;
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 24px;*/
     
-}*/
+}
 
 .text__between_img {
     padding: 0 10%;
