@@ -16,6 +16,13 @@ body.home {
     height:100vh;
 }
 
+@media (max-width: 991px){
+    body.home {
+        background-color: #b0aeae;
+        height: auto;
+    }
+}
+
 .container {
     max-width: 1300px;
     padding-left: 15px;
@@ -84,7 +91,7 @@ p {
     background: rgba(196, 196, 196, 0.7);
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 120px;
+    height: 80px;
     position: relative;
 }
 
@@ -114,7 +121,17 @@ p {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    height: 120px;
+    height: 80px;
+}
+
+@media (min-width: 992px){
+    .header {
+        height: 120px;
+    }
+    .header__wrap {
+        height: 120px;
+        padding:0;
+    }
 }
 
 .header__links > .container {
@@ -194,13 +211,25 @@ p {
     text-indent: -9999px;
     border:0;
     background-color: transparent;
-    width:51px;
-    height: 42px;
+    width:39px;
+    height: 26px;
     background-image:url(../images/ico-hamburger.png);
     background-repeat:no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 991px){
+    .header__logo {
+        width:100px;
+    }
 }
 
 @media (min-width: 992px){
+
+    .header__menu__mobile {
+        width:51px;
+        height: 42px;        
+    }
 
     .header__links__wrap__nav {
         justify-content: center;
@@ -264,6 +293,12 @@ p {
     padding:0;
     display:flex;
     flex-direction: row;
+}
+
+@media (max-width: 991px){
+    .network {
+        width: 140px;
+    }
 }
 
 .network__item {
