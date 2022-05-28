@@ -28,37 +28,37 @@ body {
 .products__wrap {
     display:flex;
     flex-direction: column;
-    /* border: 4px solid rgb(247, 250, 252); */
     align-items: center;
-    /* margin: 50px 0; */
 }
 
-.display__t-shirts {
+.display__tshirts {
     display:flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
-    
+    margin-bottom: 2vw;
     /* border: 4px solid rgb(245, 121, 121); */
 }
 
-.display__t-shirts img {
+.display__tshirts img {
     max-width:100%;
     max-height:100%;
-    width: auto;
+    width: 50vw;
     height: auto;
+    /* justify-content: space-around; */
 }
 
 .advertising__img img {
+    /* max-width:25em; */
     max-width:100%;
     max-height:100%;
     width: auto;
     height: auto;
     padding: 10px;
-    }
+}
 
 .wrap__img {
-    margin: 0 50px 0 50px;
+    margin: 0 3vh 0 3vh;
 }
 
 .img__subtitle {
@@ -70,24 +70,122 @@ body {
 .benefits__display {
     display:flex;
     flex-direction: row;
-    border: 4px solid rgb(238, 211, 211);
+    border: .5vw solid rgb(185, 182, 182);
+    margin-top: 1vh;
     align-items: center;
     justify-content: space-around;
-    padding: 20px ;
+    padding: 5vw ;
+}
+.benefits__display__2 {
+    display:flex;
+    flex-direction: row;
+    border: .5vw solid rgb(185, 182, 182);
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5vw;
 }
 
+/* RESPONSIVO */
+@media (max-width: 800px){
+    .display__tshirts {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .display__tshirts img{
+        max-width:60vw;
+        max-height:100%;
+        width: auto;
+        height: auto;
+        /* margin: 1vw 0; */
+    }
+    .img__subtitle{
+        margin-bottom: 5vw;
+    }
+    .benefits__display {
+        flex-direction: column;
+    }
+    .benefits__display img {
+        max-width:60vw;
+        max-height:100%;
+        width: auto;
+        height: auto;
+    }
 
+    .benefits__display__2 {
+        flex-direction: column-reverse;
+            
+    }
+    .benefits__display__2 img {
+        max-width:60vw;
+        max-height:100%;
+        width: auto;
+        height: auto;
+            
+    }
+    .paragraph__benefits {
+        margin: 0vh;
+    }
+    .benefits__text {
+        font-size: 5px;
+    }
+}
 
 .benefits__wrap {
-    /* padding: 15%; */
+    padding: 0 2vh;
 }
 
+
+/* TAMANHO DA FONTE */
 .img__title {
-    font-size: 60px;
-    margin: 50px 0;
-    
+    font-size: min(100px, 5vw);
+    margin: 3vw 0; 
+}
+.img__subtitle__description {
+    font-size: min(32px, 3vw);
+}
+.img__subtitle__price {
+    /* font-size: 2vw; */
+    font-size: min(32px, 3vw);
+}
+.benefits__text {
+    font-size: min(30px, 2.5vw);
+    /* font-size: 24px; */
+}
+.paragraph__benefits {
+    margin: 4vh 0;
 }
 
+/* ESTILIZANDO BOTÃO DE COMPRAR */
+.buy__now__button {
+    width: min(1000px, 20vw);
+    height: min(500px, 6vh);
+    font-size: 2vw;
+    background: #03a719;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;   
+}
+.buy__now__button:hover{
+    background: #06f526;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;   
+}
+
+/* RESPONSIVIDADE DO BOTÃO COMPRAR */
+@media (max-width: 800px){
+    .buy__now__button {
+        width: 20vw;
+        height: 3vh;
+        font-size: 2vw;;
+    }
+}
 /* Por que ser Be Basic? */
 .why__bebasic__img img {
     max-width:100%;
