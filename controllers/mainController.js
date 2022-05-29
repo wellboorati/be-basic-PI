@@ -14,7 +14,7 @@ const mainController = {
     // },
 
     carrinhoPage: (req, res) => {
-        return res.render('carrinhoDeCompras')
+        return res.render('carrinho')
     },
 
     productsPage: (req, res) => {
