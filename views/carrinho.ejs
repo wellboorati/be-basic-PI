@@ -1,10 +1,85 @@
-<header>
-    <%- include('partials/header.ejs') %>
-</header>    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeBasic - Produtos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../stylesheets/style.css">
+<link rel="stylesheet" href="../stylesheets/catalogProducts.css">
+<link rel="stylesheet" href="../stylesheets/carrinhodecompras.css">
+</head>
 
-<div class="container">
+
+<!-- header -->
+    <%- include('partials/header.ejs') %>
+    
+
+
+    <body>
+    
+        <div class="containerbackground">
+        <div class="containercarrinho">
+            <div class="carrinhodecompras">
+                <div class="textocarrinho">
+                    <h2>Carrinho de Compras</h2>
+                </div>
+                <div> 
+                    <h2> Total </h2>
+                </div>
+            </div>
+            
+            
+            <div class="compra">
+                <div class="imagem2">
+                    <img src ="../images/azul-gola-normal-camiseta-minimal-134363_540x.png" alt="Camisa branca">
+                </div>
+                <h2>Descriçao camiseta</h2>
+                <form action="qtdade">
+                    <label>Quantidade</label>
+                    <input type="number" name="qtdade" value="1" min="1" max="20">
+                    <button type="button">Remover</button>
+                </form>
+                <h2>Valor</h2>
+            </div>
+            <div class="compra">
+                <div class="imagem2">
+                    <img src ="../images/Camiseta-Arimlap-Branco-Lisa-Camiseta-Arimlap-Branco-Lisa-M_0 1.png" alt="Camisa branca">
+                </div>
+                <h2>Descriçao camiseta</h2>
+                <form action="qtdade">
+                    <label>Quantidade</label>
+                    <input type="number" name="qtdade" value="1" min="1" max="20">
+                    <button type="button">Remover</button>
+                </form>
+                <h2>Valor</h2>
+               
+            </div>
+           
+        </div>
+        <div class="container2">
+            <div class="texto">
+                <span>Subtotal</span>
+                <span>Valor</span>
+            </div>
+            <div class="detalhe">
+                <span> Os códigos de desconto, o frete e os impostos ão adicionados no encerramento</span>
+            </div>
+            <div class="finalizasubmit">
+                <form action="finalCompra"></form>
+                <button type="submit">Fechar Pedido</button>
+            </div>
+        </div>
+    </div>
+</body>
+          <!-- footer -->
+         <%- include('partials/footer.ejs') %>
         
     
-<footer>
-    <%- include('partials/footer.ejs') %>
-</footer>
+    
+
+</html>

@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+
+.containercarrinho{
+    width: 65vw;
+    background-color: #FFFFFF;
+   
+    border: 1px solid #AAAAAA;
+    margin: 1px auto;  
+    opacity: 0.7;
+    font-weight: bold
+    
+}
+
+.containerbackground{
+    background: url(../images/guy.png) no-repeat center;
+    background-size: cover;
+   
+}
+
+.carrinhodecompras{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4.5vw;
+    font-size: 0.95vw;
+    
+}
+.textocarrinho{
+    margin-right: 3.5vw;
+}
+
+.titulo{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1vw;
+}
+
+.compra{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1vw;
+    margin: 1vw;
+}
+.compra > form{
+    display: flex;
+    flex-direction:column;  
+    
+}
+
+.form > button{
+    cursor:pointer;
+}
+
+
+img {
+    width: 15vw; 
+    max-height: 100%; 
+   }
+
+.container2{
+    width: 65vw;
+    background-color: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    margin: 0px auto;  
+    margin-top: 1vw;
+    opacity: 0.7;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-weight: bold
+    
+}
+
+.texto{
+    display: flex;
+    justify-content: space-between;
+    width:32vw;
+    height:2vw;
+    margin: 1vw;
+    font-size: 2vw;
+}
+
+.detalhe{
+    font-size: 1vw;
+    width:32vw;
+    font-style: italic;
+        
+}
+
+.finalizasubmit> button {
+    padding:0.5vw 1vw; 
+    background:#5BC74A; 
+    width: 12vw;
+    height: auto;
+    cursor:pointer;
+    border-radius: 5px; 
+    margin: 1vw auto;
+}
+
+@media (max-width:600px){
+    .containerbackground {
+        background: none;
+        background-color: #AAAAAA;
+        }
+    .containercarrinho,.container2{
+        
+        width: 100%;
+        margin: 1vw auto;
+        
+        
+    }
+    .carrinhodecompras,.compra{
+        font-size: 12px;
+    }
+
+    .texto,.finalizasubmit{
+        font-size: 18px;
+    }
+   
+}
