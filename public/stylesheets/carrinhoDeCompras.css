@@ -6,21 +6,23 @@
 }
 
 
-.containercarrinho{
-    width: 65vw;
-    background-color: #FFFFFF;
-   
-    border: 1px solid #AAAAAA;
-    margin: 1px auto;  
-    opacity: 0.7;
-    font-weight: bold
-    
-}
+
 
 .containerbackground{
     background: url(../images/guy.png) no-repeat center;
     background-size: cover;
    
+}
+
+.containercarrinho{
+    width: 65vw;
+    background-color: #FFFFFF;
+   
+    border: 1px solid #AAAAAA;
+    margin: 0px auto;  
+    opacity: 0.7;
+    font-weight: bold
+    
 }
 
 .carrinhodecompras{
@@ -107,20 +109,31 @@ img {
     .containerbackground {
         background: none;
         background-color: #AAAAAA;
+        margin: 0px auto;
         }
-    .containercarrinho,.container2{
-        
-        width: 100%;
+    
+    .finalizasubmit> button {
+        padding:0.5vw 1vw; 
+        background:#5BC74A; 
+        width: 6vw 6vw;
+        height: auto;
+        cursor:pointer;
+        border-radius: 5px; 
         margin: 1vw auto;
-        
-        
-    }
-    .carrinhodecompras,.compra{
-        font-size: 12px;
+        font-size: 1.5vw;
     }
 
-    .texto,.finalizasubmit{
-        font-size: 18px;
+    .compra > form,button,input{
+        width: 8vw; 
+        font-size: 1.5vw;
+        
     }
-   
+
+    .carrinhodecompras{
+        margin-right: 8vw;
+    }
+    .textocarrinho{
+        margin-right: 12vw;
+    }
+    
 }
