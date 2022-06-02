@@ -1,0 +1,72 @@
+/* Estilizando o corpo da página */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif; 
+}
+/* COLOCANDO IMAGEM DE BACKGROUND */
+.containerbackground_adressRegistrarion { 
+    background: url(../images/guy.png) no-repeat center;
+    background-size: cover;
+}
+/* PADRÃO TAMANHO DO CORPO */
+.adressRegistration_container {
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/*  COR DO FORM E ESPAÇAMENTO*/
+.form_2 {
+    background-color: #FFFFFF;
+    margin: 1vh;  
+    padding: 5vh 0;
+    opacity: 0.7;
+    font-weight: bold;
+}
+.form_2 input {
+    width: 50vh;
+    height: 5vh;
+    font-size: 2vh;
+}
+.adress_title {
+    margin-bottom:5vh;
+}
+
+/* CONFIGURANDO BOTÃO ENDEREÇO */
+.btn_address {
+    width: min(1000px, 20vw);
+    height: min(500px, 8vh);
+    font-size: 1vw;
+    background: #03a719;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;   
+}
+.btn_address:hover{
+    background: #06f526;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;   
+}
+
+/* RESPONSIVIDADE DO BOTÃO COMPRAR */
+@media (max-width: 1000px){
+    .btn_address {
+        width: min(1000px, 20vw);
+        height: min(500px, 10vh);
+        font-size: 2vw;;
+    }
+}
+    

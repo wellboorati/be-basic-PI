@@ -7,8 +7,14 @@ const mainController = require('../controllers/mainController');
 
 /* Home pages */
 router.get('/', mainController.homePage)
-router.get('/login', mainController.loginPage) /* GET login page. */
+router.get('/paineldousuario', mainController.painelPage) /* GET login page. */
 router.get('/produtos', mainController.productsPage)
+router.get('/registration', mainController.registrationPage)
+router.get('/adressregistration', mainController.adressRegistrationPage)
+router.get('/login', mainController.loginPage)
+router.get('/resetpassword', mainController.resetPasswordPage)
+
+
 
 // router.get('/cadastro', mainController.cadastroPage) /* GET cadastro page. */
 // router.post('/cadastro', mainController.doRegister) /* POST cadastro page. */

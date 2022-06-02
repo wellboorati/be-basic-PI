@@ -1,202 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeBasic</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../stylesheets/style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeBasic - Produtos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../stylesheets/style.css">
+<link rel="stylesheet" href="../stylesheets/catalogProducts.css">
 </head>
+
 <body>
-
-<!-- HEADER -->
-    <%- include('partials/header.ejs') %>
-
-
-    <main class="main login">
-        <div class="container">
-            <div class="bannerHome__wrap">
-                <div class="breadcrumb">Home &gt; Login</div>
-                <div class="login__content">
-
-                    <div class="main__content login__content__wrap">                       
-                        
-                        <div class="login__content__wrap__avatar">
-                            <img src="../images/avatar.png" alt="" width="115" >
-                        </div>
-
-                        <ul class="login__content__lead">
-                            <li>
-                                <a href="#" class="btn">Meu Cadastro</a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn">Pedidos</a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn">Favoritos</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="login__content__wrap--compl">
-                        <br><strong>Meu Cadastro:</strong><br><br>
-
-                        <ul>
-                            <li>
-                                <a href="#">Alterar Dados Cadastrais</a>
-                            </li>
-                            <li>
-                                <a href="#">Alterar Senha</a>
-                            </li>
-                            <li>
-                                <a href="#">Gerenciar</a>
-                            </li>
-                            <li>
-                                <a href="#">Endereços de Entrega</a>
-                            </li>
-                        </ul>
-
-                        <br><br><strong>Pedidos:</strong><br><br>
-
-                        <ul>
-                            <li>
-                                <a href="#">Acompanhe Seus Pedidos</a>
-                            </li>
-                            <li>
-                                <a href="#">Imprimir 2 via de Boleto</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="login__content__wrap favoritos">
-                        <strong>Favoritos</strong><br><br>
-
-                        <div class="favoritos__wrap">
-
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>            
-        </div>
-    </main>
-
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer__wrap">
-                <div class="footer__wrap__col footer__wrap__col1">
-                    FAÇA PARTE DO CLUBE!<br><br>
-
-                    Receba conteúdo sobre inovação, empreendedorismo, investimentos e filosofia no seu e-mail. Além de muita oferta boa também!
-                </div>
-                <div class="footer__wrap__col footer__wrap__col2">
-                    <a href="#" class="footer__wrap__logo">
-                        <img src="../images/logo.png" alt="BeBasic">
-                    </a>
-                    <div class="network">
-                        <a href="#" class="network__item">
-                            <img src="../images/ico-twitter.png" alt="Twitter" class="img-fluid">
-                        </a>
-                        <a href="#" class="network__item">
-                            <img src="../images/ico-instagram.png" alt="Instagram" class="img-fluid">
-                        </a>
-                        <a href="#" class="network__item">
-                            <img src="../images/ico-facebook.png" alt="Facebook" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-                <div class="footer__wrap__col footer__wrap__col3">
-                    CONDIÇÕES DE FRETE.<br><br>
-
-                    * Frete grátis válido para as regiões Sul, Sudeste, Centro-Oeste e Nordeste.
-                </div>
-                <div class="footer__wrap__col footer__wrap__col4">
-                    <ul class="footer__wrap__menu">
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Política de privacidade</a>
-                        </li>
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Política de trocas e devoluções</a>
-                        </li>
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Política de frete</a>
-                        </li>
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Termos de serviço</a>
-                        </li>
-                    </ul>                    
-                </div>
-            </div>
-            <div class="footer__copy">
-                © 2022 BeBasic CNPJ: 66.077.940/0001-99 | Av. das Américas 2022 loja 22, Nova California. Americana, SP CEP: 11.110-000 | <a href="mailto: atendimento@bebasic.com.br">atendimento@bebasic.com.br</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../scripts/main.js"></script>
     
+<!-- HEADER -->
+<%- include('partials/header.ejs') %>
+
+<main>
+   
+    <section class="login-content-page">
+        <div class="logo">
+            <p>Faça seu Login na BeBasic</p> 
+        <label for="logo">Login</label>
+        </div>
+  
+        <div class="login">
+          <form action="/login" method="post">
+            <label for="email"></label>
+            <input type="email" required placeholder="Digite seu email" name="email" id="email"/>
+            <br />
+            <label for="password"></label>
+            <input type="password" required placeholder="Digite sua senha" name="password" id="password"/>
+            <br />
+            <div class="checkbox">
+              <input type="checkbox" id="conectado" name="conectado" value="yes" checked />
+              <small>Mantenha-me conectado</small>
+            </div>
+            <br />
+            <button type="submit">Login</button>
+            <br />
+            <div>
+              <p>
+                <small>
+                  <a href="/senha" target="_blank">Esqueceu a senha? </a>
+                </small>
+              </p>
+              <br />
+              <p>
+                <small>Ainda não tem conta?
+                  <a href="/cadastro" target="_blank"> Clique aqui </a>
+                  <br />
+                </small>
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    
+</main>
+
+<!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
 </body>
 </html>

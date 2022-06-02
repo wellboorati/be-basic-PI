@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeBasic - Produtos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../stylesheets/style.css">
+<link rel="stylesheet" href="../stylesheets/adressRegistration.css">
+</head>
+
+<body>
+    
+<!-- HEADER -->
+<%- include('partials/header.ejs') %>
+
+
+<main >
+  <div class="containerbackground_adressRegistrarion">
+  <div class="adressRegistration_container">
+  <div class="form_2_container">
+ 
+    <div class="form_2">
+      <div class="form_wrap">
+        <h2 class="adress_title">Endereço de entrega</h2>
+        <p>
+            <label for="name">Nome do Destinatário*</label><br/>
+            <input type="text" required placeholder="Digite seu nome completo" name="name" id="name"/><br/>
+        </p>
+        <p>
+            <label for="cep">CEP*</label><br />
+            <input type="text" required placeholder="Ex 00.000-000" id="cep"/><br/>
+        </p>
+        <p>
+          <label for="address">Endereço*</label><br />
+          <input type="text" required placeholder="Rua / Avenida / Praça" id="address"/><br/>
+        </p>
+
+        <p>
+          <label for="number">Número*</label><br/>
+          <input type="text" required placeholder="Número" id="number"/><br/>
+        </p>
+
+        <p>
+          <label for="bairro">Bairro*</label><br />
+          <input type="text" required placeholder="Bairro" id="bairro"/><br/>
+        </p>
+
+        <p>
+          <label for="cidade">Cidade*</label><br />
+          <input type="text" required placeholder="Cidade" id="cidade"/><br />
+        </p>
+
+        <p>
+          <label for="state">Estado*</label><br />
+          <input list="state" required/>
+          <datalist id="state">
+            <option value="AC"></option>
+            <option value="AL"></option>
+            <option value="AM"></option>
+            <option value="AP"></option>
+            <option value="BA"></option>
+            <option value="CE"></option>
+            <option value="DF"></option>
+            <option value="ES"></option>
+            <option value="GO"></option>
+            <option value="MA"></option>
+            <option value="MG"></option>
+            <option value="MS"></option>
+            <option value="MT"></option>
+            <option value="PA"></option>
+            <option value="PB"></option>
+            <option value="PE"></option>
+            <option value="PI"></option>
+            <option value="PR"></option>
+            <option value="RJ"></option>
+            <option value="RO"></option>
+            <option value="RN"></option>
+            <option value="RR"></option>
+            <option value="RS"></option>
+            <option value="SC"></option>
+            <option value="SE"></option>
+            <option value="SP"></option>
+            <option value="TO"></option>
+          </datalist>
+
+          <br/>
+        </p>
+
+        <br/>
+
+        <button class="btn_address" type="submit">Entregar neste endereço</button>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>
