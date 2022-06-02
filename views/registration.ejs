@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../stylesheets/style.css">
-<link rel="stylesheet" href="../stylesheets/catalogProducts.css">
+<link rel="stylesheet" href="../stylesheets/registration.css">
 </head>
 
 <body>
@@ -19,52 +19,55 @@
 <%- include('partials/header.ejs') %>
 
 <main>
-
-    <section>
+  <div class="containerbackground_registration">
+    <section class="registration_content_page">
+      <div class="registration_wrap">
         <div class="registration__form">
-          <h2>Cadastre-se</h2>
-          <p>Preencha abaixo seus dados pessoais</p>
+          <h2 class="cadastre_se_title">Cadastre-se</h2>
+          <p class="personal_data">Preencha abaixo com seus dados pessoais</p>
           <form action="cadastro" method="post">
             <p>
-              <label for="name">1. Nome Completo (Sem Abreviações)*</label><br/>
+              <label for="name">Nome Completo (Sem Abreviações)*</label><br/>
               <input type="text" required placeholder="Digique seu nome completo" name="name" id="name"/><br/>
             </p>
             <p>
-              <label for="email">2. Seu e-mail</label><br/>
+              <label for="email">Seu e-mail</label><br/>
               <input type="email" required placeholder="Digite seu email" name="email" id="email"/><br/>
             </p> 
             <p>
-              <label for="gender">3. Sexo</label><br/>
+              <label for="gender">Sexo</label><br/>
               <input list="gender" required placeholder="Masculino / Feminino"/><br/>
               <datalist id="gender">
               <option value="Masculino"></option>
               <option value="Feminino"></option>
             </p>
             <p>
-              <label for="cpf">4. Seu CPF</label><br/>
+              <label for="cpf">Seu CPF</label><br/>
               <input type="text" required placeholder="Ex: 000.000.000-00" name="cpf" id="cpf" pattern="[0-9]{11}"/><br/>
             </p>
             <p>
-              <label for="data">5. Seu aniversário</label><br/>
+              <label for="data">Seu aniversário</label><br/>
               <input id="date" type="date" value="2000-01-01">
             </p>
             <p>
-              <label for="telefone">4. Seu Telefone</label><br/>
+              <label for="telefone">Seu Telefone</label><br/>
               <input type="text" required placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"/><br/>
             </p>
+            <div class="password_container">
             <p id="senha">
               <label for="senha">Senha</label><br/>
               <input type="password" required placeholder="Mínimo de 8 caracteres" name="password" id="password"/><br/>
               <input type="password" required placeholder="Mínimo de 8 caracteres" name="confirm_password" id="confirm_password"/><br/>
-              <input id="checkbox" type="checkbox" onclick="showPass()">
-              <span style="color: #878886;">Salvar usuário e senha?</span>
+              <input class="saving_user_input" id="checkbox" type="checkbox" onclick="showPass()">
+              <span class="saving_user" style="color: #40413f;">Salvar usuário e senha?</span>
             </p>
+            </div>
 
-            <button>Finalizar Cadastro</button>
+            <button class="btn_finalizarCadastro_continuarComprando">Finalizar Cadastro</button>
 
-            <p>Ao continuar com o acesso, você concorda com a nossa Política de Privacidade</p>
+            <p class="paragraph_privacyPolicy">Ao continuar com o acesso, você está concordando com a nossa <a href="#">Política de Privacidade</a> </p>
 
-            <button>Continuar comprando</button>
+            <button class="btn_finalizarCadastro_continuarComprando">Continuar Comprando</button>
             </div>
   
           
@@ -74,8 +77,9 @@
         <br />
   
         <br />
+      </div>
       </section>
-    
+    </div>
 </main>
 
 <!-- FOOTER -->
