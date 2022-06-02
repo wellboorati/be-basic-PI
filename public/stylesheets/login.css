@@ -1,0 +1,88 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif; 
+}
+/* COLOCANDO IMAGEM DE BACKGROUND */
+.containerbackground_login { 
+    background: url(../images/guy.png) no-repeat center;
+    background-size: cover;
+}
+/* PADRÃO TAMANHO DO CORPO */
+.login_content_page {
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login_wrap {
+    background-color: #FFFFFF;
+    margin: 1vh;  
+    padding: 5vh 0;
+    opacity: 0.7;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.login_wrap input {
+    width: 50vh;
+    height: 5vh;
+    font-size: 2.5vh;
+}
+
+@media (max-width: 800px){
+    .login_wrap input {
+        width: min(1000px, 40vw);
+        height: min(500px, 4vh);
+        font-size: 2vw;
+    }
+}
+.login_title_h1{
+    margin-bottom: 2vh;
+}
+.paragraph_keepmeconected {
+    font-size: 2vh;
+}
+
+.checkbox {
+    margin-top: 2vh;
+}
+
+/* CONFIGURANDO BOTÃO LOGIN */
+.btn_login {
+    width: min(800px, 18vw);
+    height: min(500px, 5vh);
+    font-size: 1.5vw;
+    background: #03a719;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;   
+}
+.btn_login:hover{
+    background: #06f526;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;   
+}
+
+/* RESPONSIVIDADE DO BOTÃO COMPRAR */
+@media (max-width: 800){
+    .btn_login {
+        width: min(1000px, 20vw);
+        height: min(500px, 5vh);
+        font-size: 2vw;;
+    }
+}
+    
