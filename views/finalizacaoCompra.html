@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeBasic - Detalhes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../public/stylesheets/detalhesProdutos.css">    
+    <link rel="stylesheet" href="../public/stylesheets/finalizacaoCompra.css">
+
+</head>
+
+<body>
+
+    <header>
+        <header id="header" class="header">
+            
+            <div id="header__links" class="header__links">
+
+                <div class="container">
+                    <button id="header__links__close" class="header__links__close fa-solid fa-rectangle-xmark"></button>
+
+                    <ul class="header__links__nav">
+
+                        <li class="header__links__nav__item">
+                            <a href="#" class="header__links__nav__item__link">
+                                Link 1
+                            </a>
+                        </li>
+
+                        <li class="header__links__nav__item">
+                            <a href="#" class="header__links__nav__item__link">
+                                Link 2
+                            </a>
+                        </li>
+
+                        <li class="header__links__nav__item">
+                            <a href="#" class="header__links__nav__item__link">
+                                Link 3
+                            </a>
+                        </li>
+                        
+                        <li class="header__links__nav__item">
+                            <a href="#" class="header__links__nav__item__link">
+                                Link 4
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                
+                <div class="header__wrap">
+                    <button id="header__menu__mobile" class="header__menu__mobile">Abrir menu</button>
+
+                    <a href="#" class="header__logo">
+                        <img src="../public/images/logo-topo.png" alt="BeBasic T-shirts">
+                    </a>
+
+                    <a href="#" class="header__login">
+                        <img src="../public/images/ico-login.png" alt="Faça o login">
+                    </a>
+
+                    <a href="#" class="header__store">
+                        <img src="../public/images/ico-store.png" alt="Loja">
+                    </a>
+                </div>            
+            </div>
+        </header>
+    </header>
+    
+     <main>
+         <div class="container_finalizacao_compra">
+            <div class="checkout-panel">
+                    <div class="panel-body">
+              <h2 class="title">Pagamento</h2>
+           
+              <div class="progress-bar">
+                <div class="step active"></div>
+                <div class="step active"></div>
+                <div class="step"></div>
+                <div class="step"></div>
+              </div>
+           
+              <div class="payment-method">
+                <label for="card" class="method card">
+                  <div class="card-logos">
+                    <img src="https://designmodo.com/demo/checkout-panel/img/visa_logo.png"/>
+                    <img src="https://designmodo.com/demo/checkout-panel/img/mastercard_logo.png"/>
+                                        
+                  </div>
+           
+                  <div class="radio-input">
+                    <input id="card" type="radio" name="payment">
+                    Pague R$129,00 com o cartão de crédito
+                  </div>
+                </label>
+           
+                <label for="paypal" class="method paypal">
+                  <img src="https://designmodo.com/demo/checkout-panel/img/paypal_logo.png">
+                  <div class="radio-input">
+                    <input id="paypal" type="radio" name="payment">
+                    Pague R$129,00 com PAYPAL
+                  </div>
+                </label>
+              </div>
+           
+              <div class="input-fields">
+                <div class="column-1">
+                  <label for="cardholder">Nome</label>
+                  <input type="text" id="cardholder" />
+           
+                  <div class="small-inputs">
+                    <div>
+                      <label for="date">Data de Validade</label>
+                      <input type="text" id="date"/>
+                    </div>
+           
+                    <div>
+                      <label for="verification">CVV / CVC *</label>
+                      <input type="password" id="verification"/>
+                    </div>
+                  </div>
+           
+                </div>
+                <div class="column-2">
+                  <label for="cardnumber">Número do Cartão</label>
+                  <input type="password" id="cardnumber"/>
+           
+                  <span class="info">* CVV or CVC é o código de segurança de três dígitos que se encontra no verso do cartão.</span>
+                </div>
+              </div>
+            </div>
+           
+            <div class="panel-footer">
+              <button class="btn back-btn">Voltar</button>
+              <button class="btn next-btn">Avançar</button>
+            </div>
+          </div>
+        </div>
+       
+     </main>
+     
+
+
+     <footer id="footer" class="footer">
+            <div class="container">
+                <div class="footer__wrap">
+                    <div class="footer__wrap__col1">
+                        FAÇA PARTE DO CLUBE!<br><br>
+    
+                        Receba conteúdo sobre inovação, empreendedorismo, investimentos e filosofia no seu e-mail. Além de muita oferta boa também!
+                    </div>
+
+                    <div class="footer__wrap__col2">
+                        <a href="#" class="footer__wrap__logo">
+                            <img src="../public/images/logo.png" alt="BeBasic">
+                        </a>
+
+                        <div class="network">
+                            <a href="#" class="network__item">
+                                <img src="../public/images/ico-twitter.png" alt="Twitter" class="img-fluid">
+                            </a>
+
+                            <a href="#" class="network__item">
+                                <img src="../public/images/ico-instagram.png" alt="Instagram" class="img-fluid">
+                            </a>
+
+                            <a href="#" class="network__item">
+                                <img src="../public/images/ico-facebook.png" alt="Facebook" class="img-fluid">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="footer__wrap__col3">
+                        CONDIÇÕES DE FRETE.<br><br>
+                        * Frete grátis válido para as regiões Sul, Sudeste, Centro-Oeste e Nordeste.
+                    </div>
+
+                    <div class="footer__wrap__col4">
+                        <ul class="footer__wrap__menu">
+                            <li class="footer__wrap__menu__item">
+                                <a href="#">Política de privacidade</a>
+                            </li>
+
+                            <li class="footer__wrap__menu__item">
+                                <a href="#">Política de trocas e devoluções</a>
+                            </li>
+
+                            <li class="footer__wrap__menu__item">
+                                <a href="#">Política de frete</a>
+                            </li>
+
+                            <li class="footer__wrap__menu__item">
+                                <a href="#">Termos de serviço</a>
+                            </li>
+
+                        </ul>                    
+                    </div>
+                </div>
+
+                <div class="footer__copy">
+                    © 2022 BeBasic CNPJ: 66.077.940/0001-99 | Av. das Américas 2022 loja 22, Nova California. Americana, SP CEP: 11.110-000 | <a href="mailto: atendimento@bebasic.com.br">atendimento@bebasic.com.br</a>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="../main.js"></script>
+
+</body>
+</html>
