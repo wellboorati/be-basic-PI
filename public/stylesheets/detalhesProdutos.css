@@ -189,13 +189,6 @@ body {
     text-decoration:underline;
 }
 
-/* ESTILIZANDO MAIN - WELLINGTON */
-.main__container {
-    padding: 0 15rem;
-    width:100%;
-    margin:0 auto;
-    display: block;
-}
 
 /* USANDO DISPLAY GRID PARA COLOCAR AS IMAGENS UMA AO LADO DA OUTRA */
 .container__img {
@@ -235,29 +228,70 @@ body {
     font-size: 24px;
 }
 
-.corPreto{
-    background: black;
-    height: 30px;
-    width: 30px;
+.palavraTamanho{
+    font-weight: lighter;
+}
+
+.preco{
+    font-weight: lighter;
+}
+
+.cor{
+    font-weight: lighter;
+}
+
+
+.tamanho{
+    border: none;
+    padding: 11px 20px;
+    font: 16px 'Ubuntu', sans-serif;
+    cursor: pointer;
+}
+
+.cores{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    cursor: pointer;
     
 }
 
-.corBranca{
+.corPreto{
+    background: black;
+    height: 40px;
+    width: 40px;    
+}
+
+.corBranco{
     background: white;
-    border-style: dashed;
-    border-width: 10px;
-    border-color: black;/*Não funcionou*/
-    height: 30px;
-    width: 30px;
-    
+    border: solid 1px  black;
+    height: 40px;
+    width: 40px;  
 }
 
 .corAzul{
-    background: blue;
-    height: 30px;
-    width: 30px;
-    
+    background: #808080;
+    height: 40px;
+    width: 40px;  
 }
+
+.quantidade{
+    width: 50px;
+    font-weight: lighter;
+}
+
+
+
+.comprar{
+    border: none;
+    color: #FFFFFF;
+    font: 16px 'Ubuntu', sans-serif;
+    background: #08A742;
+    padding: 11px 20px;
+    cursor: pointer;
+    float: right;
+}
+
 
 .options{
     float: right;
@@ -265,25 +299,15 @@ body {
     height: 10px;  
 }
 
-.comprar{
-    
-    height: 30px;
-    text-align: center;
-} 
 
 
 
-.single__img__subtitle__tamanho{
-   
-    display: flex;
-    text-align: left;
-    border: 4px solid rgb(245, 121, 121);
-    /*vertical-align: top;
-    padding: 0 5%;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    font-size: 24px;*/
-    
+
+.subtitle__tamanho{
+
+    margin-right: 20px;
+    width: 50px;
+
 }
 
 .text__between_img {
@@ -294,8 +318,10 @@ body {
 }
 
 .single__img__subtitle__description {
+    display: flex;   
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
 }
 
 .related__products__title {
