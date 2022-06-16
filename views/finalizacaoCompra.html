@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../public/stylesheets/detalhesProdutos.css">
+    <link rel="stylesheet" href="../public/stylesheets/detalhesProdutos.css">    
+    <link rel="stylesheet" href="../public/stylesheets/finalizacaoCompra.css">
+
 </head>
 
 <body>
@@ -74,108 +76,77 @@
     </header>
     
      <main>
-
-         <div class="container" "main__container" >
-             
-             <div class="container__img">
-                 <div class="grid__template_area">
-                     <article class="wrap__img">
-                         <picture class="first__img">
-                             <a href="#"><img src="../public/images/Camiseta-Joss-Corte-a-Fio-Lisa-Branco-Cor-Branco-Tamanho-GG-Genero-Masculino_0 1.png" alt="Camiseta Joss Branca"></a>
-                             
-                            <div class="single__img__subtitle">
-                                 <div class="single__img__subtitle__description">
-                                     <p>Camiseta Joss Corte a Fio Liso Branca</p><br>   
-                                 </div>
-
-                                 <p>Gola Canoa</p>
-
-                            
-                            <div class="single__img__subtitle"></div>
-                                <div class="single__img__subtitle__price"> 
-                                     <p class="preco"> R$127,90 </p><br>
-                                </div>
-
-                         
-                                <div class="subtitle__tamanho">
-                                     <p class="palavraTamanho">TAMANHO</p>
-                                </div>
-
-                            
-                                <div class="tamanhos">
-                                    <button class="tamanho">P</button> 
-                                    <button class="tamanho">M</button>
-                                    <button class="tamanho">G</button>
-                                </div><br>
-  
-                                <div class="single__img__subtitle__cor"><br>
-                                    <p class="cor">COR</p>
-                                </div>
-
-                             <div class="cores">  
-                                <div class="corPreto"></div>
-                                <div class="corBranco"></div>
-                                <div class="corAzul"></div>     
-                            </div><br>
-                                    <div class="qtd"><br>
-                                        <p class="quantidade">QUANTIDADE</p>
-                                        <!-- <input type="radio"> -->
-
-                                        <select name ="quantidade"><br>
-		                                    <option value="01"> 01 </option>
-		                                    <option value="02"> 02 </option>
-		                                    <option value="03"> 03 </option>
-		                                    <option value="04"> 04 </option>
-		                                    <option value="05"> 05 </option>
-		                                    <option value="06"> 06 </option>
-		                                    <option value="07"> 07 </option>
-		                                    <option value="08"> 08 </option>
-		                                    <option value="09"> 09 </option>
-		                                    <option value="10"> 10 </option>
-                                        </select> 
-                                    </div>
-                                </div>
-
-                                    <div id="botao">
-                                        <button class="comprar">Adicionar ao Carrinho</button>  
-                                    </div>
-                               
-                                    
-                            
-                         </picture>
-                     </article>
+         <div class="container_finalizacao_compra">
+            <div class="checkout-panel">
+                    <div class="panel-body">
+              <h2 class="title">Pagamento</h2>
+           
+              <div class="progress-bar">
+                <div class="step active"></div>
+                <div class="step active"></div>
+                <div class="step"></div>
+                <div class="step"></div>
+              </div>
+           
+              <div class="payment-method">
+                <label for="card" class="method card">
+                  <div class="card-logos">
+                    <img src="https://designmodo.com/demo/checkout-panel/img/visa_logo.png"/>
+                    <img src="https://designmodo.com/demo/checkout-panel/img/mastercard_logo.png"/>
+                                        
                   </div>
-
-
-
-                  <div class="wrap__related__products">
-                      <section class="related__products">
-                      <h2 class="related__products__title"> Produtos relacionados </h2>
-                      <article class="all__together__img space__between__p">
-                          <a href="#"><img src="../public/images/frequente mente comprado juntos 1.png" alt="Produtos relacionados"></a>
-                      </article>
-                      </section>
+           
+                  <div class="radio-input">
+                    <input id="card" type="radio" name="payment">
+                    Pague R$129,00 com o cartão de crédito
                   </div>
-                  
-
-             <div class="container__text">
-                <p class="first__line"> O que é a camiseta corte a fio joss? 
-
-                    <p class="space__between_p">Ela não apresenta costura nos acabamentos e não desfia, proporcionando muito mais conforto e durabilidade a camiseta</p>
-                    <p class="space__between__p">Olha só que legal...</p>
-                    <p class="space__between__p">A camiseta Joss corte a fio é extremamente confortável e fácil de usar. É feita à mão com a mais recente tecnologia e 100% puro aldogão egípcio, que garante leveza, maciez e durabilidade para vida toda</p>
-                    <p class="space__between__p">Sem falar que garante um estilo JOSS mais despojado e moderno, podendo ser usada em qualquer ocasiõa.</p>
-                    <p class="space__top__p">Composição: 100% aldogão egípcio</p>
-                    <p>Tipo de tecido: Malha 40.1</p>
-                    <p>Gola: Canoa</p>
-                    <p>Tipo de produto: Camiseta</p>
-                    <p>Modelagem: Reta</p>
-                    <p class="space__bottom_p">Manga: Curta</p>
-                    <p class="space__between__p">Compre sem medo, oferecemos a primeira troca sem custo para defeitos, tamanho e modelos.</p>
-                    <p class="space__between__p">Ainda está com dúvidas? Entre em contato, vamos te ajudar.</p></p>
-             </div>
-         </div>
+                </label>
+           
+                <label for="paypal" class="method paypal">
+                  <img src="https://designmodo.com/demo/checkout-panel/img/paypal_logo.png">
+                  <div class="radio-input">
+                    <input id="paypal" type="radio" name="payment">
+                    Pague R$129,00 com PAYPAL
+                  </div>
+                </label>
+              </div>
+           
+              <div class="input-fields">
+                <div class="column-1">
+                  <label for="cardholder">Nome</label>
+                  <input type="text" id="cardholder" />
+           
+                  <div class="small-inputs">
+                    <div>
+                      <label for="date">Data de Validade</label>
+                      <input type="text" id="date"/>
+                    </div>
+           
+                    <div>
+                      <label for="verification">CVV / CVC *</label>
+                      <input type="password" id="verification"/>
+                    </div>
+                  </div>
+           
+                </div>
+                <div class="column-2">
+                  <label for="cardnumber">Número do Cartão</label>
+                  <input type="password" id="cardnumber"/>
+           
+                  <span class="info">* CVV or CVC é o código de segurança de três dígitos que se encontra no verso do cartão.</span>
+                </div>
+              </div>
+            </div>
+           
+            <div class="panel-footer">
+              <button class="btn back-btn">Voltar</button>
+              <button class="btn next-btn">Avançar</button>
+            </div>
+          </div>
+        </div>
+       
      </main>
+     
 
 
      <footer id="footer" class="footer">
