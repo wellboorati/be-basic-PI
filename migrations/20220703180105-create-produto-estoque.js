@@ -1,25 +1,29 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Itens_pedidos', {
+    await queryInterface.createTable('Produto_estoque', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      produto_estoque_id: {
+      fornecedor_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Produto_estoque', key: 'id'}
+        references: { model: 'Fornecedores', key: 'id'}
       },
-      pedido_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: { model: 'Pedido_venda', key: 'id'}
-      },
-      quantidade: {
+      nome: {
         type: Sequelize.STRING
+      },
+      preco: {
+        type: Sequelize.STRING
+      },
+      quantidade_disponivel: {
+        type: Sequelize.STRING
+      },
+      ativo: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -32,6 +36,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Itens_pedidos');
+    await queryInterface.dropTable('Produto_estoque');
   }
 };

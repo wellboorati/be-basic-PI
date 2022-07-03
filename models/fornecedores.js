@@ -13,8 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       Fornecedores.hasMany(models.Produto_estoque, {
         foreignKey: 'fornecedor_id'
       })
-
-   }
+    }
   }
   Fornecedores.init({
     nome_empresa: DataTypes.STRING,

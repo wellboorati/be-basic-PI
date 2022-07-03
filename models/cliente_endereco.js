@@ -3,25 +3,24 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Endereco_cliente extends Model {
+  class Cliente_endereco extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-
-      Endereco_cliente.hasMany(models.pedido_venda, {
-        foreignKey: 'endereco_id'
+      Cliente_endereco.hasMany(models.Pedido, {
+        foreignKey: 'endereco_cliente_id'
       })
 
 
-      Endereco_cliente.belongsTo(models.Clientes, {
+      Cliente_endereco.belongsTo(models.Clientes, {
         foreignKey: 'cliente_id'
       })
     }
   }
-  Endereco_cliente.init({
+  Cliente_endereco.init({
     endereco: DataTypes.STRING,
     numero: DataTypes.STRING,
     complemento: DataTypes.STRING,
@@ -32,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     endereco_entrega: DataTypes.BOOLEAN
   }, {
     sequelize,
-    modelName: 'Endereco_cliente',
+    modelName: 'Cliente_endereco',
   });
-  return Endereco_cliente;
+  return Cliente_endereco;
 };

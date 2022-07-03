@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Pedido_vendas', {
+    await queryInterface.createTable('Cliente_enderecos', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,28 +13,29 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Clientes', key: 'id'}
       },
-      endereco_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: { model: 'Endereco_cliente', key: 'id'}
-      },
-      valor_total_pedido: {
+      endereco: {
         type: Sequelize.STRING
       },
-      data_entrega: {
-        type: Sequelize.DATE
-      },
-      data_pedido: {
-        type: Sequelize.DATE
-      },
-      valor_frete: {
+      numero: {
         type: Sequelize.STRING
       },
-      cupom_desconto: {
+      complemento: {
+        type: Sequelize.STRING
+      },
+      bairro: {
+        type: Sequelize.STRING
+      },
+      cidade: {
+        type: Sequelize.STRING
+      },
+      estado: {
+        type: Sequelize.STRING
+      },
+      cep: {
+        type: Sequelize.STRING
+      },
+      endereco_entrega: {
         type: Sequelize.BOOLEAN
-      },
-      status_pedido: {
-        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -47,6 +48,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Pedido_vendas');
+    await queryInterface.dropTable('Cliente_enderecos');
   }
 };
