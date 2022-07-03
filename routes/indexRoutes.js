@@ -13,6 +13,10 @@ router.get('/registration', mainController.registrationPage)
 router.get('/adressregistration', mainController.adressRegistrationPage)
 router.get('/login', mainController.loginPage)
 router.get('/resetpassword', mainController.resetPasswordPage)
+//checkout
+router.get('/checkout', mainController.checkoutPage)
+
+router.get('/productdetails', mainController.productdetailsPage)
 
 
 

@@ -5,12 +5,14 @@
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;    
+    font-family: 'Ubuntu', sans-serif;
     height:100vh;
 }
 
 .container {
     max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin:0 auto;
 }
 
@@ -19,175 +21,6 @@ body {
     height:auto;
 }
 
-/* ESTILIZANDO HEADER - ROGÉRIO */
-.header {
-    background: rgba(196, 196, 196, 0.7);
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 120px;
-    position: relative;
-    margin: 0 0 2rem 0;
-}
-
-.header__links {
-    background-color: #fff;
-    height:120px;
-    position: fixed;
-    display:none;
-    width: 100%;
-    top:0;
-    z-index: 1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.header__links--active {
-    display:block;
-}
-
-.header__wrap {
-    display:flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 120px;
-}
-
-.header__links > .container {
-    position: relative;
-}
-
-.header__links__close {
-    position: absolute;
-    right:0;
-    top:15px;
-    background:transparent;
-    border:0;
-    font-size: 30px;
-    cursor:pointer;
-}
-
-.header__links > .container,
-.header__links__nav {
-    height: 120px;
-}
-
-.header__links__nav__item__link {
-    font-size:20px;
-    text-decoration: none;
-    color: #010101;
-}
-
-.header__links__nav {
-    list-style:none;
-    padding:0;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.header__links__nav__item__link {
-    display:block;
-    padding: 20px 40px;
-    border-radius: 10px;
-    transition: all .4s;
-}
-
-.header__links__nav__item__link:hover {
-    background: #eee;
-
-}
-
-.header__logo {
-    display:block;
-}
-
-.header__menu__mobile {
-    text-indent: -9999px;
-    border:0;
-    background-color: transparent;
-    width:51px;
-    height: 42px;
-    background-image:url(../images/ico-hamburger.png);
-    background-repeat:no-repeat;
-}
-
-@media (min-width: 992px){
-    .header__menu__mobile {
-        flex-grow: .8;
-    }
-}
-
-#header__menu__mobile {
-    cursor:pointer;
-}
-
-.network {
-    list-style:none;
-    padding:0;
-    display:flex;
-    flex-direction: row;
-}
-
-.network__item {
-    width: 64px;
-    display:block;
-    filter: grayscale(100%);
-}
-
-/* ESTILIZANDO FOOTER - ROGÉRIO*/
-.footer {
-    background: rgba(196, 196, 196, 0.7);
-    border-top: 1px solid #000000;
-    margin-top: 1rem; 
-}
-
-.footer__wrap {
-    display: grid;
-    grid-template-columns: auto;
-    padding:42px 0;
-}
-
-@media (min-width: 992px){
-    .footer__wrap {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0 50px;
-    }
-}
-
-.footer__wrap__col2 {
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer__wrap__logo {
-    display:block;
-    margin-bottom: 15px;
-}
-
-.footer__copy {
-    padding:20px 0;
-    text-align: center;
-}
-
-.footer__wrap__menu {
-    list-style: none;
-    padding:0;
-}
-
-.footer__wrap__menu__item {
-    margin-bottom:10px;
-}
-
-.footer__wrap__menu__item a {
-    color: #010101;
-    text-decoration:none;
-}
-
-.footer__wrap__menu__item a:hover {
-    text-decoration:underline;
-}
 
 
 /* USANDO DISPLAY GRID PARA COLOCAR AS IMAGENS UMA AO LADO DA OUTRA */

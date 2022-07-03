@@ -1,8 +1,8 @@
 
-const mainController = { 
-    
+const mainController = {
+
     homePage: (req, res) => {
-    return res.render('index') 
+    return res.render('index')
     },
 
     loginPage: (req, res) => {
@@ -12,7 +12,7 @@ const mainController = {
     painelPage: (req, res) => {
         return res.render('paineldousuario')
     },
-       
+
     carrinhoPage: (req, res) => {
         return res.render('carrinho')
     },
@@ -31,9 +31,15 @@ const mainController = {
 
     resetPasswordPage: (req, res) => {
         return res.render('resetpassword')
+    },
+    checkoutPage: (req, res) => {
+        return res.render('checkout')
+    },
+    productdetailsPage: (req, res) => {
+        return res.render('productdetails')
     }
 
 };
- 
+
 module.exports = mainController;
 
