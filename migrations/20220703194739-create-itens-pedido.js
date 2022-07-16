@@ -13,11 +13,11 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Produto_estoque', key: 'id'}
       },
-      // pedido_id: {
-      //   allowNull: false,
-      //   type: Sequelize.INTEGER,
-      //   references: { model: 'Pedido', key: 'id'}
-      // },
+      pedido_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Pedidos', key: 'id'}
+      },
       quantidade: {
         type: Sequelize.STRING
       },

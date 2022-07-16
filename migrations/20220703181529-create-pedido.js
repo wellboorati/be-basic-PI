@@ -13,11 +13,11 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Clientes', key: 'id'}
       },
-      // endereco_cliente_id: {
-      //   allowNull: false,
-      //   type: Sequelize.INTEGER,
-      //   references: { model: 'Cliente_endereco', key: 'id'}
-      // },
+      endereco_cliente_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Cliente_enderecos', key: 'id'}
+      },
       valor_total_pedido: {
         type: Sequelize.STRING
       },
