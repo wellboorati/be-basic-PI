@@ -5,10 +5,6 @@ const mainController = {
     return res.render('index')
     },
 
-    loginPage: (req, res) => {
-        return res.render('login')
-    },
-
     painelPage: (req, res) => {
         return res.render('paineldousuario')
     },
@@ -21,14 +17,6 @@ const mainController = {
         return res.render('produtos')
     },
 
-    registrationPage: (req, res) => {
-        return res.render('registration')
-    },
-
-    adressRegistrationPage: (req, res) => {
-        return res.render('adressregistration')
-    },
-
     resetPasswordPage: (req, res) => {
         return res.render('resetpassword')
     },
@@ -38,6 +26,16 @@ const mainController = {
     productdetailsPage: (req, res) => {
         return res.render('productdetails')
     }
+
+    // loginPage: (req, res) => {
+    //     return res.render('login')
+    // },
+    // registrationPage: (req, res) => {
+    //     return res.render('registration')
+    // },
+    // adressRegistrationPage: (req, res) => {
+    //     return res.render('adressregistration')
+    // },
 
 };
 
