@@ -1,30 +1,49 @@
-const database = require('../models')
+const database = require("../models");
 
 const registrationController = {
-
-cadastro: async (req, res) => {
-    const { nome, senha, email, sexo, cpf, data_nascimento, telefone } = req.body;
+  cadastro: async (req, res) => {
+    const {
+      name,
+      email,
+      gender,
+      cpf,
+      birthdate,
+      telefone,
+      password,
+      confirm_password,
+    } = req.body;
     // const hash = await bcrypt.hash(senha, 10);
-    const usuario = await CadastroService.createCadastro(
-        nome,
-        email,
-        senha,
-        sexo,
-        cpf,
-        data_nascimento,
-        telefone
-    );
+    const usuario = await database.Clientes.create({
+      nome: name,
+      email,
+      senha: password,
+      sexo: gender,
+      cpf,
+      data_nascimento: birthdate,
+      telefone,
+    });
 
-    return res.json({nome: usuario.nome, senha: usuario.senha, email: usuario.email, sexo: usuario.sexo, cpf: usuario.cpf, data_nascimento: usuario.data_nascimento, telefone: usuario.telefone});
-},
+    console.log(usuario);
 
-registrationPage: (req, res) => {
-    return res.render('registration')
-},
+    return res.json({
+      id: usuario.id,
+      nome: usuario.nome,
+      senha: usuario.senha,
+      email: usuario.email,
+      sexo: usuario.sexo,
+      cpf: usuario.cpf,
+      data_nascimento: usuario.data_nascimento,
+      telefone: usuario.telefone,
+    });
+  },
 
-adressRegistrationPage: (req, res) => {
-    return res.render('adressregistration')
-}
-}
+  registrationPage: (req, res) => {
+    return res.render("registration");
+  },
+
+  adressRegistrationPage: (req, res) => {
+    return res.render("adressregistration");
+  },
+};
 
 module.exports = registrationController;
