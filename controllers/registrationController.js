@@ -4,7 +4,6 @@ const registrationController = {
 
 cadastro: async (req, res) => {
     const { nome, senha, email, sexo, cpf, data_nascimento, telefone } = req.body;
-    // const hash = await bcrypt.hash(senha, 10);
     const usuario = await CadastroService.createCadastro(
         nome,
         email,
