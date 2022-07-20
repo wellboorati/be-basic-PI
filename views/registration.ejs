@@ -25,7 +25,7 @@
         <div class="registration__form">
           <h2 class="cadastre_se_title">Cadastre-se</h2>
           <p class="personal_data">Preencha abaixo com seus dados pessoais</p>
-          <form action="cadastro" method="post">
+          <form action="registration" method="post">
             <p>
               <label for="name">Nome Completo (Sem Abreviações)*</label><br/>
               <input type="text" required placeholder="Digique seu nome completo" name="name" id="name"/><br/>
@@ -36,7 +36,7 @@
             </p> 
             <p>
               <label for="gender">Sexo</label><br/>
-              <input list="gender" required placeholder="Masculino / Feminino"/><br/>
+              <input list="gender" required name="gender" placeholder="Masculino / Feminino"/><br/>
               <datalist id="gender">
               <option value="Masculino"></option>
               <option value="Feminino"></option>
@@ -46,8 +46,8 @@
               <input type="text" required placeholder="Ex: 000.000.000-00" name="cpf" id="cpf" pattern="[0-9]{11}"/><br/>
             </p>
             <p>
-              <label for="data">Seu aniversário</label><br/>
-              <input id="date" type="date" value="2000-01-01">
+              <label for="birthdate">Seu aniversário</label><br/>
+              <input id="date" type="date" name="birthdate" value="2000-01-01">
             </p>
             <p>
               <label for="telefone">Seu Telefone</label><br/>
@@ -69,13 +69,12 @@
 
             <button class="btn_finalizarCadastro_continuarComprando">Continuar Comprando</button>
             </div>
-  
-          
+
         </form>
-        
-  
+
+
         <br />
-  
+
         <br />
       </div>
       </section>

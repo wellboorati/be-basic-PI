@@ -22,6 +22,9 @@ router.get('/checkout', mainController.checkoutPage)
 router.get('/productdetails', mainController.productdetailsPage)
 
 
+router.post('/registration', registrationController.cadastro);
+
+
 
 // router.get('/cadastro', mainController.cadastroPage) /* GET cadastro page. */
 // router.post('/cadastro', mainController.doRegister) /* POST cadastro page. */
