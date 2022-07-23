@@ -11,6 +11,13 @@ const registrationController = {
       telefone,
       password,
       confirm_password,
+      address,
+      number,
+      complemento,
+      bairro,
+      city,
+      state,
+      cep,
     } = req.body;
 
     const usuario = await database.Clientes.create({
@@ -21,9 +28,21 @@ const registrationController = {
       cpf,
       data_nascimento: birthdate,
       telefone,
+
     });
 
     console.log(usuario);
+
+    const endereco = await database.Cliente_endereco.create({
+      cliente_id: usuario.id,
+      endereco: address,
+      numero: number,
+      complemento,
+      bairro,
+      cidade: city,
+      estado: state,
+      cep,
+      });
 
     return res.json({
       id: usuario.id,
@@ -34,6 +53,14 @@ const registrationController = {
       cpf: usuario.cpf,
       data_nascimento: usuario.data_nascimento,
       telefone: usuario.telefone,
+      // id: endereco.id,
+      endereco: endereco.endereco,
+      numero: endereco.numero,
+      complemento: endereco.complemento,
+      bairro: endereco.bairro,
+      cidade: endereco.cidade,
+      estado: endereco.estado,
+      cep: endereco.cep,
     });
   },
 
@@ -41,9 +68,6 @@ const registrationController = {
     return res.render("registration");
   },
 
-  adressRegistrationPage: (req, res) => {
-    return res.render("adressregistration");
-  },
 };
 
 module.exports = registrationController;

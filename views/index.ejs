@@ -26,17 +26,23 @@
                 <div class="bannerHome__slogan">
                     <span class="bannerHome__slogan__title">BeBasic,  praticidade e  leveza.</span><br>
                     <span class="bannerHome__slogan__description">Camisetas Premium de puro algodão egipcio fairtrade.</span>
+
+                    <h2 class="COLOCAR AQUI O CSS DESSE ERRO"><% if(message) { %>
+                        <div class="alert alert-info" role="alert"><%=message %></div>
+                        <% } %>
+                    </h2>
+
                 </div>
-            </div>            
+            </div>
         </div>
     </main>
 
 <!-- FOOTER -->
     <%- include('partials/footer.ejs') %>
 
-   
+
 <script src="/scripts/main.js"></script>
-    
+
 </body>
 </html>
 

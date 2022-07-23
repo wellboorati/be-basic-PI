@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+
 <!-- HEADER -->
 <%- include('partials/header.ejs') %>
 
@@ -23,41 +23,39 @@
   <div class="containerbackground_adressRegistrarion">
   <div class="adressRegistration_container">
   <div class="form_2_container">
- 
+
     <div class="form_2">
       <div class="form_wrap">
         <h2 class="adress_title">Endereço de entrega</h2>
-        <p>
+        <!-- <p>
             <label for="name">Nome do Destinatário*</label><br/>
             <input type="text" required placeholder="Digite seu nome completo" name="name" id="name"/><br/>
-        </p>
-        <p>
-            <label for="cep">CEP*</label><br />
-            <input type="text" required placeholder="Ex 00.000-000" id="cep"/><br/>
-        </p>
+        </p> -->
+        <form action="adressRegistration" method="post">
         <p>
           <label for="address">Endereço*</label><br />
-          <input type="text" required placeholder="Rua / Avenida / Praça" id="address"/><br/>
+          <input type="text" name="address" required placeholder="Rua / Avenida / Praça" id="address"/><br/>
         </p>
-
         <p>
           <label for="number">Número*</label><br/>
-          <input type="text" required placeholder="Número" id="number"/><br/>
+          <input type="text" name="number"required placeholder="Número" id="number"/><br/>
         </p>
-
         <p>
+            <label for="complemento">Complemento*</label><br />
+            <input type="text" name="complemento" required placeholder="Casa / Apartamento" id="cep"/><br/>
+        </p><p>
           <label for="bairro">Bairro*</label><br />
-          <input type="text" required placeholder="Bairro" id="bairro"/><br/>
+          <input type="text" name="bairro" required placeholder="Bairro" id="bairro"/><br/>
         </p>
 
         <p>
-          <label for="cidade">Cidade*</label><br />
-          <input type="text" required placeholder="Cidade" id="cidade"/><br />
+          <label for="city">Cidade*</label><br />
+          <input type="text" name="city"required placeholder="Cidade" id="cidade"/><br />
         </p>
 
         <p>
           <label for="state">Estado*</label><br />
-          <input list="state" required/>
+          <input list="state" name="state" required/>
           <datalist id="state">
             <option value="AC"></option>
             <option value="AL"></option>
@@ -87,13 +85,17 @@
             <option value="SP"></option>
             <option value="TO"></option>
           </datalist>
-
-          <br/>
-        </p>
-
+        <p>
+          <label for="cep">CEP*</label><br />
+          <input type="text" name="cep" required placeholder="Ex 00.000-000" id="cep"/><br/>
+      </p>
+      <!-- <label for="endereco_entrega">Endereço de entrega? </label><br/>
+      <input type="boolean" name="endereco_entrega" required placeholder="Mínimo de 8 caracteres" name="password" id="password"/><br/> -->
         <br/>
-
+        </p>
+        <br/>
         <button class="btn_address" type="submit">Entregar neste endereço</button>
+      </form>
       </div>
       </div>
       </div>

@@ -6,24 +6,27 @@ const router = express.Router();
 const mainController = require('../controllers/mainController');
 const loginController = require('../controllers/loginController');
 const registrationController = require('../controllers/registrationController');
-
+const adressRegistrationController = require('../controllers/adressRegistrationController');
 
 /* Home pages */
 router.get('/', mainController.homePage)
 router.get('/paineldousuario', mainController.painelPage) /* GET login page. */
 router.get('/produtos', mainController.productsPage)
-router.get('/registration', registrationController.registrationPage)
-router.get('/adressregistration', registrationController.adressRegistrationPage)
-router.get('/login', loginController.loginPage)
+
 router.get('/resetpassword', mainController.resetPasswordPage)
 //checkout
 router.get('/checkout', mainController.checkoutPage)
-
 router.get('/productdetails', mainController.productdetailsPage)
 
+router.get('/login', loginController.loginPage)
+router.post('/login', loginController.login)
 
+
+router.get('/registration', registrationController.registrationPage)
 router.post('/registration', registrationController.cadastro);
 
+router.get('/adressregistration', adressRegistrationController.adressRegistrationPage)
+router.post('/adressregistration', adressRegistrationController.cadastro_endereco);
 
 
 // router.get('/cadastro', mainController.cadastroPage) /* GET cadastro page. */
