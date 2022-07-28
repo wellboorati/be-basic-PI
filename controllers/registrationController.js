@@ -1,4 +1,5 @@
 const database = require("../models");
+const { validationResult } = require('express-validator');
 
 const registrationController = {
   cadastro: async (req, res) => {

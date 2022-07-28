@@ -25,25 +25,34 @@
         <div class="registration__form">
           <h2 class="cadastre_se_title">Cadastre-se</h2>
           <p class="personal_data">Preencha abaixo com seus dados pessoais</p>
+          
+          <% if (typeof errors !== 'undefined') { %>
+          <ul>
+            <% for(let error in errors ) {%>
+            <li><%= errors[error].msg %> </li>
+            <% } %>
+          </ul>
+          <% } %>
+
           <form action="registration" method="post">
             <p>
               <label for="name">Nome Completo (Sem Abreviações)*</label><br/>
-              <input type="text" required placeholder="Digique seu nome completo" name="name" id="name"/><br/>
+              <input type="text" placeholder="Digique seu nome completo" name="name" id="name"/><br/>
             </p>
             <p>
               <label for="email">Seu e-mail</label><br/>
-              <input type="email" required placeholder="Digite seu email" name="email" id="email"/><br/>
+              <input type="email"  placeholder="Digite seu email" name="email" id="email"/><br/>
             </p>
             <p>
               <label for="gender">Sexo</label><br/>
-              <input list="gender" required name="gender" placeholder="Masculino / Feminino"/><br/>
+              <input list="gender" name="gender" placeholder="Masculino / Feminino"/><br/>
               <datalist id="gender">
               <option value="Masculino"></option>
               <option value="Feminino"></option>
             </p>
             <p>
               <label for="cpf">Seu CPF</label><br/>
-              <input type="text" required placeholder="Ex: 000.000.000-00" name="cpf" id="cpf" pattern="[0-9]{11}"/><br/>
+              <input type="text" placeholder="Ex: 000.000.000-00" name="cpf" id="cpf" pattern="[0-9]{11}"/><br/>
             </p>
             <p>
               <label for="birthdate">Seu aniversário</label><br/>
@@ -51,40 +60,40 @@
             </p>
             <p>
               <label for="telefone">Seu Telefone</label><br/>
-              <input type="text" required placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"/><br/>
+              <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"/><br/>
             </p>
             <div class="password_container">
               <p id="senha">
                 <label for="senha">Senha</label><br/>
-                <input type="password" required placeholder="Mínimo de 8 caracteres" name="password" id="password"/><br/>
-                <input type="password" required placeholder="Mínimo de 8 caracteres" name="confirm_password" id="confirm_password"/><br/>
+                <input type="password" placeholder="Mínimo de 8 caracteres" name="password" id="password"/><br/>
+                <input type="password" placeholder="Mínimo de 8 caracteres" name="confirm_password" id="confirm_password"/><br/>
                 <!-- <input class="saving_user_input" id="checkbox" type="checkbox" onclick="showPass()">
                 <span class="saving_user" style="color: #40413f;">Salvar usuário e senha?</span>
               </p> -->
               </div>
             <label for="address">Endereço*</label><br />
-          <input type="text" name="address" required placeholder="Rua / Avenida / Praça" id="address"/><br/>
+          <input type="text" name="address" placeholder="Rua / Avenida / Praça" id="address"/><br/>
         </p>
         <p>
           <label for="number">Número*</label><br/>
-          <input type="text" name="number"required placeholder="Número" id="number"/><br/>
+          <input type="text" name="number"placeholder="Número" id="number"/><br/>
         </p>
         <p>
             <label for="complemento">Complemento*</label><br />
-            <input type="text" name="complemento" required placeholder="Casa / Apartamento" id="cep"/><br/>
+            <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep"/><br/>
         </p><p>
           <label for="bairro">Bairro*</label><br />
-          <input type="text" name="bairro" required placeholder="Bairro" id="bairro"/><br/>
+          <input type="text" name="bairro" placeholder="Bairro" id="bairro"/><br/>
         </p>
 
         <p>
           <label for="city">Cidade*</label><br />
-          <input type="text" name="city"required placeholder="Cidade" id="cidade"/><br />
+          <input type="text" name="city"placeholder="Cidade" id="cidade"/><br />
         </p>
 
         <p>
           <label for="state">Estado*</label><br />
-          <input list="state" name="state" required/>
+          <input list="state" name="state" />
           <datalist id="state">
             <option value="AC"></option>
             <option value="AL"></option>
@@ -116,7 +125,7 @@
           </datalist>
         <p>
           <label for="cep">CEP*</label><br />
-          <input type="text" name="cep" required placeholder="Ex 00.000-000" id="cep"/><br/>
+          <input type="text" name="cep" placeholder="Ex 00.000-000" id="cep"/><br/>
       </p>
             
             
