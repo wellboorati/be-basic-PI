@@ -5,6 +5,10 @@ const mainController = {
     return res.render('index')
     },
 
+    adminPage: (req, res) => {
+        return res.render('adminpage')
+    },
+
     painelPage: (req, res) => {
         return res.render('paineldousuario')
     },

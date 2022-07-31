@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    list-style: none; 
+    
+}
+
+a{text-decoration: none;
+color: black;}
+
+h1,h4{
+    color: black;
+    
+}
+.containerbackgroundamin{
+    
+    background: url(../images/guy.png) no-repeat center;
+    background-size: cover;
+       
+    
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1vw;
+    font-size: 2vw;
+    
+    
+    
+       
+}
+
+.menu li{
+    margin: 1vw;
+}
+
+.Menu_1{
+    padding: 1vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 2vw;
+    border: 2px solid #AAAAAA;
+    background-color: #FFFFFF;
+        opacity: 0.7;
+    
+    
+            
+}
+
+.Menu_Geral{
+    display: flex;
+    flex-direction:column;
+    margin-left: 3vw;
+    align-items: center;
+    
+    
+}
+
+
+
+.Menu_2{
+    margin: 1vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    border: 2px solid #AAAAAA;
+    height: 20vw;
+    width: 100%;
+    background-color: #FFFFFF;
+        opacity: 0.7;
+}
+
+.Menu_3{
+    margin: 1vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    border: 2px solid #AAAAAA;
+    height: max-content;
+    width: 100%; 
+    background-color: #FFFFFF;
+        opacity: 0.7; 
+}
+
+table, th, td {
+        border: 1px solid;
+        width: 2vw;
+        color: black;
+        font-style: bold;
+        background-color: #FFFFFF;
+        opacity: 0.7;
+        
+}
+
+  
+
+@media (max-width:600px){
+    .containerbackgroundamin{
+    display:flex;
+    flex-direction:column
+}
+
+}

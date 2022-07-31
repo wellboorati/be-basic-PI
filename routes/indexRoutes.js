@@ -36,6 +36,9 @@ router.post('/adressregistration', adressRegistrationController.cadastro_enderec
 router.get('/carrinho', mainController.carrinhoPage) /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 
+router.get('/adminpage', mainController.adminPage) /* GET carrinho page. */
+// router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
+
 
 // router.post('/login', mainController.doLogin) /* POST do login. */
 // router.get('/logout', mainController.doLogout) /* POST do login. */
