@@ -22,7 +22,6 @@ const registrationController = {
     } = req.body;
 
     const usuario = await database.Clientes.create({
-      // id:1,
       nome: name,
       email,
       senha: password,
@@ -30,7 +29,7 @@ const registrationController = {
       cpf,
       data_nascimento: birthdate,
       telefone,
-      // admnistrador: false
+      admnistrador: false
 
     });
 

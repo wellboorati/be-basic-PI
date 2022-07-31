@@ -1,4 +1,6 @@
 const database = require("../models");
+// const fornecedor = require("../controllers/fornecedorController/")
+
 
 const produtosEstoqueController = {
   cadastro_produtos_estoque: async (req, res) => {
@@ -12,7 +14,8 @@ const produtosEstoqueController = {
 
 
     const produtosEstoque = await database.Produto_estoque.create({
-      id: fornecedor_id,
+      // fornecedor_id: fornecedor.id,
+      fornecedor_id,
       nome,
       preco,
       quantidade_disponivel: quantidade,
@@ -22,7 +25,7 @@ const produtosEstoqueController = {
     console.log(produtosEstoque);
 
     return res.json({
-      id: produtosEstoque.id,
+      fornecedor_id: produtosEstoque.id,
       nome: produtosEstoque.nome,
       preco: produtosEstoque.preco,
       quantidade: produtosEstoque.quantidade_disponivel,

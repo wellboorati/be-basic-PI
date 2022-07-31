@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeBasic - Cadastro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../stylesheets/style.css">
+<link rel="stylesheet" href="../stylesheets/registration.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<%- include('partials/header.ejs') %>
+
+<main>
+  <div class="containerbackground_registration">
+    <section class="registration_content_page">
+      <div class="registration_wrap">
+        <div class="registration__form">
+          <h2 class="cadastre_se_title">Cadastre-se</h2>
+          <p class="personal_data">Preencha abaixo com seus dados pessoais</p>
+          
+          <% if (typeof errors !== 'undefined') { %>
+          <ul>
+            <% for(let error in errors ) {%>
+            <li><%= errors[error].msg %> </li>
+            <% } %>
+          </ul>
+          <% } %>
+
+          <form action="fornecedor" method="post">
+            <p>
+              <label for="empresa">empresa (Sem Abreviações)*</label><br/>
+              <input type="text" placeholder="Digique seu nome completo" empresa="empresa" id="empresa"/><br/>
+            </p>
+            <p>
+              <label for="nome">Nome</label><br/>
+              <input type="text"  placeholder="Digite seu nome" name="nome" id="nome"/><br/>
+            </p>
+            <p>
+                <label for="produto">produto</label><br/>
+                <input type="text"  placeholder="Digite seu produto" name="produto" id="produto"/><br/>
+              </p>
+            <p>
+              <label for="telefone">Seu Telefone</label><br/>
+              <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"/><br/>
+            </p>
+            <p>
+                <label for="email">Seu e-mail</label><br/>
+                <input type="email"  placeholder="Digite seu email" name="email" id="email"/><br/>
+              </p>
+            
+            <label for="endereco">Endereço*</label><br />
+          <input type="text" name="endereco" placeholder="Rua / Avenida / Praça" id="address"/><br/>
+        </p>
+        <p>
+          <label for="numero">Número*</label><br/>
+          <input type="text" name="numero"placeholder="Número" id="numero"/><br/>
+        </p>
+        <p>
+            <label for="complemento">Complemento*</label><br />
+            <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep"/><br/>
+        </p><p>
+          <label for="bairro">Bairro*</label><br />
+          <input type="text" name="bairro" placeholder="Bairro" id="bairro"/><br/>
+        </p>
+
+        <p>
+          <label for="cidade">Cidade*</label><br />
+          <input type="text" name="cidade"placeholder="Cidade" id="cidade"/><br />
+        </p>
+
+        <p>
+          <label for="estado">Estado*</label><br />
+          <input list="estado" name="estado" />
+          <datalist id="estado">
+            <option value="AC"></option>
+            <option value="AL"></option>
+            <option value="AM"></option>
+            <option value="AP"></option>
+            <option value="BA"></option>
+            <option value="CE"></option>
+            <option value="DF"></option>
+            <option value="ES"></option>
+            <option value="GO"></option>
+            <option value="MA"></option>
+            <option value="MG"></option>
+            <option value="MS"></option>
+            <option value="MT"></option>
+            <option value="PA"></option>
+            <option value="PB"></option>
+            <option value="PE"></option>
+            <option value="PI"></option>
+            <option value="PR"></option>
+            <option value="RJ"></option>
+            <option value="RO"></option>
+            <option value="RN"></option>
+            <option value="RR"></option>
+            <option value="RS"></option>
+            <option value="SC"></option>
+            <option value="SE"></option>
+            <option value="SP"></option>
+            <option value="TO"></option>
+          </datalist>
+            <button class="btn_finalizarCadastro_continuarComprando">Finalizar Cadastro</button>
+
+            <p class="paragraph_privacyPolicy">Ao continuar com o acesso, você está concordando com a nossa <a href="#">Política de Privacidade</a> </p>
+
+            <!-- <button class="btn_finalizarCadastro_continuarComprando">Continuar Comprando</button> -->
+            </div>
+
+        </form>
+
+
+        <br />
+
+        <br />
+      </div>
+      </section>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

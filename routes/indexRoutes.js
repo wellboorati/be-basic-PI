@@ -8,6 +8,7 @@ const loginController = require('../controllers/loginController');
 const registrationController = require('../controllers/registrationController');
 const adressRegistrationController = require('../controllers/adressRegistrationController');
 const produtosEstoqueController = require('../controllers/produtosEstoqueController');
+const fornecedorController = require('../controllers/fornecedorController');
 const { validateRegister } = require('../middlaware/registerValidation');
 const auth = require('../middlaware/auth')
 
@@ -27,6 +28,9 @@ router.post('/login', loginController.login)
 
 router.get('/registration', registrationController.registrationPage)
 router.post('/registration', registrationController.cadastro);
+
+router.get('/fornecedor', fornecedorController.fornecedorRegistration)
+router.post('/fornecedor', fornecedorController.cadastro_fornecedor);
 
 // router.post('/registration', validateRegister, registrationController.cadastro);
 
