@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BeBasic - Cadastro de Produtos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../stylesheets/style.css">
+<link rel="stylesheet" href="../stylesheets/produtosEstoque.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<%- include('partials/header.ejs') %>
+
+<main>
+  <div class="containerbackground">
+    <section class="content_page">
+      <div class="wrap">
+        <div class="form">
+
+          <p class="personal_data">Preencha abaixo os dados dos Produtos</p><br>
+          <br>
+
+            <form action="produtosestoque" method="post"> <!--erro aqui-->
+
+            <p>
+              <label for="fornecedor_id">Id Fornecedor</label><br/>
+              <input type="text" required placeholder="Digite o Id do Fornecedor" name="fornecedor_id" id="fornecedor_id"/><br/>
+            </p>
+
+            <p>
+              <label for="nome">Nome</label><br/>
+              <input type="text" required placeholder="Digite o nome do produto" name="nome" id="nome" /><br/>
+            </p>
+
+            <p>
+              <label for="preco">Preço</label><br/>
+              <input type="number" required placeholder="Digite o preço do produto" name="preco" id="preco" /><br/>
+            </p>
+
+            <p>
+              <label for="quantidade">Quantidade</label><br/>
+              <input type="number" required placeholder="Digite a quantidade" name="quantidade" id="quantidade"/><br/>
+            </p>
+
+            <p>
+              <label for="ativo">Disponibilidade</label><br/>
+              <input list="ativo" required name="ativo" placeholder="Ativo / Inativo"/><br/>
+              <datalist id="ativo">
+              <option value="Ativo"></option>
+              <option value="Inativo"></option>
+            </p>
+
+            <button class="btn_finalizarCadastro">Finalizar Cadastro</button>
+
+            </div>
+
+        </form>
+        <br />
+        <br />
+      </div>
+      </section>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
