@@ -7,12 +7,17 @@ const loginController = {
       const usuarioSalvo = await database.Clientes.findOne({
         where: { email: email },
       })
-      req.session.usuario = usuarioSalvo;;
+      req.session.usuario = usuarioSalvo;
       console.log(senha);
       console.log(usuarioSalvo.senha);
       if (usuarioSalvo) {
         const senhaValida = senha === usuarioSalvo.senha;
         if (senhaValida) {
+          if (usuarioSalvo.admnistrador) {
+            res.status(200).render("resetPassword", {
+              usuarioSalvo: req.session.usuario
+            });
+          }
           res.status(200).render("index", {
             usuarioSalvo: req.session.usuario
           });

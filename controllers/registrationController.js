@@ -29,6 +29,7 @@ const registrationController = {
       cpf,
       data_nascimento: birthdate,
       telefone,
+      admnistrador: false
 
     });
 
