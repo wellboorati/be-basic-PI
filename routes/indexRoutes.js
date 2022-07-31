@@ -7,9 +7,9 @@ const mainController = require('../controllers/mainController');
 const loginController = require('../controllers/loginController');
 const registrationController = require('../controllers/registrationController');
 const adressRegistrationController = require('../controllers/adressRegistrationController');
+const produtosEstoqueController = require('../controllers/produtosEstoqueController');
 const { validateRegister } = require('../middlaware/registerValidation');
 const auth = require('../middlaware/auth')
-
 
 /* Home pages */
 router.get('/', auth, mainController.homePage)
@@ -26,10 +26,16 @@ router.post('/login', loginController.login)
 
 
 router.get('/registration', registrationController.registrationPage)
-router.post('/registration', validateRegister, registrationController.cadastro);
+router.post('/registration', registrationController.cadastro);
+
+// router.post('/registration', validateRegister, registrationController.cadastro);
 
 router.get('/adressregistration', adressRegistrationController.adressRegistrationPage)
 router.post('/adressregistration', adressRegistrationController.cadastro_endereco);
+
+
+router.get('/produtosestoque', produtosEstoqueController.productInventoryPage)
+router.post ('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
 
 
 // router.get('/cadastro', mainController.cadastroPage) /* GET cadastro page. */
@@ -42,5 +48,8 @@ router.get('/carrinho', mainController.carrinhoPage) /* GET carrinho page. */
 
 // router.post('/login', mainController.doLogin) /* POST do login. */
 // router.get('/logout', mainController.doLogout) /* POST do login. */
+
+
+
 
 module.exports = router

@@ -1,3 +1,4 @@
+
 const database = require("../models");
 
 const loginController = {
@@ -31,7 +32,6 @@ const loginController = {
       console.log(err);
       res.status(500).send("Algo deu errado, tente novamente.");
     }
-    // req.session.usuario = usuarioSalvo;
   },
 
   loginPage: (req, res) => {

@@ -25,7 +25,10 @@ const mainController = {
     },
     productdetailsPage: (req, res) => {
         return res.render('productdetails')
-    }
+    },
+    productInventoryPage: (req, res) => {
+        return res.render('produtosEstoque')
+        }
 
     // loginPage: (req, res) => {
     //     return res.render('login')
