@@ -1,19 +1,26 @@
+
 const database = require("../models");
 
 const loginController = {
   login: async (req, res) => {
     try {
       const { email, senha } = req.body;
-      const usuario = await database.Clientes.findOne({
+      const usuarioSalvo = await database.Clientes.findOne({
         where: { email: email },
-      });
+      })
+      req.session.usuario = usuarioSalvo;
       console.log(senha);
-      console.log(usuario.senha);
-      if (usuario) {
-        const senhaValida = senha === usuario.senha;
+      console.log(usuarioSalvo.senha);
+      if (usuarioSalvo) {
+        const senhaValida = senha === usuarioSalvo.senha;
         if (senhaValida) {
+          if (usuarioSalvo.admnistrador) {
+            res.status(200).render("resetPassword", {
+              usuarioSalvo: req.session.usuario
+            });
+          }
           res.status(200).render("index", {
-            message: "Usuário logado",
+            usuarioSalvo: req.session.usuario
           });
         } else {
           res.status(401).json("Senha incorreta, tente novamente.");

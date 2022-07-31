@@ -41,8 +41,7 @@ body {
     display: grid;
     grid-template-areas: 
     "first__img second__img third__img"
-    "fourth__img text__between_img fifth__img"  
-    ;
+    "fourth__img text__between_img fifth__img";
 }
 
 .single__img__subtitle {
@@ -86,7 +85,6 @@ body {
     justify-content: space-between;
     width: 200px;
     cursor: pointer;
-    
 }
 
 .corPreto{

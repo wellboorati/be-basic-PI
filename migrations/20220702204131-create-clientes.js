@@ -29,6 +29,9 @@ module.exports = {
       telefone: {
         type: Sequelize.STRING
       },
+      admnistrador: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

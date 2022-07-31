@@ -3,7 +3,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const session = require('express-session');
+
 
 //Rotas aqui
 const indexRouter = require('./routes/indexRoutes');
@@ -12,17 +14,25 @@ const loginRouter = require('./routes/loginRoutes');
 
 const app = express();
 app.use(bodyParser.json());
-
+// app.use(session);
 // view engine setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+//configurando session
+app.use(session({
+  secret: "projetoBeBasic",
+  resave: true,
+  saveUninitialized: true
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 // rotas que levam para as páginas:
 app.use('/', indexRouter);

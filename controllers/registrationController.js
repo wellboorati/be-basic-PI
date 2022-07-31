@@ -1,4 +1,5 @@
 const database = require("../models");
+const { validationResult } = require('express-validator');
 
 const registrationController = {
   cadastro: async (req, res) => {
@@ -28,6 +29,7 @@ const registrationController = {
       cpf,
       data_nascimento: birthdate,
       telefone,
+      admnistrador: false
 
     });
 
@@ -53,6 +55,7 @@ const registrationController = {
       cpf: usuario.cpf,
       data_nascimento: usuario.data_nascimento,
       telefone: usuario.telefone,
+      // admnistrador: false,
       // id: endereco.id,
       endereco: endereco.endereco,
       numero: endereco.numero,
