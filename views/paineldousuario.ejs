@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeBasic - Painel do Usuário</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../stylesheets/style.css">
-</head>
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
 <body>
 
-<!-- HEADER -->
-    <%- include('partials/header.ejs') %>
-
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
 
     <main class="main login">
         <div class="container">
@@ -23,10 +12,10 @@
                 <div class="breadcrumb">Home &gt; Login</div>
                 <div class="login__content">
 
-                    <div class="main__content login__content__wrap">                       
-                        
+                    <div class="main__content login__content__wrap">
+
                         <div class="login__content__wrap__avatar">
-                            <img src="../images/avatar.png" alt="" width="115" >
+                            <img src="../images/avatar.png" alt="" width="115">
                         </div>
 
                         <ul class="login__content__lead">
@@ -64,12 +53,8 @@
                         <br><br><strong>Pedidos:</strong><br><br>
 
                         <ul>
-                            <li>
-                                <a href="#">Acompanhe Seus Pedidos</a>
-                            </li>
-                            <li>
-                                <a href="#">Imprimir 2 via de Boleto</a>
-                            </li>
+                            <li><a href="#">Acompanhe Seus Pedidos</a></li>
+                            <li><a href="#">Imprimir 2 via de Boleto</a></li>
                         </ul>
 
                     </div>
@@ -140,63 +125,11 @@
                     </div>
 
                 </div>
-            </div>            
+            </div>
         </div>
     </main>
 
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer__wrap">
-                <div class="footer__wrap__col footer__wrap__col1">
-                    FAÇA PARTE DO CLUBE!<br><br>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
 
-                    Receba conteúdo sobre inovação, empreendedorismo, investimentos e filosofia no seu e-mail. Além de muita oferta boa também!
-                </div>
-                <div class="footer__wrap__col footer__wrap__col2">
-                    <a href="#" class="footer__wrap__logo">
-                        <img src="../images/logo.png" alt="BeBasic">
-                    </a>
-                    <div class="network">
-                        <a href="#" class="network__item">
-                            <img src="../images/ico-twitter.png" alt="Twitter" class="img-fluid">
-                        </a>
-                        <a href="#" class="network__item">
-                            <img src="../images/ico-instagram.png" alt="Instagram" class="img-fluid">
-                        </a>
-                        <a href="#" class="network__item">
-                            <img src="../images/ico-facebook.png" alt="Facebook" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-                <div class="footer__wrap__col footer__wrap__col3">
-                    CONDIÇÕES DE FRETE.<br><br>
-
-                    * Frete grátis válido para as regiões Sul, Sudeste, Centro-Oeste e Nordeste.
-                </div>
-                <div class="footer__wrap__col footer__wrap__col4">
-                    <ul class="footer__wrap__menu">
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Política de privacidade</a>
-                        </li>
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Política de trocas e devoluções</a>
-                        </li>
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Política de frete</a>
-                        </li>
-                        <li class="footer__wrap__menu__item">
-                            <a href="#">Termos de serviço</a>
-                        </li>
-                    </ul>                    
-                </div>
-            </div>
-            <div class="footer__copy">
-                © 2022 BeBasic CNPJ: 66.077.940/0001-99 | Av. das Américas 2022 loja 22, Nova California. Americana, SP CEP: 11.110-000 | <a href="mailto: atendimento@bebasic.com.br">atendimento@bebasic.com.br</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../scripts/main.js"></script>
-    
-</body>
-</html>
+</body></html>
