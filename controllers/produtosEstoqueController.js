@@ -14,6 +14,7 @@ const produtosEstoqueController = {
 
 
     const produtosEstoque = await database.Produto_estoque.create({
+
       // fornecedor_id: fornecedor.id,
       fornecedor_id,
       nome,
@@ -22,20 +23,29 @@ const produtosEstoqueController = {
       ativo,
     });
 
-    console.log(produtosEstoque);
+    
 
-    return res.json({
-      fornecedor_id: produtosEstoque.id,
-      nome: produtosEstoque.nome,
-      preco: produtosEstoque.preco,
-      quantidade: produtosEstoque.quantidade_disponivel,
-      ativo: produtosEstoque.ativo,
-    });
+    // console.log(produtosEstoque);
+
+    this.listarProdutos;
+
+    // return res.json({
+    //   fornecedor_id: produtosEstoque.id,
+    //   nome: produtosEstoque.nome,
+    //   preco: produtosEstoque.preco,
+    //   quantidade: produtosEstoque.quantidade_disponivel,
+    //   ativo: produtosEstoque.ativo,
+    // });
   },
 
   productInventoryPage: (req, res) => {
     return res.render("produtosestoque");
   },
+
+  listarProdutos: async (req,res)=>{
+    const produtos = await database.Produto_estoque.findAll()
+    return res.json(produtos);
+  }
 
 };
 
