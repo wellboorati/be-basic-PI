@@ -1,112 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BeBasic - Endereço</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="../stylesheets/style.css">
-<link rel="stylesheet" href="../stylesheets/adressRegistration.css">
-</head>
+<!-- header -->
+<%- include('partials/header.ejs') %>
 
 <body>
 
-<!-- HEADER -->
-<%- include('partials/header.ejs') %>
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
+
+    <main>
+        <div class="containerbackground_adressRegistrarion">
+            <div class="container form_2"">
+                <div class="row">
+                    <div class="col">
+                        <div class="">
+
+                            <h2 class="adress_title">Endereço de entrega</h2>
+
+                            <form action="adressRegistration" method="post">
+                                <div>
+                                    <label for="address">Endereço*</label><br/>
+                                    <input type="text" name="address" required placeholder="Rua / Avenida / Praça" id="address" class="form-control" /><br/>
+                                </div>
+                                <div>
+                                    <label for="number">Número*</label><br/>
+                                    <input type="text" name="number" required placeholder="Número" id="number" class="form-control" /><br/>
+                                </div>
+                                <div>
+                                    <label for="complemento">Complemento*</label><br/>
+                                    <input type="text" name="complemento" required placeholder="Casa / Apartamento" id="complemento" class="form-control" /><br/>
+                                </div>
+                                <div>
+                                    <label for="bairro">Bairro*</label><br/>
+                                    <input type="text" name="bairro" required placeholder="Bairro" id="bairro" class="form-control" /><br/>
+                                </div>
+
+                                <div>
+                                    <label for="city">Cidade*</label><br/>
+                                    <input type="text" name="city" required placeholder="Cidade" id="city" class="form-control" /><br/>
+                                </div>
+
+                                <div>
+                                    <label for="state">Estado*</label><br/>
+                                    <input list="state" name="state" required class="form-control" />
+
+                                    <datalist id="state">
+                                        <option value="AC"></option>
+                                        <option value="AL"></option>
+                                        <option value="AM"></option>
+                                        <option value="AP"></option>
+                                        <option value="BA"></option>
+                                        <option value="CE"></option>
+                                        <option value="DF"></option>
+                                        <option value="ES"></option>
+                                        <option value="GO"></option>
+                                        <option value="MA"></option>
+                                        <option value="MG"></option>
+                                        <option value="MS"></option>
+                                        <option value="MT"></option>
+                                        <option value="PA"></option>
+                                        <option value="PB"></option>
+                                        <option value="PE"></option>
+                                        <option value="PI"></option>
+                                        <option value="PR"></option>
+                                        <option value="RJ"></option>
+                                        <option value="RO"></option>
+                                        <option value="RN"></option>
+                                        <option value="RR"></option>
+                                        <option value="RS"></option>
+                                        <option value="SC"></option>
+                                        <option value="SE"></option>
+                                        <option value="SP"></option>
+                                        <option value="TO"></option>
+                                    </datalist>
+                                </div><br>
+                                <div>
+                                    <label for="cep">CEP*</label><br/>
+                                    <input type="text" name="cep" required placeholder="Ex 00.000-000" id="cep" class="form-control" /><br/>
+                                </div>
+                                <button class="btn btn-primary mx-auto" type="submit">Entregar neste endereço</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
-<main >
-  <div class="containerbackground_adressRegistrarion">
-  <div class="adressRegistration_container">
-  <div class="form_2_container">
+    <!-- <main>
+        <div class="containerbackground_adressRegistrarion">
+            <div class="adressRegistration_container">
+                <div class="form_2_container">
 
-    <div class="form_2">
-      <div class="form_wrap">
-        <h2 class="adress_title">Endereço de entrega</h2>
-        <!-- <p>
-            <label for="name">Nome do Destinatário*</label><br/>
-            <input type="text" required placeholder="Digite seu nome completo" name="name" id="name"/><br/>
-        </p> -->
-        <form action="adressRegistration" method="post">
-        <p>
-          <label for="address">Endereço*</label><br />
-          <input type="text" name="address" required placeholder="Rua / Avenida / Praça" id="address"/><br/>
-        </p>
-        <p>
-          <label for="number">Número*</label><br/>
-          <input type="text" name="number"required placeholder="Número" id="number"/><br/>
-        </p>
-        <p>
-            <label for="complemento">Complemento*</label><br />
-            <input type="text" name="complemento" required placeholder="Casa / Apartamento" id="cep"/><br/>
-        </p><p>
-          <label for="bairro">Bairro*</label><br />
-          <input type="text" name="bairro" required placeholder="Bairro" id="bairro"/><br/>
-        </p>
+                    <div class="form_2">
+                        <div class="form_wrap">
+                            <h2 class="adress_title">Endereço de entrega</h2>
+                            <p>
+                                                                    <label for="name">Nome do Destinatário*</label><br/>
+                                                                    <input type="text" required placeholder="Digite seu nome completo" name="name" id="name"/><br/>
+                                                                </p> 
+                            <form action="adressRegistration" method="post">
+                                <p>
+                                    <label for="address">Endereço*</label><br/>
+                                    <input type="text" name="address" required placeholder="Rua / Avenida / Praça" id="address"/><br/>
+                                </p>
+                                <p>
+                                    <label for="number">Número*</label><br/>
+                                    <input type="text" name="number" required placeholder="Número" id="number"/><br/>
+                                </p>
+                                <p>
+                                    <label for="complemento">Complemento*</label><br/>
+                                    <input type="text" name="complemento" required placeholder="Casa / Apartamento" id="cep"/><br/>
+                                </p>
+                                <p>
+                                    <label for="bairro">Bairro*</label><br/>
+                                    <input type="text" name="bairro" required placeholder="Bairro" id="bairro"/><br/>
+                                </p>
 
-        <p>
-          <label for="city">Cidade*</label><br />
-          <input type="text" name="city"required placeholder="Cidade" id="cidade"/><br />
-        </p>
+                                <p>
+                                    <label for="city">Cidade*</label><br/>
+                                    <input type="text" name="city" required placeholder="Cidade" id="cidade"/><br/>
+                                </p>
 
-        <p>
-          <label for="state">Estado*</label><br />
-          <input list="state" name="state" required/>
-          <datalist id="state">
-            <option value="AC"></option>
-            <option value="AL"></option>
-            <option value="AM"></option>
-            <option value="AP"></option>
-            <option value="BA"></option>
-            <option value="CE"></option>
-            <option value="DF"></option>
-            <option value="ES"></option>
-            <option value="GO"></option>
-            <option value="MA"></option>
-            <option value="MG"></option>
-            <option value="MS"></option>
-            <option value="MT"></option>
-            <option value="PA"></option>
-            <option value="PB"></option>
-            <option value="PE"></option>
-            <option value="PI"></option>
-            <option value="PR"></option>
-            <option value="RJ"></option>
-            <option value="RO"></option>
-            <option value="RN"></option>
-            <option value="RR"></option>
-            <option value="RS"></option>
-            <option value="SC"></option>
-            <option value="SE"></option>
-            <option value="SP"></option>
-            <option value="TO"></option>
-          </datalist>
-        <p>
-          <label for="cep">CEP*</label><br />
-          <input type="text" name="cep" required placeholder="Ex 00.000-000" id="cep"/><br/>
-      </p>
-      <!-- <label for="endereco_entrega">Endereço de entrega? </label><br/>
-      <input type="boolean" name="endereco_entrega" required placeholder="Mínimo de 8 caracteres" name="password" id="password"/><br/> -->
-        <br/>
-        </p>
-        <br/>
-        <button class="btn_address" type="submit">Entregar neste endereço</button>
-      </form>
-      </div>
-      </div>
-      </div>
+                                <p>
+                                    <label for="state">Estado*</label><br/>
+                                    <input list="state" name="state" required/>
+                                    <datalist id="state">
+                                        <option value="AC"></option>
+                                        <option value="AL"></option>
+                                        <option value="AM"></option>
+                                        <option value="AP"></option>
+                                        <option value="BA"></option>
+                                        <option value="CE"></option>
+                                        <option value="DF"></option>
+                                        <option value="ES"></option>
+                                        <option value="GO"></option>
+                                        <option value="MA"></option>
+                                        <option value="MG"></option>
+                                        <option value="MS"></option>
+                                        <option value="MT"></option>
+                                        <option value="PA"></option>
+                                        <option value="PB"></option>
+                                        <option value="PE"></option>
+                                        <option value="PI"></option>
+                                        <option value="PR"></option>
+                                        <option value="RJ"></option>
+                                        <option value="RO"></option>
+                                        <option value="RN"></option>
+                                        <option value="RR"></option>
+                                        <option value="RS"></option>
+                                        <option value="SC"></option>
+                                        <option value="SE"></option>
+                                        <option value="SP"></option>
+                                        <option value="TO"></option>
+                                    </datalist>
+                                </p>
+                                <p>
+                                    <label for="cep">CEP*</label><br/>
+                                    <input type="text" name="cep" required placeholder="Ex 00.000-000" id="cep"/><br/>
+                                </p>
+                                <label for="endereco_entrega">Endereço de entrega? </label><br/>
+                                                                      <input type="boolean" name="endereco_entrega" required placeholder="Mínimo de 8 caracteres" name="password" id="password"/><br/> 
+                                <br/>
+                            </p>
+                            <br/>
+                            <button class="btn_address" type="submit">Entregar neste endereço</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</main>
-
-<!-- FOOTER -->
-<%- include('partials/footer.ejs') %>
-
-<script src="/scripts/main.js"></script>
-
-</body>
-</html>
+  </main> -->
+</body><!-- FOOTER --><%- include('partials/footer.ejs') %></body></html>

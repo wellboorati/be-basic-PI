@@ -1,145 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BeBasic - Produtos</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="../stylesheets/style.css">
-<link rel="stylesheet" href="../stylesheets/catalogProducts.css">
-</head>
+<!-- header -->
+<%- include('partials/header.ejs') %>
 
 <body>
-    
-<!-- HEADER -->
-    <%- include('partials/header.ejs') %>
+
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
 
 
-<main class="main__products">
-    
-    <div class="container__products">
-        <div class="products__wrap">
-            <div class="img__title">Camisetas feitas para você! </div>
-            <div class= "display__tshirts">
-                <article class="wrap__img">
-                    <picture class= "first__img">
-                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola O"></a>
-                        <div class="img__subtitle">
-                            <div class="img__subtitle__description">
-                                Camiseta Branca Gola O
-                            </div>
-                            <div class="img__subtitle__price"> R$127,90
-                            </div>
-                        </div>
-                    </picture>
-                </article>
+    <main class="main__products">
 
-                <article class="wrap__img">
-                    <picture class="second__img">
-                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Preta Gola O"></a>
-                        <div class="img__subtitle">
-                            <div class="img__subtitle__description">
-                                Camiseta Preta Gola O
+        <div class="container__products">
+            <div class="products__wrap">
+                <div class="img__title">Camisetas feitas para você!
+                </div>
+                <div class="display__tshirts">
+                    <article class="wrap__img">
+                        <picture class="first__img">
+                            <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola O"></a>
+                            <div class="img__subtitle">
+                                <div class="img__subtitle__description">
+                                    Camiseta Branca Gola O
+                                </div>
+                                <div class="img__subtitle__price">
+                                    R$127,90
+                                </div>
                             </div>
-                            <div class="img__subtitle__price"> R$127,90</div>
-                        </div>
-                    </picture>
-                </article>
+                        </picture>
+                    </article>
+
+                    <article class="wrap__img">
+                        <picture class="second__img">
+                            <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Preta Gola O"></a>
+                            <div class="img__subtitle">
+                                <div class="img__subtitle__description">
+                                    Camiseta Preta Gola O
+                                </div>
+                                <div class="img__subtitle__price">
+                                    R$127,90</div>
+                            </div>
+                        </picture>
+                    </article>
                 </div>
 
                 <div class="img__title">Estilo e simplicidade juntos</div>
-                <div class= "display__tshirts">
-                <article class="wrap__img">
-                    <picture class="third__img">
-                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Joss Branca"></a>
-                        <div class="img__subtitle">
-                            <div class="img__subtitle__description">
-                                Camiseta Azul Gola V
+                <div class="display__tshirts">
+                    <article class="wrap__img">
+                        <picture class="third__img">
+                            <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Joss Branca"></a>
+                            <div class="img__subtitle">
+                                <div class="img__subtitle__description">
+                                    Camiseta Azul Gola V
+                                </div>
+                                <div class="img__subtitle__price">
+                                    R$127,90</div>
                             </div>
-                            <div class="img__subtitle__price"> R$127,90</div>
-                        </div>
-                    </picture>
-                </article>
+                        </picture>
+                    </article>
 
-                <article class="wrap__img">
-                    <picture class="fourth__img">
-                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Cinza Gola V"></a>
-                        <div class="img__subtitle">
-                            <div class="img__subtitle__description">
-                                Camiseta Cinza Gola V
+                    <article class="wrap__img">
+                        <picture class="fourth__img">
+                            <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Cinza Gola V"></a>
+                            <div class="img__subtitle">
+                                <div class="img__subtitle__description">
+                                    Camiseta Cinza Gola V
+                                </div>
+                                <div class="img__subtitle__price">
+                                    R$127,90</div>
                             </div>
-                            <div class="img__subtitle__price"> R$127,90</div>
+                        </picture>
+                    </article>
+                </div>
+
+                <div class="benefits__display">
+                    <article class="benefits__wrap">
+                        <div class="benefits__text">
+                            <h1 class="paragraph__benefits">Conforto e Beleza</h1>
+                            <p class="paragraph__benefits">
+                                Usamos um dos tecidos mais nobres do mundo para a        confecção das nossas Camisetas: O algodão Egípcio!</p>
+
+                            <p class="paragraph__benefits">Suas fibras são em média 3x mais resistentes que o algodão comum, o que faz com que seja mais macia e durável.</p>
+
+                            <p class="paragraph__benefits">Seu brilho natural faz com que esse tipo de algodão tenha cores mais vivas e conserve sua beleza por muito mais tempo.</p>
+
+                            <p class="paragraph__benefits">Descubra por que nossa camiseta é tão querida por milhares de pessoas:</p>
                         </div>
-                    </picture>
-                </article>
-            </div>
+                        <button class="buy__now__button">
+                            COMPRAR
+                        </button>
+                    </article>
 
-            <div class="benefits__display">
-                <article class="benefits__wrap">
-                    <div class="benefits__text">
-                        <h1 class="paragraph__benefits">Conforto e Beleza</h1>
-                        <p class="paragraph__benefits"> Usamos um dos tecidos mais nobres do mundo para a        confecção das nossas Camisetas: O algodão Egípcio!</p> 
-                            
-                        <p class="paragraph__benefits">Suas fibras são em média 3x mais resistentes que o algodão comum, o que faz com que seja mais macia e durável.</p>    
-                            
-                         <p class="paragraph__benefits">Seu brilho natural faz com que esse tipo de algodão tenha cores mais vivas e conserve sua beleza por muito mais tempo.</p>   
-                            
-                        <p class="paragraph__benefits">Descubra por que nossa camiseta é tão querida por milhares de pessoas:</p>    
-                    </div>
-                    <button class="buy__now__button">
-                        COMPRAR
-                    </button>
-                </article>
-                    
 
-                <picture class="advertising__img">
+                    <picture class="advertising__img">
                         <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola V"></a>
-                </picture>
-            </div>
-
-            <div class="benefits__display__2">
-                <picture class="advertising__img">
-                    <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola V"></a>
-                </picture>
-                <article class="benefits__wrap">
-                    <div class="benefits__text">
-                        <h1 class="title__benefits">Conforto e Beleza</h1>
-                        <p class="paragraph__benefits"> Usamos um dos tecidos mais nobres do mundo para a        confecção das nossas Camisetas: O algodão Egípcio!</p> 
-                            
-                        <p class="paragraph__benefits">Suas fibras são em média 3x mais resistentes que o algodão comum, o que faz com que seja mais macia e durável.</p>    
-                            
-                         <p class="paragraph__benefits">Seu brilho natural faz com que esse tipo de algodão tenha cores mais vivas e conserve sua beleza por muito mais tempo.</p>   
-                            
-                        <p class="paragraph__benefits">Descubra por que nossa camiseta é tão querida por milhares de pessoas:</p>    
-                    </div>
-                    <button class="buy__now__button">
-                        COMPRAR
-                    </button>
-                </article>
-                
-            </div>
-
-            <div class="why__bebasic__img">
-                    <picture class="benefits__img">
-                        <a href="#"> <img src="../images/novos-benefícios.jpg" alt=""></a>
                     </picture>
-             </div>
-                    
+                </div>
+
+                <div class="benefits__display__2">
+                    <picture class="advertising__img">
+                        <a href="#"><img src="../images/TechTShirt_Preta-06.jpg" alt="Camiseta Branca Gola V"></a>
+                    </picture>
+                    <article class="benefits__wrap">
+                        <div class="benefits__text">
+                            <h1 class="title__benefits">Conforto e Beleza</h1>
+                            <p class="paragraph__benefits">
+                                Usamos um dos tecidos mais nobres do mundo para a        confecção das nossas Camisetas: O algodão Egípcio!</p>
+
+                            <p class="paragraph__benefits">Suas fibras são em média 3x mais resistentes que o algodão comum, o que faz com que seja mais macia e durável.</p>
+
+                            <p class="paragraph__benefits">Seu brilho natural faz com que esse tipo de algodão tenha cores mais vivas e conserve sua beleza por muito mais tempo.</p>
+
+                            <p class="paragraph__benefits">Descubra por que nossa camiseta é tão querida por milhares de pessoas:</p>
+                        </div>
+                        <button class="buy__now__button">
+                            COMPRAR
+                        </button>
+                    </article>
+
+                </div>
+
+                <div class="why__bebasic__img">
+                    <picture class="benefits__img">
+                        <a href="#">
+                            <img src="../images/novos-benefícios.jpg" alt=""></a>
+                    </picture>
+                </div>
+
+            </div>
         </div>
-    </div>
-    </div>
-</div>
-</div>
-</main>
-    
-<!-- FOOTER -->
+    </main>
+
+    <!-- FOOTER -->
     <%- include('partials/footer.ejs') %>
 
-    <script src="/scripts/main.js"></script>
 
-</body>
-</html>
+</body></html>

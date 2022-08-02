@@ -1,69 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BeBasic - Login</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="../stylesheets/style.css">
-<link rel="stylesheet" href="../stylesheets/login.css">
-</head>
+<!-- header -->
+<%- include('partials/header.ejs') %>
 
 <body>
 
-<!-- HEADER -->
-<%- include('partials/header.ejs') %>
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
 
-<main>
-   <div class="containerbackground_login">
-    <section class="login_content_page">
-      <div class="login_wrap">
-        <div class="login_title">
-           <h1 class="login_title_h1">Faça seu Login </h1>
+    <main>
+        <div class="containerbackground_login">
+            <section class="login_content_page">
+                <div class="login_wrap">
+                    <div class="login_title">
+                        <h1 class="login_title_h1">Faça seu Login
+                        </h1>
+                    </div>
+
+                    <div class="login">
+                        <form action="/login" method="post">
+                            <label for="email"></label>
+                            <input type="email" name="email" required placeholder="Digite seu email" name="email" id="email"/>
+                            <br/>
+                            <label for="senha"></label>
+                            <input type="senha" required placeholder="Digite sua senha" name="senha" id="senha"/>
+                            <br/>
+                            <div class="checkbox">
+                                <input type="checkbox" id="conectado" name="conectado" value="yes"/>
+                                <p class="paragraph_keepmeconected">Mantenha-me conectado</p>
+                            </div>
+                            <br/>
+                            <button class="btn_login" type="submit">CONTINUAR</button>
+                            <br/>
+                            <div>
+                                <p>
+                                    <small>
+                                        <a href="/resetpassword">Esqueceu sua senha?
+                                        </a>
+                                    </small>
+                                </p>
+                                <br/>
+                                <p>
+                                    <small>Ainda não tem conta?
+                                        <a href="/registration">
+                                            Clique aqui
+                                        </a>
+                                        <br/>
+                                    </small>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </div>
-  
-        <div class="login">
-          <form action="/login" method="post">
-            <label for="email"></label>
-            <input type="email" name="email" required placeholder="Digite seu email" name="email" id="email"/>
-            <br/>
-            <label for="senha"></label>
-            <input type="senha" required placeholder="Digite sua senha" name="senha" id="senha"/>
-            <br/>
-            <div class="checkbox">
-              <input type="checkbox" id="conectado" name="conectado" value="yes"/>
-              <p class="paragraph_keepmeconected">Mantenha-me conectado</p>
-            </div>
-            <br/>
-            <button class="btn_login" type="submit">CONTINUAR</button>
-            <br/>
-            <div>
-              <p>
-                <small>
-                  <a href="/resetpassword">Esqueceu sua senha? </a>
-                </small>
-              </p>
-              <br/>
-              <p>
-                <small>Ainda não tem conta?
-                  <a href="/registration"> Clique aqui </a>
-                  <br />
-                </small>
-              </p>
-            </div>
-          </form>
-        </div>
-      </div>
-      </section>
-    </div>
-</main>
+    </main>
 
-<!-- FOOTER -->
-<%- include('partials/footer.ejs') %>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
 
-</body>
-</html>
+</body></html>
