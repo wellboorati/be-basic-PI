@@ -15,7 +15,7 @@ const loginController = {
         const senhaValida = senha === usuarioSalvo.senha;
         if (senhaValida) {
           if (usuarioSalvo.admnistrador) {
-            res.status(200).render("resetPassword", {
+            res.status(200).render("paineldousuario", {
               usuarioSalvo: req.session.usuario
             });
           }

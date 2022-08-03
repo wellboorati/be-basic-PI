@@ -46,25 +46,26 @@ const registrationController = {
       cep,
       });
 
-    return res.json({
-      id: usuario.id,
-      nome: usuario.nome,
-      senha: usuario.senha,
-      email: usuario.email,
-      sexo: usuario.sexo,
-      cpf: usuario.cpf,
-      data_nascimento: usuario.data_nascimento,
-      telefone: usuario.telefone,
-      // admnistrador: false,
-      // id: endereco.id,
-      endereco: endereco.endereco,
-      numero: endereco.numero,
-      complemento: endereco.complemento,
-      bairro: endereco.bairro,
-      cidade: endereco.cidade,
-      estado: endereco.estado,
-      cep: endereco.cep,
-    });
+    return res.redirect('/')
+    // res.json({
+    //   id: usuario.id,
+    //   nome: usuario.nome,
+    //   senha: usuario.senha,
+    //   email: usuario.email,
+    //   sexo: usuario.sexo,
+    //   cpf: usuario.cpf,
+    //   data_nascimento: usuario.data_nascimento,
+    //   telefone: usuario.telefone,
+    //   // admnistrador: false,
+    //   // id: endereco.id,
+    //   endereco: endereco.endereco,
+    //   numero: endereco.numero,
+    //   complemento: endereco.complemento,
+    //   bairro: endereco.bairro,
+    //   cidade: endereco.cidade,
+    //   estado: endereco.estado,
+    //   cep: endereco.cep,
+    // });
   },
 
   registrationPage: (req, res) => {
