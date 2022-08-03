@@ -1,0 +1,40 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+
+<!-- HEADER -->
+<%- include('partials/menu.ejs') %>
+
+<main>
+  <div class="containerbackground">
+    <section class="content_page">
+      <div class="wrap">
+
+          <p class="personal_data">Lista de Produtos Cadastrados</p>
+
+          <% if(produtos){ %>
+            <% produtos.forEach(produto => {%>
+                <%= produto.id %>
+                <%= produto.fornecedor_id %>
+                <%= produto.nome %>
+                <%= produto.preco %>
+                <%= produto.quantidade_disponivel %>
+                <%= produto.ativo %><br>
+                <%})} %>
+
+            <button class="btn_cadastrarNovoProduto"><a href="produtosestoque">Cadastrar Novo Produto </a></button>
+            </div>
+
+        <br />
+        <br />
+      </div>
+      </section>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>
