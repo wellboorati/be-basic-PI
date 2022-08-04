@@ -39,7 +39,10 @@ const produtosEstoqueController = {
     return res.render("produtosestoque");//ou res.json
   },
 
-  
+  listarProdutos: async (req,res)=>{
+    const produtos = await database.Produto_estoque.findAll()
+    return res.json(produtos);
+  }
 
 };
 
