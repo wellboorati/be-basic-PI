@@ -1,67 +1,79 @@
 <!-- header -->
 <%- include('partials/header.ejs') %>
 
-<body>
+  <body>
 
-<!-- HEADER -->
-<%- include('partials/menu.ejs') %>
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
 
-<main>
-  <div class="containerbackground">
-    <section class="content_page">
-      <div class="wrap">
-        <div class="form">
+      <main>
 
-          <p class="personal_data">Preencha abaixo os dados dos Produtos</p><br>
-          <br>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h2 class="text-uppercase text-center">Preencha abaixo os dados dos Produtos</h2>
+                <hr />
+                <div class="mt-4 row justify-content-center">
+                  <div class="col col-lg-6">
 
-            <form action="produtosestoque" method="post"> 
+                    <form action="produtosestoque" method="post" class="form row justify-content-center">
+                      <div class="col-12 mb-3">
+                        <label class="formLabel" for="fornecedor_id">Id Fornecedor</label>
+                        <input type="text" required placeholder="Digite o Id do Fornecedor" name="fornecedor_id"
+                          id="fornecedor_id" class="form__control w-100" />
+                      </div>
+                      <div class="col-12 mb-3">
+                        <label class="formLabel" for="nome">Nome</label>
+                        <input type="text" required placeholder="Digite o nome do produto" name="nome" id="nome"
+                          class="form__control w-100" />
+                      </div>
+                      <div class="col-12 mb-3">
+                        <label class="formLabel" for="preco">Preço</label>
+                        <input type="number" required placeholder="Digite o preço do produto" name="preco"
+                          id="preco" class="form__control w-100" />
+                      </div>
+                      <div class="col-12 mb-3">
+                        <label class="formLabel" for="quantidade">Quantidade</label>
+                        <input type="number" required placeholder="Digite a quantidade" name="quantidade"
+                          id="quantidade" class="form__control w-100" />
+                        </p>
+                      </div>
+                      <div class="col-12 mb-5">
+                        <label class="formLabel" for="ativo">Disponibilidade</label>
+                        <input list="ativo" required name="ativo" placeholder="Ativo / Inativo" class="form__control w-100" />
+                        <datalist id="ativo">
+                          <option value="Ativo"></option>
+                          <option value="Inativo"></option>
+                        </datalist>
+                      </div>
+                      <div class="col-12 text-center">
+                        <button type="submit" class="btn form__submit">Finalizar Cadastro</button>
+                    </form>
+                  </div>
+                  </form>
+                </div>
+              </div>
 
-            <p>
-              <label for="fornecedor_id">Id Fornecedor</label><br/>
-              <input type="text" required placeholder="Digite o Id do Fornecedor" name="fornecedor_id" id="fornecedor_id"/><br/>
-            </p>
-
-            <p>
-              <label for="nome">Nome</label><br/>
-              <input type="text" required placeholder="Digite o nome do produto" name="nome" id="nome" /><br/>
-            </p>
-
-            <p>
-              <label for="preco">Preço</label><br/>
-              <input type="number" required placeholder="Digite o preço do produto" name="preco" id="preco" /><br/>
-            </p>
-
-            <p>
-              <label for="quantidade">Quantidade</label><br/>
-              <input type="number" required placeholder="Digite a quantidade" name="quantidade" id="quantidade"/><br/>
-            </p>
-
-            <p>
-              <label for="ativo">Disponibilidade</label><br/>
-              <input list="ativo" required name="ativo" placeholder="Ativo / Inativo"/><br/>
-              <datalist id="ativo">
-              <option value="Ativo"></option>
-              <option value="Inativo"></option>
-            </p>
-
-            <button class="btn_finalizarCadastro">
-              Finalizar Cadastro
-            </button>
-            <!-- <a href="listarprodutos"></a> -->
-               </a>
             </div>
+          </div>
+          </div>
+        </section>
 
-        </form>
-        <br />
-        <br />
-      </div>
-      </section>
-    </div>
-</main>
 
-<!-- FOOTER -->
-<%- include('partials/footer.ejs') %>
+        <%- include('partials/trending.ejs') %>
 
-</body>
-</html>
+          <%- include('partials/benefits.ejs') %>
+
+            <%- include('partials/instagram.ejs') %>
+
+      </main>
+
+
+
+      <!-- FOOTER -->
+      <%- include('partials/footer.ejs') %>
+
+  </body>
+
+  </html>
