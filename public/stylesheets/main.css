@@ -181,6 +181,14 @@ body.home .navbar {
 
 .form__control {}
 
+.formLabel {
+  font-weight: bold;
+  color: #DD8560;
+  font-size: 14px;
+  display:block;
+  cursor:pointer;
+}
+
 .featured {
   background-image: url(../images/guy.jpg);
   background-position: center -570px;
