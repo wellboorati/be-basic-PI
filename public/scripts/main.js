@@ -1,19 +1,29 @@
-window.onload = () => {
-    
-    let menu = document.querySelector('#header__menu__mobile');
-    let links = document.querySelector('#header__links');
-    let close = document.querySelector('#header__links__close');
-
-    menu.addEventListener('click', ()=> {
-        links.classList.add('header__links--active');
-    });
-
-    close.addEventListener('click', ()=> {
-        if(links.classList.contains('header__links--active')){
-            links.classList.remove('header__links--active');
-        } else {
-            links.classList.add('header__links--active');
+$(document).ready(function(){
+    $('.your-class').slick({
+      dots: true,
+      arrows: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
-
-}
+  });
