@@ -69,6 +69,17 @@ hr {
     width:100%;
 }
 
+hr.separate {
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  width: 100%;
+  background: none;
+  border-top: 1px solid #979797;
+  height:0;
+}
+
 body.home .navbar {
 }
 
@@ -289,10 +300,6 @@ section {
   display:flex;
 }
 
-.products__details__color__pallete__item {
-
-}
-
 .products__details__color__label {
   font-size: 12px;
 }
@@ -496,6 +503,39 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
 }
 
+.products__checkout {
+  display: flex;
+  gap: 10px 0;
+  flex-direction: column;
+}
+
+/* Produto checkout */
+.products__checkout__item {
+  display:flex;
+  gap: 0 10px;
+  align-items: center;
+}
+
+.products__checkout__item__info__name {
+  color:#000;
+  font-size:14px;
+  text-transform: uppercase;
+}
+
+.products__checkout__item__info__description {
+  color:#555;
+  font-size:12px;
+}
+
+.products__checkout__item__info__price {
+  color: #DD8560;
+}
+
+.products__checkout__item__info {
+  display:flex;
+  flex-direction: column;
+}
+
 .slick-dots {
   list-style:none; 
   padding:0;
@@ -675,4 +715,20 @@ footer {
   body.address .benefits,
   body.address .instagram,
   body.address footer {display:none;}
+}
+
+
+/**
+* Checkout
+*/
+
+.card-chosen {
+  display:flex;
+  align-items: center;
+  gap: 0 10px;
+  height: 70px;
+}
+
+.card-chosen-number {
+  font-size: 14px;
 }
