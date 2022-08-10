@@ -21,6 +21,11 @@ const registrationController = {
       cep,
     } = req.body;
 
+    const filename = {
+      file: req.file.path
+    };
+
+
     const usuario = await database.Clientes.create({
       nome: name,
       email,
@@ -29,7 +34,8 @@ const registrationController = {
       cpf,
       data_nascimento: birthdate,
       telefone,
-      admnistrador: false
+      admnistrador: false,
+      file
 
     });
 

@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+
 
 // ************ Controller Require ************
 
@@ -10,6 +12,7 @@ const adressRegistrationController = require('../controllers/adressRegistrationC
 const produtosEstoqueController = require('../controllers/produtosEstoqueController');
 const fornecedorController = require('../controllers/fornecedorController');
 const { validateRegister } = require('../middlaware/registerValidation');
+const { upload } = require('../middlaware/uploadsUser');
 const auth = require('../middlaware/auth')
 
 /* Home pages */
@@ -28,6 +31,7 @@ router.post('/login', loginController.login)
 
 router.get('/registration', registrationController.registrationPage)
 router.post('/registration', registrationController.cadastro);
+// router.post('/registration', upload.single('file'), registrationController.cadastro);
 // router.post('/registration', validateRegister, registrationController.cadastro);
 
 router.get('/fornecedor', fornecedorController.fornecedorRegistration)
