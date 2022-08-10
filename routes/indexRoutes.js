@@ -51,7 +51,7 @@ router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
 router.get('/carrinho', auth, mainController.carrinhoPage) /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 
-router.get('/adminpage', auth, mainController.adminPage) /* GET carrinho page. */
+router.get('/adminpage',mainController.adminPage) /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 
 

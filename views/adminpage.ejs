@@ -6,10 +6,13 @@
 <!-- HEADER -->
 <%- include('partials/menu.ejs') %>
 
-    <div class="containerbackgroundamin">
-       
-        <div class="menu">
-            <div class="Menu_1">
+<main>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-lg-6 text-center">
+                    <h2 class="text-center text-uppercase">Administrativo</h2>
+                    <hr />
                     <ul>
                         <li><a href="/">Produtos</a></li>
                         <li><a href="/">Controle Categoria</a></li>
@@ -20,70 +23,66 @@
                         <li><a href="/">Estoque</a></li>
                         <li><a href="/">Pagamentos</a></li>
                     </ul>
-            </div>
-            <div class="Menu_Geral">
-                <div class="Menu_2">
-                    <h1><a href="/">Total de vendas</a></h1>
+
+                    <h3 class="text-center text-uppercase">Total de vendas</h3>
                     <h4>Valor De Vendas</h4>
+
+                    <div class="Menu_3">
+                        <h1><a href="/">Pedidos a Enviar</a></h1>
+                        <table border="1">
+                            <tr>
+                                <td>Pedido</td>
+                                <td>Valor Total do Pedido</td>
+                                <td>Data do Pedido</td>
+                                <td>Data de entrega</td>
+                                <td>Valor Frete</td>
+                                <td>Status do Pedido</td>
+                                <td>Cupom de Desconto</td>
+                            </tr>
+                            <tr>
+                                <td>1111123</td>
+                                <td>R$ 22,00</td>
+                                <td>31/06/2022</td>
+                                <td>31/08/2022</td>
+                                <td>R$ 15,00</td>
+                                <td>Enviado</td>
+                                <td>COMPREHJ</td>
+                            </tr>
+                            <tr>
+                                <td>1111123</td>
+                                <td>R$ 22,00</td>
+                                <td>31/06/2022</td>
+                                <td>31/08/2022</td>
+                                <td>R$ 15,00</td>
+                                <td>Enviado</td>
+                                <td>COMPREHJ</td>
+                            </tr>
+                            <tr>
+                                <td>1111123</td>
+                                <td>R$ 22,00</td>
+                                <td>31/06/2022</td>
+                                <td>31/08/2022</td>
+                                <td>R$ 15,00</td>
+                                <td>Enviado</td>
+                                <td>COMPREHJ</td>
+                            </tr>
+                            <tr>
+                                <td>1111123</td>
+                                <td>R$ 22,00</td>
+                                <td>31/06/2022</td>
+                                <td>31/08/2022</td>
+                                <td>R$ 15,00</td>
+                                <td>Enviado</td>
+                                <td>COMPREHJ</td>
+                            </tr>
+                        </table>
+                    </div>
+
                 </div>
-                <div class="Menu_3">
-                    <h1><a href="/">Pedidos a Enviar</a></h1>
-                    <table border="1">
-                        <tr>
-                            <td>Pedido</td>
-                            <td>Valor Total do Pedido</td>
-                            <td>Data do Pedido</td>
-                            <td>Data de entrega</td>
-                            <td>Valor Frete</td>
-                            <td>Status do Pedido</td>
-                            <td>Cupom de Desconto</td>
-                        </tr>
-                        <tr>
-                            <td>1111123</td>
-                            <td>R$ 22,00</td>
-                            <td>31/06/2022</td>
-                            <td>31/08/2022</td>
-                            <td>R$ 15,00</td>
-                            <td>Enviado</td>
-                            <td>COMPREHJ</td>
-                        </tr>
-                        <tr>
-                            <td>1111123</td>
-                            <td>R$ 22,00</td>
-                            <td>31/06/2022</td>
-                            <td>31/08/2022</td>
-                            <td>R$ 15,00</td>
-                            <td>Enviado</td>
-                            <td>COMPREHJ</td>
-                        </tr>
-                        <tr>
-                            <td>1111123</td>
-                            <td>R$ 22,00</td>
-                            <td>31/06/2022</td>
-                            <td>31/08/2022</td>
-                            <td>R$ 15,00</td>
-                            <td>Enviado</td>
-                            <td>COMPREHJ</td>
-                        </tr>
-                        <tr>
-                            <td>1111123</td>
-                            <td>R$ 22,00</td>
-                            <td>31/06/2022</td>
-                            <td>31/08/2022</td>
-                            <td>R$ 15,00</td>
-                            <td>Enviado</td>
-                            <td>COMPREHJ</td>
-                        </tr>
-                    </table>
-                </div> 
             </div>
-           
         </div>
-            
-            
-       
-        
-    </div>
+    </section>
+</main>
 
     <!-- FOOTER -->
 <%- include('partials/footer.ejs') %>
