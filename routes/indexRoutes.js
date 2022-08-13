@@ -15,6 +15,7 @@ const auth = require('../middlaware/auth')
 /* Home pages */
 router.get('/', mainController.homePage)
 router.get('/paineldousuario', auth, mainController.painelPage) /* GET login page. */
+router.get('/categorias', mainController.categoriesPage)
 router.get('/produtos', mainController.productsPage)
 
 router.get('/resetpassword', mainController.resetPasswordPage)

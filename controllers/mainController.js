@@ -21,6 +21,10 @@ const mainController = {
         return res.render('produtos')
     },
 
+    categoriesPage: (req, res) => {
+        return res.render('categorias')
+    },
+
     resetPasswordPage: (req, res) => {
         return res.render('resetpassword')
     },
