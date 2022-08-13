@@ -45,7 +45,7 @@ router.post('/adressregistration', adressRegistrationController.cadastro_enderec
 
 router.get('/produtosestoque', produtosEstoqueController.productInventoryPage)
 router.post ('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
-// router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
+router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
 
 
 // router.get('/cadastro', mainController.cadastroPage) /* GET cadastro page. */
@@ -55,7 +55,7 @@ router.post ('/produtosestoque',produtosEstoqueController.cadastro_produtos_esto
 router.get('/carrinho', auth, mainController.carrinhoPage) /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 
-router.get('/adminpage', auth, mainController.adminPage) /* GET carrinho page. */
+router.get('/adminpage',mainController.adminPage) /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 
 

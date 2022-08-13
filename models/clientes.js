@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       data_nascimento: DataTypes.DATE,
       telefone: DataTypes.STRING,
       admnistrador: DataTypes.BOOLEAN,
+      image_url: DataTypes.STRING
     },
     {
       sequelize,

@@ -1,121 +1,133 @@
-<!-- header -->
 <%- include('partials/header.ejs') %>
 
-<body>
+  <body class="home">
 
-<!-- HEADER -->
-<%- include('partials/header.ejs') %>
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
 
-<main>
-  <div class="containerbackground_registration">
-    <section class="registration_content_page">
-      <div class="registration_wrap">
-        <div class="registration__form">
-          <h2 class="cadastre_se_title">Cadastre-se</h2>
-          <p class="personal_data">Preencha abaixo com seus dados pessoais</p>
-          
-          <% if (typeof errors !== 'undefined') { %>
-          <ul>
-            <% for(let error in errors ) {%>
-            <li><%= errors[error].msg %> </li>
-            <% } %>
-          </ul>
-          <% } %>
+      <main>
 
-          <form action="fornecedor" method="post">
-            <p>
-              <label for="empresa">empresa (Sem Abreviações)*</label><br/>
-              <input type="text" placeholder="Digique seu nome completo" empresa="empresa" id="empresa"/><br/>
-            </p>
-            <p>
-              <label for="nome">Nome</label><br/>
-              <input type="text"  placeholder="Digite seu nome" name="nome" id="nome"/><br/>
-            </p>
-            <p>
-                <label for="produto">produto</label><br/>
-                <input type="text"  placeholder="Digite seu produto" name="produto" id="produto"/><br/>
-              </p>
-            <p>
-              <label for="telefone">Seu Telefone</label><br/>
-              <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"/><br/>
-            </p>
-            <p>
-                <label for="email">Seu e-mail</label><br/>
-                <input type="email"  placeholder="Digite seu email" name="email" id="email"/><br/>
-              </p>
-            
-            <label for="endereco">Endereço*</label><br />
-          <input type="text" name="endereco" placeholder="Rua / Avenida / Praça" id="address"/><br/>
-        </p>
-        <p>
-          <label for="numero">Número*</label><br/>
-          <input type="text" name="numero"placeholder="Número" id="numero"/><br/>
-        </p>
-        <p>
-            <label for="complemento">Complemento*</label><br />
-            <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep"/><br/>
-        </p><p>
-          <label for="bairro">Bairro*</label><br />
-          <input type="text" name="bairro" placeholder="Bairro" id="bairro"/><br/>
-        </p>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h2 class="text-uppercase text-center">Endereço de entrega</h2>
+                <hr />
+                <div class="mt-4 row justify-content-center">
+                  <div class="col col-lg-6">
 
-        <p>
-          <label for="cidade">Cidade*</label><br />
-          <input type="text" name="cidade"placeholder="Cidade" id="cidade"/><br />
-        </p>
+                    <% if (typeof errors !=='undefined' ) { %>
+                      <ul>
+                        <% for(let error in errors ) {%>
+                          <li>
+                            <%= errors[error].msg %>
+                          </li>
+                          <% } %>
+                      </ul>
+                      <% } %>
 
-        <p>
-          <label for="estado">Estado*</label><br />
-          <input list="estado" name="estado" />
-          <datalist id="estado">
-            <option value="AC"></option>
-            <option value="AL"></option>
-            <option value="AM"></option>
-            <option value="AP"></option>
-            <option value="BA"></option>
-            <option value="CE"></option>
-            <option value="DF"></option>
-            <option value="ES"></option>
-            <option value="GO"></option>
-            <option value="MA"></option>
-            <option value="MG"></option>
-            <option value="MS"></option>
-            <option value="MT"></option>
-            <option value="PA"></option>
-            <option value="PB"></option>
-            <option value="PE"></option>
-            <option value="PI"></option>
-            <option value="PR"></option>
-            <option value="RJ"></option>
-            <option value="RO"></option>
-            <option value="RN"></option>
-            <option value="RR"></option>
-            <option value="RS"></option>
-            <option value="SC"></option>
-            <option value="SE"></option>
-            <option value="SP"></option>
-            <option value="TO"></option>
-          </datalist>
-            <button class="btn_finalizarCadastro_continuarComprando">Finalizar Cadastro</button>
-
-            <p class="paragraph_privacyPolicy">Ao continuar com o acesso, você está concordando com a nossa <a href="#">Política de Privacidade</a> </p>
-
-            <!-- <button class="btn_finalizarCadastro_continuarComprando">Continuar Comprando</button> -->
+                        <form class="form row justify-content-center">
+                          <div class="col-12 mb-3">
+                            <label for="empresa" class="formLabel">Empresa (Sem Abreviações)*</label>
+                            <input type="text" placeholder="Digique seu nome completo" empresa="empresa"
+                              id="empresa" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="nome" class="formLabel" >Nome</label>
+                            <input type="text" placeholder="Digite seu nome" name="nome" id="nome" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="produto" class="formLabel" >Produto</label>
+                            <input type="text" placeholder="Digite seu produto" name="produto" id="produto" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="telefone" class="formLabel" >Seu Telefone</label>
+                            <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="email" class="formLabel" >Seu e-mail</label>
+                            <input type="email" placeholder="Digite seu email" name="email" id="email" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="endereco" class="formLabel" >Endereço*</label>
+                            <input type="text" name="endereco" placeholder="Rua / Avenida / Praça" id="address" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="numero" class="formLabel" >Número*</label>
+                            <input type="text" name="numero" placeholder="Número" id="numero" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="complemento" class="formLabel" >Complemento*</label>
+                            <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="bairro" class="formLabel" >Bairro*</label>
+                            <input type="text" name="bairro" placeholder="Bairro" id="bairro" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="cidade" class="formLabel" >Cidade*</label>
+                            <input type="text" name="cidade" placeholder="Cidade" id="cidade" class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-5">
+                            <label for="estado" class="formLabel" >Estado*</label>
+                            <input list="estado" name="estado" class="form__control w-100" />
+                            <datalist id="estado">
+                              <option value="AC"></option>
+                              <option value="AL"></option>
+                              <option value="AM"></option>
+                              <option value="AP"></option>
+                              <option value="BA"></option>
+                              <option value="CE"></option>
+                              <option value="DF"></option>
+                              <option value="ES"></option>
+                              <option value="GO"></option>
+                              <option value="MA"></option>
+                              <option value="MG"></option>
+                              <option value="MS"></option>
+                              <option value="MT"></option>
+                              <option value="PA"></option>
+                              <option value="PB"></option>
+                              <option value="PE"></option>
+                              <option value="PI"></option>
+                              <option value="PR"></option>
+                              <option value="RJ"></option>
+                              <option value="RO"></option>
+                              <option value="RN"></option>
+                              <option value="RR"></option>
+                              <option value="RS"></option>
+                              <option value="SC"></option>
+                              <option value="SE"></option>
+                              <option value="SP"></option>
+                              <option value="TO"></option>
+                            </datalist>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button type="submit" class="btn form__submit">Finalizar Cadastro</button>
+                          </div>
+                        </form>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
 
-        </form>
+
+        <%- include('partials/trending.ejs') %>
+
+        <%- include('partials/benefits.ejs') %>
+
+        <%- include('partials/instagram.ejs') %>
+
+      </main>
+
+      <!-- FOOTER -->
+      <%- include('partials/footer.ejs') %>
+
+  </body>
+
+  </html>
 
 
-        <br />
 
-        <br />
-      </div>
-      </section>
-    </div>
-</main>
-
-<!-- FOOTER -->
-<%- include('partials/footer.ejs') %>
-
-</body>
-</html>
+  <!-- PODE USAR PARA FONTE O MEDIA QUERY, ONDE SERÁ O BREAK POINT DE VOCÊS?  -->

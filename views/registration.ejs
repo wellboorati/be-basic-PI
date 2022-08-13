@@ -1,147 +1,176 @@
 <!-- header -->
 <%- include('partials/header.ejs') %>
 
-<body>
+  <body>
 
-<!-- HEADER -->
-<%- include('partials/menu.ejs') %>
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
 
-<main>
-  <div class="containerbackground_registration">
-    <section class="registration_content_page">
-      <div class="registration_wrap">
-        <div class="registration__form">
-          <h2 class="cadastre_se_title">Cadastre-se</h2>
-          <p class="personal_data">Preencha abaixo com seus dados pessoais</p>
-          
-          <% if (typeof errors !== 'undefined') { %>
-          <ul>
-            <% for(let error in errors ) {%>
-            <li><%= errors[error].msg %> </li>
-            <% } %>
-          </ul>
-          <% } %>
+      <main>
 
-          <form action="registration" enctype="multipart/form-data" method="post" >
-            <p>
-              <label for="name">Nome Completo (Sem Abreviações)*</label><br/>
-              <input type="text" placeholder="Digique seu nome completo" name="name" id="name"/><br/>
-            </p>
-            <p>
-              <label for="email">Seu e-mail</label><br/>
-              <input type="email"  placeholder="Digite seu email" name="email" id="email"/><br/>
-            </p>
-            <p>
-              <label for="gender">Sexo</label><br/>
-              <input list="gender" name="gender" placeholder="Masculino / Feminino"/><br/>
-              <datalist id="gender">
-              <option value="Masculino"></option>
-              <option value="Feminino"></option>
-            </p>
-            <p>
-              <label for="cpf">Seu CPF</label><br/>
-              <input type="text" placeholder="Ex: 000.000.000-00" name="cpf" id="cpf" pattern="[0-9]{11}"/><br/>
-            </p>
-            <p>
-              <label for="birthdate">Seu aniversário</label><br/>
-              <input id="date" type="date" name="birthdate" value="2000-01-01">
-            </p>
-            <p>
-              <label for="telefone">Seu Telefone</label><br/>
-              <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"/><br/>
-            </p>
-            <div class="password_container">
-              <p id="senha">
-                <label for="senha">Senha</label><br/>
-                <input type="password" placeholder="Mínimo de 8 caracteres" name="password" id="password"/><br/>
-                <input type="password" placeholder="Mínimo de 8 caracteres" name="confirm_password" id="confirm_password"/><br/>
-                <p>
-                  <label for="file">Imagem de perfil:</label><br/>
-                  <input type="file" name="file" id="file" value="Submit"/><br/>
-                </p>
-                <!-- <input class="saving_user_input" id="checkbox" type="checkbox" onclick="showPass()">
-                <span class="saving_user" style="color: #40413f;">Salvar usuário e senha?</span>
-              </p> -->
-              </div>
-            <label for="address">Endereço*</label><br />
-          <input type="text" name="address" placeholder="Rua / Avenida / Praça" id="address"/><br/>
-        </p>
-        <p>
-          <label for="number">Número*</label><br/>
-          <input type="text" name="number"placeholder="Número" id="number"/><br/>
-        </p>
-        <p>
-            <label for="complemento">Complemento*</label><br />
-            <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep"/><br/>
-        </p><p>
-          <label for="bairro">Bairro*</label><br />
-          <input type="text" name="bairro" placeholder="Bairro" id="bairro"/><br/>
-        </p>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h2 class="text-uppercase text-center">Cadastre-se</h2>
+                <hr />
+                <p class="text-center mt-3">Preencha abaixo com seus dados pessoais</p>
+                <div class="mt-4 row justify-content-center">
+                  <div class="col col-lg-6">
 
-        <p>
-          <label for="city">Cidade*</label><br />
-          <input type="text" name="city"placeholder="Cidade" id="cidade"/><br />
-        </p>
+                    <% if (typeof errors !=='undefined' ) { %>
+                      <ul>
+                        <% for(let error in errors ) {%>
+                          <li>
+                            <%= errors[error].msg %>
+                          </li>
+                          <% } %>
+                      </ul>
+                      <% } %>
 
-        <p>
-          <label for="state">Estado*</label><br />
-          <input list="state" name="state" />
-          <datalist id="state">
-            <option value="AC"></option>
-            <option value="AL"></option>
-            <option value="AM"></option>
-            <option value="AP"></option>
-            <option value="BA"></option>
-            <option value="CE"></option>
-            <option value="DF"></option>
-            <option value="ES"></option>
-            <option value="GO"></option>
-            <option value="MA"></option>
-            <option value="MG"></option>
-            <option value="MS"></option>
-            <option value="MT"></option>
-            <option value="PA"></option>
-            <option value="PB"></option>
-            <option value="PE"></option>
-            <option value="PI"></option>
-            <option value="PR"></option>
-            <option value="RJ"></option>
-            <option value="RO"></option>
-            <option value="RN"></option>
-            <option value="RR"></option>
-            <option value="RS"></option>
-            <option value="SC"></option>
-            <option value="SE"></option>
-            <option value="SP"></option>
-            <option value="TO"></option>
-          </datalist>
-        <p>
-          <label for="cep">CEP*</label><br />
-          <input type="text" name="cep" placeholder="Ex 00.000-000" id="cep"/><br/>
-      </p>
-            
-            
+                        <form class="form row justify-content-center" action="/registration" method="post" enctype="multipart/form-data" >
+                          <div class="col-12 mb-3">
+                            <label for="name" class="formLabel">Nome</label>
+                            <input type="text" placeholder="Digite seu nome completo (sem abreviações)" name="name" id="name"
+                              class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="email" class="formLabel">Email</label>
+                            <input type="email" placeholder="Digite seu email" name="email" id="email"
+                              class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="gender" class="formLabel">Sexo</label>
+                            <input list="gender" name="gender" placeholder="Masculino / Feminino"
+                            class="form__control w-100" /><br>
+                            <datalist id="gender">
+                              <option value="Masculino"></option>
+                              <option value="Feminino"></option>
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="cpf" class="formLabel">CPF</label>
+                            <input type="text" placeholder="Ex: 000.000.000-00" name="cpf" id="cpf"
+                              pattern="[0-9]{11}"
+                              class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="birthdate" class="formLabel">Seu aniversário</label>
+                            <input id="date" type="date" name="birthdate" value="2000-01-01"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="telefone" class="formLabel">Telefone</label>
+                            <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="senha" class="formLabel">Senha</label>
+                            <input type="password" placeholder="Mínimo de 8 caracteres" name="password"
+                              id="password"
+                              class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="senha" class="formLabel">Confirme sua Senha</label>
+                            <input type="password" placeholder="Mínimo de 8 caracteres" name="confirm_password"
+                              id="confirm_password"
+                              class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="address" class="formLabel">Endereço</label>
+                            <input type="text" name="address" placeholder="Rua / Avenida / Praça" id="address"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="number" class="formLabel">Número</label>
+                            <input type="text" name="number" placeholder="Número" id="number"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="complemento" class="formLabel">Complemento</label>
+                            <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="bairro" class="formLabel">Bairro</label>
+                            <input type="text" name="bairro" placeholder="Bairro" id="bairro"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="city" class="formLabel">Cidade</label>
+                            <input type="text" name="city" placeholder="Cidade" id="cidade"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="state" class="formLabel">Estado</label>
+                            <input list="state" name="state"
+                            class="form__control w-100" />
+                            <datalist id="state">
+                              <option value="AC"></option>
+                              <option value="AL"></option>
+                              <option value="AM"></option>
+                              <option value="AP"></option>
+                              <option value="BA"></option>
+                              <option value="CE"></option>
+                              <option value="DF"></option>
+                              <option value="ES"></option>
+                              <option value="GO"></option>
+                              <option value="MA"></option>
+                              <option value="MG"></option>
+                              <option value="MS"></option>
+                              <option value="MT"></option>
+                              <option value="PA"></option>
+                              <option value="PB"></option>
+                              <option value="PE"></option>
+                              <option value="PI"></option>
+                              <option value="PR"></option>
+                              <option value="RJ"></option>
+                              <option value="RO"></option>
+                              <option value="RN"></option>
+                              <option value="RR"></option>
+                              <option value="RS"></option>
+                              <option value="SC"></option>
+                              <option value="SE"></option>
+                              <option value="SP"></option>
+                              <option value="TO"></option>
+                            </datalist>
+                          </div>
+                          <div class="col-12 mb-3">
+                            <label for="Imagem URL" class="formLabel">Imagem URL</label>
+                            <input type="file" name="image_url" placeholder="image_url" id="image_url"
+                            class="form__control w-100" />
+                          </div>
+                          <div class="col-12 mb-4 text-center">
+                            <p>Ao continuar com o acesso, você está concordando com a nossa <a href="#">Política de
+                                Privacidade</a> </p>
+                          </div>
+                          <div class="col-12 text-center">
+                            <button type="submit" class="btn form__submit">Finalizar Cadastro</button>
+                          </div>
+                        </form>
+                  </div>
+                </div>
 
             <button class="btn_finalizarCadastro_continuarComprando" type="submit" value="Upload">Finalizar Cadastro</button>
 
             <p class="paragraph_privacyPolicy">Ao continuar com o acesso, você está concordando com a nossa <a href="#">Política de Privacidade</a> </p>
-
-            <!-- <button class="btn_finalizarCadastro_continuarComprando">Continuar Comprando</button> -->
+              </div>
+>>>>>>> 6630b304f3a5766c795de69f1cea420112cfab6e
             </div>
+          </div>
+        </section>
 
-        </form>
 
+        <%- include('partials/trending.ejs') %>
 
-        <br />
+          <%- include('partials/benefits.ejs') %>
 
-        <br />
-      </div>
-      </section>
-    </div>
-</main>
+            <%- include('partials/instagram.ejs') %>
 
-<!-- FOOTER -->
-<%- include('partials/footer.ejs') %>
+      </main>
 
-</body>
-</html>
+      <!-- FOOTER -->
+      <%- include('partials/footer.ejs') %>
+
+  </body>
+
+  </html>
