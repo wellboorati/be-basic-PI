@@ -1,0 +1,69 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+    <body>
+
+        <!-- HEADER -->
+        <%- include('partials/menu.ejs') %>
+
+            <main>
+
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="text-uppercase text-center">Pagamento</h2>
+                                <hr />
+                                <div class="mt-4 row justify-content-center">
+                                    <div class="col col-lg-6">
+
+                                        <form action="adressRegistration" class="form row justify-content-center" method="post">
+                                            <div class="col-12 mb-3">
+                                                <label class="formLabel" for="address">Nome*</label>
+                                                <input type="text" name="address" required
+                                                    placeholder="Digite o nome idêntico ao do cartão" id="address"
+                                                    class="form__control w-100" />
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label class="formLabel" for="number">Número do cartão*</label>
+                                                <input type="text" name="number" required placeholder="Número"
+                                                    id="number" class="form__control w-100" />
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label class="formLabel" for="complemento">Validade*</label>
+                                                <input type="text" name="complemento" required
+                                                    placeholder="Mês / Ano" class="form__control w-100" />
+                                            </div>
+                                            <div class="col-12 mb-5">
+                                                <label class="formLabel" for="bairro">CVV*</label>
+                                                <input type="text" name="bairro" required placeholder=""
+                                                    id="bairro" class="form__control w-100" />
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <button type="submit" class="btn form__submit">Cadastrar cartão</button>
+                                            </div>
+                                        </form>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+
+                <%- include('partials/trending.ejs') %>
+
+                <%- include('partials/benefits.ejs') %>
+
+                <%- include('partials/instagram.ejs') %>
+
+            </main>
+
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs') %>
+
+    </body>
+
+    </html>

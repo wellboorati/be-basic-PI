@@ -543,13 +543,12 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-image:url(../images/arrow-down.svg);
+  background-image:url(../images/arrow-right-2.svg);
   background-repeat: no-repeat;
   background-position: center center;
   top: calc( 50% - 15px );
   right: 0;
-  text-indent: -9999px;
-  transform: rotate(-90deg);
+  text-indent: -9999px;  
   display:block;
 }
 
@@ -752,13 +751,12 @@ footer {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-image:url(../images/arrow-down.svg);
+  background-image:url(../images/arrow-right-2.svg);
   background-repeat: no-repeat;
   background-position: center center;
   top: calc( 50% - 15px );
   right: 0;
   text-indent: -9999px;
-  transform: rotate(-90deg);
   display:block;
   background-color: #fff;  
 }

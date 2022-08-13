@@ -17,6 +17,10 @@ const mainController = {
         return res.render('carrinho')
     },
 
+    pagamentoPage: (req, res) => {
+        return res.render('forma-pagamento')
+    },
+
     productsPage: (req, res) => {
         return res.render('produtos')
     },

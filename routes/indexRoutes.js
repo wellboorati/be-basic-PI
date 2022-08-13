@@ -19,6 +19,7 @@ router.get('/categorias', mainController.categoriesPage)
 router.get('/produtos', mainController.productsPage)
 
 router.get('/resetpassword', mainController.resetPasswordPage)
+router.get('/forma-de-pagamento', mainController.pagamentoPage)
 //checkout
 router.get('/checkout', mainController.checkoutPage)
 router.get('/productdetails', mainController.productdetailsPage)
