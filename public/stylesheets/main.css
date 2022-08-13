@@ -47,6 +47,7 @@ h2 {
     border-radius: 30px;
     padding: 8px 30px;
     transition: all .4s;
+    border-radius: 0;
 }
 
 .btn-primary:hover {
@@ -713,7 +714,7 @@ footer {
 }
 
 .lista__categories__card__name {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   text-align: center;
   display: flex;
