@@ -5,6 +5,10 @@ const mainController = {
     return res.render('index')
     },
 
+    nossaHistoriaPage: (req, res) => {
+        return res.render('nossa-historia')
+    },
+
     adminPage: (req, res) => {
         return res.render('adminpage')
     },
@@ -32,11 +36,17 @@ const mainController = {
     resetPasswordPage: (req, res) => {
         return res.render('resetpassword')
     },
+
     checkoutPage: (req, res) => {
         return res.render('checkout')
     },
+
     productdetailsPage: (req, res) => {
         return res.render('productdetails')
+    },
+
+    page404: (req, res) => {
+        return res.render('404')
     },
     // productInventoryPage: (req, res) => {
     //     return res.render('produtosEstoque')
