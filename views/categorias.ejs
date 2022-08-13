@@ -1,0 +1,62 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
+
+
+    <main class="main__products">
+
+        <section class="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="text-uppercase text-center">Nossa Coleção</h2>
+                        <hr />
+                        <div class="list__categories">
+                            <div class="lista__categories__card">
+                                <div class="lista__categories__card__pic">
+                                    <a href="/produtos"><img src="/images/categoria-1.png" alt="" class="img-fluid"></a>
+                                </div>
+                                <div class="lista__categories__card__name">
+                                    Categoria 1
+                                </div>
+                            </div>
+                            <div class="lista__categories__card">
+                                <div class="lista__categories__card__pic">
+                                    <a href="/produtos"><img src="/images/categoria-2.png" alt="" class="img-fluid"></a>
+                                </div>
+                                <div class="lista__categories__card__name">
+                                    Categoria 2
+                                </div>
+                            </div>
+                            <div class="lista__categories__card">
+                                <div class="lista__categories__card__pic">
+                                    <a href="/produtos"><img src="/images/categoria-3.png" alt="" class="img-fluid"></a>
+                                </div>
+                                <div class="lista__categories__card__name">
+                                    Categoria 3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/trending.ejs') %>
+
+        <%- include('partials/benefits.ejs') %>
+
+        <%- include('partials/instagram.ejs') %>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+
+
+</body></html>

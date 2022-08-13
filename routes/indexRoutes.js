@@ -17,16 +17,22 @@ const auth = require('../middlaware/auth')
 
 /* Home pages */
 router.get('/', mainController.homePage)
+router.get('/nossa-historia', mainController.nossaHistoriaPage)
 router.get('/paineldousuario', auth, mainController.painelPage) /* GET login page. */
+router.get('/categorias', mainController.categoriesPage)
 router.get('/produtos', mainController.productsPage)
 
 router.get('/resetpassword', mainController.resetPasswordPage)
+router.get('/forma-de-pagamento', mainController.pagamentoPage)
+
 //checkout
 router.get('/checkout', mainController.checkoutPage)
 router.get('/productdetails', mainController.productdetailsPage)
 
 router.get('/login', loginController.loginPage)
 router.post('/login', loginController.login)
+
+router.get('/404', mainController.page404)
 
 
 router.get('/registration', registrationController.registrationPage)
