@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+
+    <!-- header -->
+    <%- include('partials/menu.ejs') %>
+    
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Avatar</h1>
+
+      <!-- <img class="img-product-main" src="../.<%= data.clientes.image_url %>" alt=""> -->
+      <img class="img-product-main" src= "<%= image %>" alt="">
+
+      <figure class="image" style="width: 256px">
+        <img src="<%= image %>">
+      </figure>
+
+      <p>URL: <a href="<%= image %>" target="_blank"><%= image %></a></p>
+      
+    </div>
+  </section>
+</body>
+
+</html>
+
+<img src="/{{post.image}}>

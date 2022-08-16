@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
+const path = require("path");
 
 
 // ************ Controller Require ************
@@ -12,8 +13,9 @@ const adressRegistrationController = require('../controllers/adressRegistrationC
 const produtosEstoqueController = require('../controllers/produtosEstoqueController');
 const fornecedorController = require('../controllers/fornecedorController');
 const { validateRegister } = require('../middlaware/registerValidation');
-const { upload } = require('../middlaware/uploadsUser');
-const auth = require('../middlaware/auth')
+const upload = require('../middlaware/uploadsUser');
+const auth = require('../middlaware/auth');
+
 
 /* Home pages */
 router.get('/', mainController.homePage)
@@ -36,7 +38,7 @@ router.get('/404', mainController.page404)
 
 
 router.get('/registration', registrationController.registrationPage)
-router.post('/registration', registrationController.cadastro);
+router.post('/registration', upload.single('avatar'), registrationController.cadastro);
 // router.post('/registration', upload.single('file'), registrationController.cadastro);
 // router.post('/registration', validateRegister, registrationController.cadastro);
 

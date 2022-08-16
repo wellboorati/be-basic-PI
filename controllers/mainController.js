@@ -41,6 +41,7 @@ const mainController = {
         return res.render('checkout')
     },
 
+    
     productdetailsPage: (req, res) => {
         return res.render('productdetails')
     },

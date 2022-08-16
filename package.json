@@ -20,6 +20,7 @@
     "nodemon": "^2.0.19",
     "path": "^0.12.7",
     "sequelize": "^6.21.3",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "uuidv4": "^6.2.13"
   }
 }

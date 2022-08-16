@@ -134,30 +134,43 @@
                               <option value="TO"></option>
                             </datalist>
                           </div>
-                          <div class="col-12 mb-3">
-                            <label for="Imagem URL" class="formLabel">Imagem URL</label>
-                            <input type="file" name="image_url" placeholder="image_url" id="image_url"
+                          <div class="col-12 mb-3" id="file-js-example">
+                            <label for="avatar" class="formLabel">Imagem URL</label>
+                            <input type="file" name="avatar" placeholder="avatar" id="avatar" accept="image/*"
                             class="form__control w-100" />
                           </div>
+                          <span class="file-name">
+                            No file uploaded
+                          </span>
                           <div class="col-12 mb-4 text-center">
                             <p>Ao continuar com o acesso, você está concordando com a nossa <a href="#">Política de
                                 Privacidade</a> </p>
                           </div>
                           <div class="col-12 text-center">
-                            <button type="submit" class="btn form__submit">Finalizar Cadastro</button>
+                            <button type="submit" class="btn form__submit" value="Upload" >Finalizar Cadastro</button>
+                            <!-- <button type="submit" class="btn form__submit" value="Upload" disabled id="file-js-submit">Finalizar Cadastro</button> -->
                           </div>
                         </form>
                   </div>
                 </div>
 
-            <button class="btn_finalizarCadastro_continuarComprando" type="submit" value="Upload">Finalizar Cadastro</button>
-
             <p class="paragraph_privacyPolicy">Ao continuar com o acesso, você está concordando com a nossa <a href="#">Política de Privacidade</a> </p>
               </div>
->>>>>>> 6630b304f3a5766c795de69f1cea420112cfab6e
+
             </div>
           </div>
         </section>
+        <!-- <script>
+          const fileInput = document.querySelector('#file-js-example input[type=file]');
+          fileInput.onchange = () => {
+            if (fileInput.files.length > 0) {
+              const fileName = document.querySelector('#file-js-example .file-name');
+              fileName.textContent = fileInput.files[0].name;
+              const submitButton = document.querySelector('#file-js-submit');
+              submitButton.removeAttribute('disabled')
+            }
+          }
+        </script> -->
 
 
         <%- include('partials/trending.ejs') %>
