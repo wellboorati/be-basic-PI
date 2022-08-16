@@ -1,49 +1,59 @@
-<header id="header" class="header">
-    <div id="header__links" class="header__links">
+<header>
+    <nav class="navbar">
         <div class="container">
-            <button id="header__links__close" class="header__links__close fa-solid fa-rectangle-xmark"></button>
-            <div class="header__links__wrap">
-                <ul class="header__links__wrap__nav">
-                    <li class="header__links__wrap__nav__item">
-                        <a href="/login" class="header__links__wrap__nav__item__link">
-                            <img src="../images/ico-login.png" alt="Faça o login">
-                        </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navBarBeBasic" aria-controls="navBarBeBasic" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-0 p-0" href="/">
+                <img src="/images/logo-topo.png" alt="Be Basic T-Shirts" width="80">
+            </a>
+
+            <div class="navbar-toggler-2nd d-flex gap-2">
+                <div class="navbar-toggler-2nd-search collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navBarSearch" aria-controls="navBarSearch" aria-expanded="false" aria-label="Toggle navigation"></div>
+                <a href="/checkout" class="navbar-toggler-2nd-store"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navBarSearch">
+                <form class="col-12 col-lg-4 col-lg-5 d-lg-flex offset-lg-7 py-3 py-lg-4 text-center">
+                    <input class="form__control me-2 w-100 mb-3 mb-lg-0" type="search" placeholder="Digite aqui para pesquisar" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Pesquisar</button>
+                </form>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navBarBeBasic">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
-                    <li class="header__links__wrap__nav__item">
-                        <a href="/produtos" class="header__links__wrap__nav__item__link">
-                            <img src="../images/ico-store.png" alt="Loja">
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
                     </li>
-                    <li class="header__links__wrap__nav__item">
-                        <a href="/paineldousuario" class="header__links__wrap__nav__item__link">
-                            Painel do usuário
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/nossa-historia">Nossa história</a>
                     </li>
-                    <li class="header__links__wrap__nav__item">
-                        <a href="/registration" class="header__links__wrap__nav__item__link">
-                            Cadastro
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categorias">Categorias</a>
                     </li>
-                    <li class="header__links__wrap__nav__item">
-                        <a href="/adressregistration" class="header__links__wrap__nav__item__link">
-                            Endereço de entrega
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/checkout">Carrinho</a>
                     </li>
-                    <li class="header__links__wrap__nav__item">
-                        <a href="/resetpassword" class="header__links__wrap__nav__item__link">
-                            Alterar senha
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Minha Conta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/forma-de-pagamento">Forma de pagamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/adressregistration">Endereço de entrega</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/resetpassword">Atualizar senha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/404">404 (configurar)</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="header__wrap">
-            <a href="/" class="header__logo">
-                <img src="../images/logo-topo.png" alt="BeBasic T-shirts" class="img-fluid">
-            </a>
-            <button id="header__menu__mobile" class="header__menu__mobile">Abrir menu</button>
-        </div>
-    </div>
+    </nav>
 </header>

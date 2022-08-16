@@ -4,54 +4,49 @@
 <body>
 
     <!-- HEADER -->
-    <%- include('partials/menu.ejs') %>
+    <%- include('partials/menu.ejs') %>    
 
     <main>
-        <div class="containerbackground_login">
-            <section class="login_content_page">
-                <div class="login_wrap">
-                    <div class="login_title">
-                        <h1 class="login_title_h1">Faça seu Login
-                        </h1>
-                    </div>
 
-                    <div class="login">
-                        <form action="/login" method="post">
-                            <label for="email"></label>
-                            <input type="email" name="email" required placeholder="Digite seu email" name="email" id="email"/>
-                            <br/>
-                            <label for="senha"></label>
-                            <input type="senha" required placeholder="Digite sua senha" name="senha" id="senha"/>
-                            <br/>
-                            <div class="checkbox">
-                                <input type="checkbox" id="conectado" name="conectado" value="yes"/>
-                                <p class="paragraph_keepmeconected">Mantenha-me conectado</p>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="text-uppercase text-center">Login</h2>
+                        <hr />
+                        <div class="mt-4 row justify-content-center">
+                            <div class="col col-lg-6">
+                                <form class="form row justify-content-center" method="post">
+                                    <div class="col-12 mb-3">
+                                        <label class="formLabel" for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Digite seu email" class="form__control w-100" required>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label class="formLabel" for="senha">Senha</label>
+                                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="form__control w-100" required>
+                                    </div>
+                                    <div class="col-12 mb-4 text-center">
+                                        <p class="f14"><a href="/resetpassword">Esqueci minha senha</a><br>
+                                            <a href="/registration">Ainda não tem conta? Clique aqui</a></p>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn form__submit">Continuar</button>
+                                    </div>
+                                </form>
                             </div>
-                            <br/>
-                            <button class="btn_login" type="submit">CONTINUAR</button>
-                            <br/>
-                            <div>
-                                <p>
-                                    <small>
-                                        <a href="/resetpassword">Esqueceu sua senha?
-                                        </a>
-                                    </small>
-                                </p>
-                                <br/>
-                                <p>
-                                    <small>Ainda não tem conta?
-                                        <a href="/registration">
-                                            Clique aqui
-                                        </a>
-                                        <br/>
-                                    </small>
-                                </p>
-                            </div>
-                        </form>
+                        </div>
+                        
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <%- include('partials/trending.ejs') %>
+
+        <%- include('partials/benefits.ejs') %>
+
+        <%- include('partials/instagram.ejs') %>
+
     </main>
 
     <!-- FOOTER -->

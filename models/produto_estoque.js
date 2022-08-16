@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     nome: DataTypes.STRING,
     preco: DataTypes.STRING,
     quantidade_disponivel: DataTypes.STRING,
+    
     ativo: DataTypes.BOOLEAN
   }, {
     sequelize,

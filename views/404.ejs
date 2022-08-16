@@ -1,0 +1,40 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>    
+
+    <main>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="text-uppercase text-center">Página não encontrada</h2>
+                        <hr />
+                        <p class="mt-3 text-center">Não encontramos o que você procurou. Tente voltar na página inicial.</p>
+                        <div class="mt-4 row justify-content-center">
+                            <div class="col col-lg-6 text-center">
+                                <a href="/" class="btn form__submit">Home</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/trending.ejs') %>
+
+        <%- include('partials/benefits.ejs') %>
+
+        <%- include('partials/instagram.ejs') %>
+
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+
+</body></html>

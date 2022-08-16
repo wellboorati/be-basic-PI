@@ -3,15 +3,16 @@
 
 <body>
 
-<!-- HEADER -->
-<%- include('partials/menu.ejs') %>
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
 
 <main>
-  <div class="containerbackground">
-    <section class="content_page">
-      <div class="wrap">
-
-          <p class="personal_data">Lista de Produtos Cadastrados</p>
+  <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h2 class="text-uppercase text-center">Lista de Produtos Cadastrados</h2>
+          <hr/>
 
           <% if(produtos){ %>
             <% produtos.forEach(produto => {%>
@@ -21,20 +22,174 @@
                 <%= produto.preco %>
                 <%= produto.quantidade_disponivel %>
                 <%= produto.ativo %><br>
-                <%})} %>
+                    < %})} %>
 
-            <button class="btn_cadastrarNovoProduto"><a href="produtosestoque">Cadastrar Novo Produto </a></button>
+          <div class="list__products">
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-1.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    21WN reversible angora cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
             </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-2.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-3.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    21WN reversible angora cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-4.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-1.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    21WN reversible angora cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-2.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-3.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    21WN reversible angora cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-4.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-1.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    21WN reversible angora cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-2.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-3.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    21WN reversible angora cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-4.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-1.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    21WN reversible angora cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+            <div class="lista__products__card">
+                <div class="lista__products__card__pic">
+                    <a href="#"><img src="/images/produto-fake-2.png" alt=""></a>
+                </div>
+                <div class="lista__products__card__name">
+                    cardigan
+                </div>
+                <div class="lista__products__card__price">
+                    R$120
+                </div>
+            </div>
+          </div>
 
-        <br />
-        <br />
+          <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+        </div>
       </div>
-      </section>
     </div>
+  </section>
+
 </main>
 
 <!-- FOOTER -->
 <%- include('partials/footer.ejs') %>
-
-</body>
-</html>
+        
+  

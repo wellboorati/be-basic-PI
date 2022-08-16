@@ -28,6 +28,7 @@ const produtosEstoqueController = {
     return res.render("produtosestoque");//ou res.json
   },
 
+<<<<<<< HEAD
   // listarProdutos: async (req,res)=>{
   //   const produtos = await database.Produto_estoque.findAll()
   //   return res.json(produtos);
@@ -36,6 +37,13 @@ const produtosEstoqueController = {
     const produtos = await database.Produto_estoque.findAll()
     return res.render("listarprodutos",{produtos},);
   },
+=======
+  listarProdutos: async (req,res)=>{
+    //const produtos = await database.Produto_estoque.findAll()
+    //return res.json(produtos);
+    return res.render("listarProdutos");
+  }
+>>>>>>> ddc39db30d20563fe0028df6d11a524b9f6d112a
 
 
   // deletarProdutos:async (req,res)=>{
