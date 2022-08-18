@@ -23,8 +23,10 @@ module.exports = (sequelize, DataTypes) => {
   Produto_estoque.init({
     nome: DataTypes.STRING,
     preco: DataTypes.STRING,
+    tamanho: DataTypes.STRING,
+    cor: DataTypes.STRING,
     quantidade_disponivel: DataTypes.STRING,
-    
+    image_url: DataTypes.STRING,
     ativo: DataTypes.BOOLEAN
   }, {
     sequelize,

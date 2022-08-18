@@ -251,6 +251,14 @@ section {
     justify-content: center;
 }
 
+/* Tamanho da imagem na home */
+.list__products img {
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
 .lista__products__card {
     width: 165px;
 }
