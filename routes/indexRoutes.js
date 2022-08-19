@@ -15,6 +15,8 @@ const fornecedorController = require('../controllers/fornecedorController');
 const { validateRegister } = require('../middlaware/registerValidation');
 const upload = require('../middlaware/uploadsUser');
 const auth = require('../middlaware/auth');
+const produtoController = require('../controllers/produtoController')
+
 
 
 /* Home pages */
@@ -22,7 +24,9 @@ router.get('/', mainController.homePage)
 router.get('/nossa-historia', mainController.nossaHistoriaPage)
 router.get('/paineldousuario', auth, mainController.painelPage) /* GET login page. */
 router.get('/categorias', mainController.categoriesPage)
-router.get('/produtos', mainController.productsPage)
+// router.get('/produtos', mainController.productsPage)
+
+router.get('/produtos', produtoController.listarTodosOsProdutos)
 
 router.get('/resetpassword', mainController.resetPasswordPage)
 router.get('/forma-de-pagamento', mainController.pagamentoPage)

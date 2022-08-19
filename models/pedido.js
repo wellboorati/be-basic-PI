@@ -24,10 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Pedido.init({
-    valor_total_pedido: DataTypes.STRING,
+    valor_total_pedido: DataTypes.INTEGER,
     data_entrega: DataTypes.DATE,
     data_pedido: DataTypes.DATE,
-    valor_frete: DataTypes.STRING,
+    valor_frete: DataTypes.INTEGER,
     cupom_desconto: DataTypes.BOOLEAN,
     status_pedido: DataTypes.STRING
   }, {

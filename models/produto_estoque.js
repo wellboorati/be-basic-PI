@@ -22,10 +22,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Produto_estoque.init({
     nome: DataTypes.STRING,
-    preco: DataTypes.STRING,
-    tamanho: DataTypes.STRING,
+    preco: DataTypes.INTEGER,
     cor: DataTypes.STRING,
-    quantidade_disponivel: DataTypes.STRING,
+    p_quantidade_disponivel: DataTypes.INTEGER,
+    m_quantidade_disponivel: DataTypes.INTEGER,
+    g_quantidade_disponivel: DataTypes.INTEGER,
     image_url: DataTypes.STRING,
     ativo: DataTypes.BOOLEAN
   }, {

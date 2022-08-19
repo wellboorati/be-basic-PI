@@ -19,13 +19,16 @@ module.exports = {
       preco: {
         type: Sequelize.INTEGER
       },
-      tamanho: {
-        type: Sequelize.STRING
-      },
       cor: {
         type: Sequelize.STRING
       },
-      quantidade_disponivel: {
+      p_quantidade_disponivel: {
+        type: Sequelize.INTEGER
+      },
+      m_quantidade_disponivel: {
+        type: Sequelize.INTEGER
+      },
+      g_quantidade_disponivel: {
         type: Sequelize.INTEGER
       },
       image_url: {
