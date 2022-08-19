@@ -6,130 +6,45 @@
     <!-- HEADER -->
     <%- include('partials/menu.ejs') %>
 
-    <main class="main login">
-        <div class="container">
-            <div class="bannerHome__wrap">
-                <div class="breadcrumb">Home &gt; Login</div>
-                <div class="login__content">
+    <main>
 
-                    <div class="main__content login__content__wrap">
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <h2 class="text-uppercase text-center">Minha Conta</h2>
+                        <hr/>
 
-                        <div class="login__content__wrap__avatar">
+                        <div>
                             <img src="../images/avatar.png" alt="" width="115">
                         </div>
 
-                        <ul class="login__content__lead">
-                            <li>
-                                <a href="/registration" class="btn">Meu Cadastro</a>
-                            </li>
-                            <li>
-                                <a href="/carrinho" class="btn">Pedidos</a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn">Favoritos</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="login__content__wrap--compl">
-                        <br><strong>Meu Cadastro:</strong><br><br>
-
                         <ul>
                             <li>
-                                <a href="/registration">Alterar Dados Cadastrais</a>
+                                <a href="/registration">Meu Cadastro</a>
+                            </li>
+                            <li>
+                                <a href="/carrinho">Pedidos</a>
+                            </li>
+                            <li>
+                                <a href="/forma-de-pagamento">Forma de pagamento</a>
+                            </li>
+                            <li>
+                                <a href="/adressregistration">Endereço de entrega</a>
                             </li>
                             <li>
                                 <a href="/resetpassword">Alterar Senha</a>
-                            </li>
-                            <li>
-                                <a href="#">Gerenciar</a>
                             </li>
                             <li>
                                 <a href="/adressregistration">Endereços de Entrega</a>
                             </li>
                         </ul>
 
-                        <br><br><strong>Pedidos:</strong><br><br>
-
-                        <ul>
-                            <li><a href="#">Acompanhe Seus Pedidos</a></li>
-                            <li><a href="#">Imprimir 2 via de Boleto</a></li>
-                        </ul>
-
                     </div>
-
-                    <div class="login__content__wrap favoritos">
-                        <strong>Favoritos</strong><br><br>
-
-                        <div class="favoritos__wrap">
-
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-                            <div class="favoritos__wrap__item">
-                                <a href="#" class="favoritos__wrap__item__heart">
-                                    Favoritar
-                                </a>
-                                <div class="favoritos__wrap__item__pic">
-                                    <img src="../images/camiseta.png" alt="">
-                                </div>
-                                <a href="#" class="favoritos__wrap__item__cart">
-                                    Adicionar na Sacola
-                                </a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <!-- FOOTER -->
-    <%- include('partials/footer.ejs') %>
-
+        <!-- FOOTER -->
+        <%- include('partials/footer.ejs') %></body>
 </body></html>
