@@ -12,6 +12,17 @@ class produtoController {
 
         }
     }
+
+    static async categorias(req,res) {
+        try{
+        const produtos = await database.Produto_estoque.findAll()
+        return res.render("produtos",{produtos})
+        // return res.status(200).json(todosOsProdutos)
+        } catch(error) {
+            return res.status(500).json(error.message)
+
+        }
+    }
 }
 
 // const produtoController = {
