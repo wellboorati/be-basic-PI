@@ -38,6 +38,13 @@ h3 {
     font-weight: bold;
 }
 
+h4 {
+    font-family: 'Tenor Sans';
+    font-size: 18px;
+    margin-bottom:16px;
+    font-weight: bold;
+}
+
 .f14 {
   font-size: 14px;
 }
@@ -125,7 +132,7 @@ body.home .navbar {
 #navBarBeBasic .navbar-nav {margin-left: 15px;}
 
 #navBarBeBasic .nav-link {
-  background-image: url(../images/bullet-gray.svg);
+  background-image: url(../images/bullet-full-red.svg);
   background-repeat: no-repeat;
   background-position: 0 center;
   padding-left: 20px;
@@ -149,6 +156,33 @@ body.home .navbar {
 #navBarBeBasic .dropdown-menu {
   background: #f2f2f2;
   border: 0;
+}
+
+.navBarPainel {
+  padding:0;
+  list-style:none;
+  margin-left: 15px;
+}
+
+.navBarPainel .nav-link {
+  background-image: url(../images/bullet-gray.svg);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  padding-left: 20px;
+  color: #000;
+}
+
+.navBarPainel .nav-link:hover {
+  color:#DD8560;
+}
+
+/**
+* Table
+*/
+
+.table th,
+.table td {
+  text-align: center;
 }
 
 /**
