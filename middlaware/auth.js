@@ -4,6 +4,7 @@ function auth(req, res, next){
     }
     else {
     return res.send("você precisa estar logado para ter acesso")
+    // return res.render("login")
     }
 }
 

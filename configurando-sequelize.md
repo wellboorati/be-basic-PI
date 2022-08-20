@@ -12,7 +12,7 @@ Desfazendo as migrações: npx sequelize-cli db:migrate:undo:all
 Populando o banco de dados:
 
 Gerando as tabelas de seeders: npx sequelize-cli seed:generate --name NomeDaTabela
-Enviando as tabelas de seeders ao banco: npx sequelize-cli seed:all
+Enviando as tabelas de seeders ao banco: npx sequelize-cli db:seed:all
 Desfazendo as de seeders no banco: npx sequelize db:seed:undo:all
 
 

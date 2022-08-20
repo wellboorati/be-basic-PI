@@ -13,6 +13,11 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Fornecedores', key: 'id'}
       },
+      categoria_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Categoria', key: 'id'}
+      },
       nome: {
         type: Sequelize.STRING
       },

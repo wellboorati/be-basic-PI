@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
       Produto_estoque.belongsTo(models.Fornecedores, {
         foreignKey: 'fornecedor_id'
       })
+
+      Produto_estoque.belongsTo(models.Categoria, {
+        foreignKey: 'categoria_id'
+      })
     }
   }
   Produto_estoque.init({

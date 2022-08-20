@@ -6,6 +6,7 @@ module.exports = {
   {
     fornecedor_id: 1,
     nome: 'Camiseta Gola V',
+    categoria_id: 2,
     preco: 120,
     cor: 'branco',
     p_quantidade_disponivel: 10,
@@ -19,6 +20,7 @@ module.exports = {
 {
   fornecedor_id: 1,
   nome: 'Camiseta Gola V',
+  categoria_id: 2,
   preco: 120,
   cor: 'preto',
   p_quantidade_disponivel: 10,
@@ -32,6 +34,7 @@ module.exports = {
 {
   fornecedor_id: 1,
   nome: 'Camiseta Gola V',
+  categoria_id: 2,
   preco: 120,
   cor: 'azul',
   p_quantidade_disponivel: 10,
@@ -44,6 +47,7 @@ module.exports = {
 {
   fornecedor_id: 1,
   nome: 'Camiseta Gola V',
+  categoria_id: 2,
   preco: 120,
   cor: 'cinza',
   p_quantidade_disponivel: 10,
@@ -57,6 +61,7 @@ module.exports = {
 {
   fornecedor_id: 2,
   nome: 'Camiseta Gola O',
+  categoria_id: 1,
   preco: 120,
   cor: 'branco',
   p_quantidade_disponivel: 10,
@@ -70,6 +75,7 @@ module.exports = {
 {
 fornecedor_id: 2,
 nome: 'Camiseta Gola O',
+categoria_id: 1,
 preco: 120,
 cor: 'preto',
 p_quantidade_disponivel: 10,
@@ -83,6 +89,7 @@ updatedAt: new Date(),
 {
 fornecedor_id: 2,
 nome: 'Camiseta Gola O',
+categoria_id: 1,
 preco: 120,
 cor: 'azul',
 p_quantidade_disponivel: 10,
@@ -96,6 +103,7 @@ updatedAt: new Date(),
 {
 fornecedor_id: 2,
 nome: 'Camiseta Gola O',
+categoria_id: 1,
 preco: 120,
 cor: 'cinza',
 p_quantidade_disponivel: 10,
