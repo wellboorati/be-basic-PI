@@ -28,6 +28,7 @@ a:hover {color: #000;}
 h2 {
     font-family: 'Tenor Sans';
     font-size: 18px;
+    margin-top:20px;
     margin-bottom:0;
 }
 
@@ -43,6 +44,27 @@ h4 {
     font-size: 18px;
     margin-bottom:16px;
     font-weight: bold;
+}
+
+header,
+#navBarSearch input {
+  background: #f7f2f2;
+}
+
+.cover-featured {
+  height: 4px;
+  background: #eee;
+  box-shadow: 0 3px 4px 0px #68686836;
+  /* border-bottom: 1px solid #000; */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dd8560+0,dbcdc7+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dba28c+0,dbcdc7+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dbcdc7+0,dba28c+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dbcdc7+0,d8b2a4+100 */
+  background: #dbcdc7; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #dbcdc7 0%, #d8b2a4 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  #dbcdc7 0%,#d8b2a4 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  #dbcdc7 0%,#d8b2a4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbcdc7', endColorstr='#d8b2a4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .f14 {
