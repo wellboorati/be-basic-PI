@@ -17,6 +17,7 @@ const upload = require('../middlaware/uploadsUser');
 const auth = require('../middlaware/auth');
 const produtoController = require('../controllers/produtoController');
 const paineldousuario = require('../controllers/paineldousuarioController')
+const admnistrador = require('../controllers/admnistradorController')
 
 
 /* Home pages */
@@ -24,21 +25,35 @@ router.get('/', mainController.homePage)
 router.get('/nossa-historia', mainController.nossaHistoriaPage)
 
 // painel do usuário
-// router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro) 
-router.get('/paineldousuario', paineldousuario.encontreMeuCadastro)
-router.get('/paineldousuario', paineldousuario.atualizarMeuCadastro)
+// router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro)
+router.get('/paineldousuario', mainController.painelPage)
 
 // Meu cadastro
 router.get('/meucadastro/:id', paineldousuario.encontreMeuCadastro)
+router.put('/meucadastro/:id', paineldousuario.atualizarMeuCadastro)
 
 // Pedidos
 router.get('/pedidos', paineldousuario.encontreMeusPedidos)
 
+
+// Admnistrador
+router.get('/adminpage',mainController.adminPage)
+router.get('/todosOsClientes', admnistrador.encontreTodosOsCadastros)
+router.get('/todosOsClientes/:id', admnistrador.encontreUmCadastro)
+router.post('/todosOsClientes/:id', admnistrador.atualizarUmCadastro)
+router.get('/pedidos/:id', admnistrador.encontreUmPedido)
+
+
+
+
+
+
+// Categoria
 router.get('/categorias', mainController.categoriesPage)
 // router.get('/produtos', mainController.productsPage)
 
 router.get('/produtos', produtoController.listarTodosOsProdutos)
-router.get('/categorias', produtoController.categorias)
+// router.get('/categorias', produtoController.categorias)
 
 router.get('/resetpassword', mainController.resetPasswordPage)
 router.get('/forma-de-pagamento', mainController.pagamentoPage)
@@ -82,7 +97,7 @@ router.get('/carrinho', mainController.carrinhoPage) /* GET carrinho page. */
 // router.get('/carrinho', auth, mainController.carrinhoPage) /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 
-router.get('/adminpage',mainController.adminPage) /* GET carrinho page. */
+ /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 
 
