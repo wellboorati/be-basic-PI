@@ -28,29 +28,24 @@ const produtosEstoqueController = {
     return res.render("produtosestoque");//ou res.json
   },
 
-<<<<<<< HEAD
-  // listarProdutos: async (req,res)=>{
-  //   const produtos = await database.Produto_estoque.findAll()
-  //   return res.json(produtos);
-  // },
+
   listarProdutos: async (req,res) => {
     const produtos = await database.Produto_estoque.findAll()
     return res.render("listarprodutos",{produtos},);
   },
-=======
-  listarProdutos: async (req,res)=>{
-    //const produtos = await database.Produto_estoque.findAll()
-    //return res.json(produtos);
-    return res.render("listarProdutos");
+
+  deletarProdutos:async (req,res)=>{
+    const { id } = req.params
+    try {
+      const excluir = await database.Produto_estoque.destroy({
+        where: {id: Number(id)}})
+
+      return res.status(200).json({ mensagem: `id ${id} deletado` })
+
+  } catch (error) {
+      return res.status(500).json(error.message)
   }
->>>>>>> ddc39db30d20563fe0028df6d11a524b9f6d112a
-
-
-  // deletarProdutos:async (req,res)=>{
-  //   //lógica de deletar
-
-  //   return res.json();
-  // },
+}
 };
 
 module.exports = produtosEstoqueController;

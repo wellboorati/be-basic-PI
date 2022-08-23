@@ -54,7 +54,7 @@ router.post('/adressregistration', adressRegistrationController.cadastro_enderec
 router.get('/produtosestoque', produtosEstoqueController.productInventoryPage)
 router.post ('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
 router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
-// router.delete('/deletarprodutos',produtosEstoqueController.deletarProdutos)
+router.delete('/deletarprodutos/:id',produtosEstoqueController.deletarProdutos)
 
 
 
