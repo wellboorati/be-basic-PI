@@ -34,18 +34,33 @@ class paineldousuario{
         }
 
         static async encontreMeusPedidos(req, res) {
+                const { cliente_id, id } = req.params
+                try{
+                    const meuPedido = await database.Pedido.findOne( {
+                        where: {
+                            cliente_id: Number(cliente_id),
+                            id: Number(id)
+                        }})
+                        return res.status(200).json(meuPedido)
+                } catch (error) {
+                    return res.status(500).json(error.message)
+                }
+                }
+
+        static async redefinirSenha (req, res) {
             const { id } = req.params
-            try{
-                // const meuPedido = await database.Pedido.findAll()
-                // return res.status(200).json(meuPedido)
-                // return res.status(200).render("paineldousuario")
-                 const meuPedido = await database.Pedido.findOne( {
-                    where: { id: Number(id) }})
-                    return res.status(200).json(meuPedido)
+            const { senha } = req.body;
+
+            try {
+                const usuarioSenha = await database.Clientes.update({ senha },
+                    {where: { id }})
+
+                return res.status(200).json(usuarioSenha)
+
             } catch (error) {
                 return res.status(500).json(error.message)
             }
-            }
+        }
 
 
     }

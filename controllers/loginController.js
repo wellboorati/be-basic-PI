@@ -44,6 +44,23 @@ const loginController = {
     }
   },
 
+
+
+  static async redefinirSenha (req, res) {
+    const { id } = req.params
+    const { email, senha } = req.body;
+
+    try {
+        const usuarioSenha = await database.Clientes.update({ senha },
+            {where: { id }})
+
+        return res.status(200).json(usuarioSenha)
+
+    } catch (error) {
+        return res.status(500).json(error.message)
+    }
+}
+
   loginPage: (req, res) => {
     return res.render("login");
   },

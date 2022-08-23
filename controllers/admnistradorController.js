@@ -24,12 +24,19 @@ class admnistrador{
 
         static async atualizarUmCadastro (req, res) {
             const { id } = req.params
-            const informacoes = req.body
+            const {
+                nome, email, sexo, cpf, data_nascimento, telefone, senha, endereco, numero, complemento, bairro, cidade, estado, cep
+                } = req.body;
+
             try {
-                await database.Clientes.update(informacoes, {where: {id: Number(id)}})
-                const atualizarMeuCadastro = await database.Pessoas.findOne( {
-                    where: { id: Number(id)}})
-                    return res.status(200).json(atualizarMeuCadastro)
+                const usuario = await database.Clientes.update({ nome, email, senha, sexo, cpf, data_nascimento, telefone },
+                    {where: { id }})
+
+                const usuarioEndereco = await database.Cliente_endereco.update({ endereco, numero, complemento, bairro, cidade , estado, cep },
+                    {where: { id }})
+
+                    return res.status(200).json(usuario)
+
             } catch (error) {
                 return res.status(500).json(error.message)
             }

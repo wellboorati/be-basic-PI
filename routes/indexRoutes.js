@@ -24,17 +24,19 @@ const admnistrador = require('../controllers/admnistradorController')
 router.get('/', mainController.homePage)
 router.get('/nossa-historia', mainController.nossaHistoriaPage)
 
-// painel do usuário
+// PAINEL DO USUÁRIO
 // router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro)
 router.get('/paineldousuario', mainController.painelPage)
 
-// Meu cadastro
+// PAINEL DO USUÁRIO - meu cadastro
 router.get('/meucadastro/:id', paineldousuario.encontreMeuCadastro)
 router.put('/meucadastro/:id', paineldousuario.atualizarMeuCadastro)
 
-// Pedidos
-router.get('/pedidos', paineldousuario.encontreMeusPedidos)
+// PAINEL DO USUÁRIO - pedidos
+router.get('/meucadastro/:cliente_id/pedido/:id', paineldousuario.encontreMeusPedidos)
 
+// PAINEL DO USUÁRIO - Redefinir senha
+router.put('/redefinirSenha/:id', paineldousuario.redefinirSenha)
 
 // Admnistrador
 router.get('/adminpage',mainController.adminPage)
