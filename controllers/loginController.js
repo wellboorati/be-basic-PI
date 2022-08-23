@@ -34,19 +34,7 @@ const loginController = {
     }
   },
 
-  updateSenha: async (id, senha) => {
-    try {
-      const { email, senha } = req.body;
-      return await Clientes.update({ senha }, { where: { id } }
-      )
-    } catch (error) {
-      throw new Error(error)
-    }
-  },
-
-
-
-  static async redefinirSenha (req, res) {
+  redefinirSenha: async (req, res) => {
     const { id } = req.params
     const { email, senha } = req.body;
 
@@ -59,7 +47,7 @@ const loginController = {
     } catch (error) {
         return res.status(500).json(error.message)
     }
-}
+},
 
   loginPage: (req, res) => {
     return res.render("login");
