@@ -328,14 +328,23 @@ section {
 
 /* Tamanho da imagem na home */
 .list__products img {
-    max-width:200px;
-    max-height:150px;
+    max-width:180px;
     width: auto;
     height: auto;
 }
 
 .lista__products__card {
     width: 165px;
+}
+
+.list__category .lista__products__card {
+  width: 300px;
+}
+
+.list__category img {
+  max-width: 300px;
+  width: auto;
+  height: auto;
 }
 
 .lista__products__card__name {
