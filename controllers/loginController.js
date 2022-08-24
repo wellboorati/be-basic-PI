@@ -34,6 +34,7 @@ const loginController = {
     }
   },
 
+<<<<<<< HEAD
   updateSenha: async (id, senha) => {
     try {
       const { email, senha } = req.body;
@@ -46,6 +47,8 @@ const loginController = {
 
 
 
+=======
+>>>>>>> 5187c37bc916127d1c742b8842cced3f1ddbea76
   redefinirSenha: async (req, res) => {
     const { id } = req.params
     const { email, senha } = req.body;

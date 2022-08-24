@@ -38,15 +38,21 @@ router.get('/meucadastro/:cliente_id/pedido/:id', paineldousuario.encontreMeusPe
 // PAINEL DO USUÁRIO - Redefinir senha
 router.put('/redefinirSenha/:id', paineldousuario.redefinirSenha)
 
-// Admnistrador
+
+// ADMNISTRADOR
 router.get('/adminpage',mainController.adminPage)
-router.get('/todosOsClientes', admnistrador.encontreTodosOsCadastros)
-router.get('/todosOsClientes/:id', admnistrador.encontreUmCadastro)
-router.post('/todosOsClientes/:id', admnistrador.atualizarUmCadastro)
-router.get('/pedidos/:id', admnistrador.encontreUmPedido)
+// ADMINISTRADOR - cadastros / Pedidos / Fornecedores
+router.get('/adminpageCadastros', admnistrador.encontreTodosOsCadastros)
+router.get('/adminpageCadastros/:id', admnistrador.encontreUmCadastro)
+router.put('/adminpageCadastros/:id', admnistrador.atualizarUmCadastro)
+// ADMINISTRADOR - Pedidos
+router.get('/adminpagePedidos', admnistrador.todosOsPedidos)
+router.get('/adminpageCadastros/:id/adminpagePedidos/:id', admnistrador.encontreUmPedido)
+
+// ADMINISTRADOR - Produtos
 
 
-
+// ADMINISTRADOR - Fornecedores
 
 
 
