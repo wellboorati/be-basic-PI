@@ -4,28 +4,38 @@ const produtosEstoqueController = {
   cadastro_produtos_estoque: async (req, res) => {
     const {
       fornecedor_id,
+      categoria_id,
       nome,
       preco,
-      quantidade,
+      cor,
+      p_quantidade_disponivel,
+      m_quantidade_disponivel,
+      g_quantidade_disponivel,
+      image_url,
       ativo,
     } = req.body;
 
 
-    const produtosEstoque = await database.Produto_estoque.create({
+    const produtosEstoque = await database.Produto_estoque.create(
 
-      fornecedor_id,
-      nome,
-      preco,
-      quantidade_disponivel: quantidade,
-      ativo,
-    });
+      {
+        fornecedor_id,
+        categoria_id,
+        nome,
+        preco,
+        cor,
+        p_quantidade_disponivel,
+        m_quantidade_disponivel,
+        g_quantidade_disponivel,
+        image_url,
+        ativo,
+      });
 
-
-    return res.redirect("/listarprodutos");
+      return res.redirect("/listarprodutos");
   },
 
   productInventoryPage: (req, res) => {
-    return res.render("produtosestoque");//ou res.json
+    return res.render("produtosestoque");
   },
 
 

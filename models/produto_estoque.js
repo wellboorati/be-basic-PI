@@ -18,13 +18,20 @@ module.exports = (sequelize, DataTypes) => {
       Produto_estoque.belongsTo(models.Fornecedores, {
         foreignKey: 'fornecedor_id'
       })
+
+      Produto_estoque.belongsTo(models.Categoria, {
+        foreignKey: 'categoria_id'
+      })
     }
   }
   Produto_estoque.init({
     nome: DataTypes.STRING,
-    preco: DataTypes.STRING,
-    quantidade_disponivel: DataTypes.STRING,
-    
+    preco: DataTypes.INTEGER,
+    cor: DataTypes.STRING,
+    p_quantidade_disponivel: DataTypes.INTEGER,
+    m_quantidade_disponivel: DataTypes.INTEGER,
+    g_quantidade_disponivel: DataTypes.INTEGER,
+    image_url: DataTypes.STRING,
     ativo: DataTypes.BOOLEAN
   }, {
     sequelize,

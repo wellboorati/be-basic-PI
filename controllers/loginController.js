@@ -34,6 +34,33 @@ const loginController = {
     }
   },
 
+  updateSenha: async (id, senha) => {
+    try {
+      const { email, senha } = req.body;
+      return await Clientes.update({ senha }, { where: { id } }
+      )
+    } catch (error) {
+      throw new Error(error)
+    }
+  },
+
+
+
+  redefinirSenha: async (req, res) => {
+    const { id } = req.params
+    const { email, senha } = req.body;
+
+    try {
+        const usuarioSenha = await database.Clientes.update({ senha },
+            {where: { id }})
+
+        return res.status(200).json(usuarioSenha)
+
+    } catch (error) {
+        return res.status(500).json(error.message)
+    }
+},
+
   loginPage: (req, res) => {
     return res.render("login");
   },

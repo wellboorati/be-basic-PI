@@ -20,26 +20,46 @@
                                 <form action="produtosestoque" method="post" class="form row justify-content-center">
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="fornecedor_id">Id Fornecedor</label>
-                                        <input type="text" required placeholder="Digite o Id do Fornecedor" name="fornecedor_id" id="fornecedor_id" class="form__control w-100"/>
+                                        <input type="number" value="1" required placeholder="Digite o Id do Fornecedor" name="fornecedor_id" id="fornecedor_id" class="form__control w-100"/>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="formLabel" for="categoria_id">Id Categoria</label>
+                                        <input type="number" value="1" required placeholder="Digite a categoria" name="categoria_id" id="fornecedor_id" class="form__control w-100"/>
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="nome">Nome</label>
-                                        <input type="text" required placeholder="Digite o nome do produto" name="nome" id="nome" class="form__control w-100"/>
+                                        <input type="text" value="camiseta x"required placeholder="Digite o nome do produto" name="nome" id="nome" class="form__control w-100"/>
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="preco">Preço</label>
-                                        <input type="number" required placeholder="Digite o preço do produto" name="preco" id="preco" class="form__control w-100"/>
+                                        <input type="number" value="25.00" required placeholder="Digite o preço do produto" name="preco" id="preco" class="form__control w-100"/>
                                     </div>
                                     <div class="col-12 mb-3">
-                                        <label class="formLabel" for="quantidade">Quantidade</label>
-                                        <input type="number" required placeholder="Digite a quantidade" name="quantidade" id="quantidade" class="form__control w-100"/>
+                                        <label class="formLabel" for="cor">Cor</label>
+                                        <input type="text" value="amarela" required placeholder="Digite o preço do produto" name="cor" id="preco" class="form__control w-100"/>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="formLabel" for="quantidade_p">Quantidade Disponivel P</label>
+                                        <input type="number" value="10" required placeholder="Digite a quantidade" name="p_quantidade_disponivel" id="quantidade_p" class="form__control w-100"/>
                                     </p>
                                 </div>
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="quantidade_m">Quantidade Disponivel M</label>
+                                    <input type="number" value="10" required placeholder="Digite a quantidade disponivel" name=" m_quantidade_disponivel" id="quantidade_m" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="quantidade_g">Quantidade Disponivel G</label>
+                                    <input type="number" value="10" required placeholder="Digite a quantidade disponivel" name="g_quantidade_disponivel" id="quantidade_g" class="form__control w-100"/>
+                                </div>
+                                <!-- <div class="col-12 mb-3">
+                                    <label class="formLabel" for="imagem">Imagem</label>
+                                    <input type="image" required placeholder="" name="image_url" id="imagem" class="form__control w-100"/>
+                                </div> -->
                                 <div class="col-12 mb-5">
                                     <label class="formLabel" for="ativo">Disponibilidade</label>
                                     <input list="ativo" required name="ativo" placeholder="Ativo / Inativo" class="form__control w-100"/>
                                     <datalist id="ativo">
-                                        <option value="Ativo"></option>
+                                        <option value="Ativo" selected></option>
                                         <option value="Inativo"></option>
                                     </datalist>
                                 </div>

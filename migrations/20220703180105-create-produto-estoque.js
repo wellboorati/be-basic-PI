@@ -13,13 +13,30 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Fornecedores', key: 'id'}
       },
+      categoria_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Categoria', key: 'id'}
+      },
       nome: {
         type: Sequelize.STRING
       },
       preco: {
+        type: Sequelize.INTEGER
+      },
+      cor: {
         type: Sequelize.STRING
       },
-      quantidade_disponivel: {
+      p_quantidade_disponivel: {
+        type: Sequelize.INTEGER
+      },
+      m_quantidade_disponivel: {
+        type: Sequelize.INTEGER
+      },
+      g_quantidade_disponivel: {
+        type: Sequelize.INTEGER
+      },
+      image_url: {
         type: Sequelize.STRING
       },
       ativo: {

@@ -49,7 +49,7 @@ const registrationController = {
       cep,
       });
 
-   return res.render('avatar', { image: `./public/images/userUpload/${filename}` })
+   return res.render('avatar', { image: `../images/userUpload/${filename}`, descricao: "descrição" })
 
     // return res.redirect('/')
     // return res.json({

@@ -27,18 +27,37 @@
                     <a href="#"><img src="
                         https://cdn.shopify.com/s/files/1/0544/3731/4735/products/camiseta-minimal-426603_2048x2048.webp?v=1660209882" alt=""></a>
                 </div>
+                <div class="lista__products__card__fornecedor_id">
+                    <%= produto.fornecedor_id %>
+                </div>
+                <div class="lista__products__card__categoria_id">
+                    <%= produto.categoria_id %>
+                </div>
                 <div class="lista__products__card__name">
                     <%= produto.nome %>
-                </div>
-                <div class="lista__products__card__name">
-                    <%= produto.quantidade_disponivel %>
-                </div>
-                <div class="lista__products__card__name">
-                    <%= produto.ativo %><br>
                 </div>
                 <div class="lista__products__card__price">
                     <%= produto.preco %>
                 </div>
+                <div class="lista__products__card__cor">
+                    <%= produto.cor %>
+                </div>
+                <div class="lista__products__card__name">
+                    <%= produto.p_quantidade_disponivel %>
+                </div>
+                <div class="lista__products__card__name">
+                    <%= produto.m_quantidade_disponivel %>
+                </div>
+                <div class="lista__products__card__name">
+                    <%= produto.g_quantidade_disponivel %>
+                </div>
+                <!-- <div class="lista__products__card__name">
+                    <%= produto.image_url %>
+                </div> -->
+                <div class="lista__products__card__name">
+                    <%= produto.ativo %><br>
+                </div>
+                
             </div>
             <%})} %>
             <div class="lista__products__card">
