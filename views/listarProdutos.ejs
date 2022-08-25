@@ -15,12 +15,6 @@
           <h2 class="text-uppercase text-center">Lista de Produtos Cadastrados</h2>
           <hr/>
 
-        <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
-        <!-- <a class="btn form__submit mt-5" href="">Deletar</a> -->
-            <div class="btn">
-                <button value="<%= produto.id %>" onclick="deletar(10)"> Deletar </button>
-            </div>
-
           <div class="list__products">
             <div class="lista__products__card">
                 <div class="lista__products__card__pic">
@@ -28,38 +22,45 @@
                         https://cdn.shopify.com/s/files/1/0544/3731/4735/products/camiseta-minimal-426603_2048x2048.webp?v=1660209882" alt=""></a>
                 </div>
                 <div class="lista__products__card__fornecedor_id">
-                    <%= produto.fornecedor_id %>
+                    <p>Código do Fornecedor: <%= produto.fornecedor_id %></p>
                 </div>
                 <div class="lista__products__card__categoria_id">
-                    <%= produto.categoria_id %>
+                    <p>Código da Categoria: <%= produto.categoria_id %></p>
                 </div>
                 <div class="lista__products__card__name">
-                    <%= produto.nome %>
+                    <p>Produto: <%= produto.nome %></p>
                 </div>
                 <div class="lista__products__card__price">
-                    <%= produto.preco %>
+                    <p>Preço: <%= produto.preco %></p>
                 </div>
                 <div class="lista__products__card__cor">
-                    <%= produto.cor %>
+                    <p>Cor: <%= produto.cor %></p>
                 </div>
                 <div class="lista__products__card__name">
-                    <%= produto.p_quantidade_disponivel %>
+                    <p>Quantidade P: <%= produto.p_quantidade_disponivel %></p>
                 </div>
                 <div class="lista__products__card__name">
-                    <%= produto.m_quantidade_disponivel %>
+                    <p>Quantidade M: <%= produto.m_quantidade_disponivel %></p>
                 </div>
                 <div class="lista__products__card__name">
-                    <%= produto.g_quantidade_disponivel %>
+                    <p>Quantidade G: <%= produto.g_quantidade_disponivel %></p>
                 </div>
                 <!-- <div class="lista__products__card__name">
                     <%= produto.image_url %>
                 </div> -->
                 <div class="lista__products__card__name">
-                    <%= produto.ativo %><br>
+                    <p>Disponibilidade: <%= produto.ativo %><br></p>
                 </div>
-                
+                <div class="btn">
+                    <button value="<%= produto.id %>" onclick="deletar()"> Deletar </button><br><br>
+                    <button value="<%= produto.id %>" onclick="alterar()"> Alterar </button>
+                </div>
+    
             </div>
             <%})} %>
+        <div>
+            <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+        </div>
             <div class="lista__products__card">
                 <div class="lista__products__card__pic">
                     <a href="#"><img src="/images/produto-fake-2.png" alt=""></a>
@@ -213,6 +214,7 @@
 
 </main>
 <script src="./partials/deletar.js"></script>
+<script src="./partials/alterar.js"></script>
 </body>
 <!-- FOOTER -->
 <%- include('partials/footer.ejs') %>
