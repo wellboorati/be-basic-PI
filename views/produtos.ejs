@@ -30,6 +30,7 @@
                                             <%= produto.preco %>
                                         </div>
                                     </div>
+                                    <button onclick="getProductById(produto.id)">Detalhes</button>
                             <% })} %>
                         </div>
                     </div>
@@ -37,13 +38,20 @@
             </div>
         </section>
 
+        <script>
+            function getProductById(id)
+            {
+                fetch(`http://localhost:3000/detalheproduto/${id}`)
+            }
+        </script>
+
         <%- include('partials/trending.ejs') %>
 
         <%- include('partials/benefits.ejs') %>
 
         <%- include('partials/instagram.ejs') %>
 
-
+        /produtos?categoria=2
     </main>
 
     <!-- FOOTER -->

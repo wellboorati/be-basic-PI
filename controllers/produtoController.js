@@ -25,8 +25,22 @@ class produtoController {
       return res.status(500).json(error.message);
     }
   }
-}
 
+
+static async listarProduto(req, res) {
+  const { id } = req.params
+  try{
+      const detalheproduto = await database.Produto.findOne( {
+          where: {
+              id
+          }})
+          return res.status(200).render("productsdetails", {detalheproduto})
+          // return res.status(200).json(meuPedido)
+  } catch (error) {
+      return res.status(500).json(error.message)
+  }
+  }
+}
 // const produtoController = {
 //     listarTodosOsProdutos: async (req, res) => {
 
@@ -54,6 +68,6 @@ class produtoController {
 //     res.status(500).render('error', { error: error })
 // }
 // }
-// };
+
 
 module.exports = produtoController;

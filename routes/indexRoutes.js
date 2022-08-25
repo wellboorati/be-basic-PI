@@ -50,7 +50,10 @@ router.get('/adminpagePedidos', admnistrador.todosOsPedidos)
 router.get('/adminpageCadastros/:id/adminpagePedidos/:id', admnistrador.encontreUmPedido)
 
 // ADMINISTRADOR - Produtos
-
+router.get('/adminpageProduto', admnistrador.todosOsProdutos)
+router.get('/adminpageProduto/:id', admnistrador.encontreUmCadastro)
+router.put('/adminpageProduto/:id', admnistrador.atualizarUmProduto)
+router.delete('/adminpageProduto/:id', admnistrador.deletarUmProduto)
 
 // ADMINISTRADOR - Fornecedores
 
@@ -61,6 +64,8 @@ router.get('/categorias', mainController.categoriesPage)
 // router.get('/produtos', mainController.productsPage)
 
 router.get('/produtos', produtoController.listarTodosOsProdutos)
+router.get('/detalheproduto/:id', produtoController.listarProduto)
+
 // router.get('/categorias', produtoController.categorias)
 
 router.get('/resetpassword', mainController.resetPasswordPage)
