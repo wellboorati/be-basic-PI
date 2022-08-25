@@ -47,7 +47,8 @@ class admnistrador{
         static async todosOsPedidos(req, res) {
             try{
                 const meuPedido = await database.Pedido.findAll()
-                return res.status(200).json(meuPedido)
+                //return res.status(200).json(meuPedido)
+                return res.render("adminpagePedidos")
             } catch (error) {
                 return res.status(500).json(error.message)
             }
@@ -98,7 +99,8 @@ class admnistrador{
         static async encontreTodosOsFornecedores(req, res) {
             try{
                 const todosOsFornecedores = await database.Fornecedores.findAll()
-                return res.status(200).json(todosOsFornecedores)
+                // return res.status(200).json(todosOsFornecedores)
+                return res.render("fornecedor")
             } catch (error) {
                 return res.status(500).json(error.message)
             }
