@@ -9,59 +9,70 @@
   <section>
     
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center">        
         <div class="col text-center">
           <h2 class="text-uppercase text-center">Lista de Produtos Cadastrados</h2>
           <hr/>
 
-          <div class="list__products">
-            <% if(produtos){ %>
-                <% produtos.forEach(produto => {%>
-            <div class="lista__products__card">
-                <div class="lista__products__card__pic">
-                    <a href="#"><img src="
-                        https://cdn.shopify.com/s/files/1/0544/3731/4735/products/camiseta-minimal-426603_2048x2048.webp?v=1660209882" alt=""></a>
-                </div>
-                <div class="lista__products__card__fornecedor_id">
-                    <strong>Código do Fornecedor: <%= produto.fornecedor_id %></strong>
-                </div>
-                <div class="lista__products__card__categoria_id">
-                    <strong>Código da Categoria: <%= produto.categoria_id %></strong>
-                </div>
-                <div class="lista__products__card__name">
-                    Produto: <%= produto.nome %>
-                </div>
-                <div class="lista__products__card__price">
-                    Preço: <%= produto.preco %>
-                </div>
-                <div class="lista__products__card__cor">
-                    <strong>Cor: <%= produto.cor %></strong>
-                </div>
-                <div class="lista__products__card__name">
-                    Quantidade P: <%= produto.p_quantidade_disponivel %>
-                </div>
-                <div class="lista__products__card__name">
-                    Quantidade M: <%= produto.m_quantidade_disponivel %>
-                </div>
-                <div class="lista__products__card__name">
-                    Quantidade G: <%= produto.g_quantidade_disponivel %>
-                </div>
-                <!-- <div class="lista__products__card__name">
-                    <%= produto.image_url %>
-                </div> -->
-                <div class="lista__products__card__name">
-                    <p>Disponibilidade: <%= produto.ativo %></p><br>
-                </div>
-                <div class="btn">
-                    <button value="<%= produto.id %>" onclick="deletar()" class="btn btn-primary"> Deletar </button><br><br>
-                    <button value="<%= produto.id %>" onclick="alterar()" class="btn btn-primary"> Alterar </button>
-                </div>
-    
+          <div class="row">
+            <div class="col-12 col-lg-3 text-start">
+                <%- include('partials/menuAdmin') %>
             </div>
-            <%})} %>
-          </div>
+            <div class="col-12 col-lg-9">
 
-          <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+                <div class="list__products">
+                    <% if(produtos){ %>
+                        <% produtos.forEach(produto => {%>
+                    <div class="lista__products__card">
+                        <div class="lista__products__card__pic">
+                            <a href="#"><img src="
+                                https://cdn.shopify.com/s/files/1/0544/3731/4735/products/camiseta-minimal-426603_2048x2048.webp?v=1660209882" alt=""></a>
+                        </div>
+                        <div class="lista__products__card__fornecedor_id">
+                            <strong>Código do Fornecedor: <%= produto.fornecedor_id %></strong>
+                        </div>
+                        <div class="lista__products__card__categoria_id">
+                            <strong>Código da Categoria: <%= produto.categoria_id %></strong>
+                        </div>
+                        <div class="lista__products__card__name">
+                            Produto: <%= produto.nome %>
+                        </div>
+                        <div class="lista__products__card__price">
+                            Preço: <%= produto.preco %>
+                        </div>
+                        <div class="lista__products__card__cor">
+                            <strong>Cor: <%= produto.cor %></strong>
+                        </div>
+                        <div class="lista__products__card__name">
+                            Quantidade P: <%= produto.p_quantidade_disponivel %>
+                        </div>
+                        <div class="lista__products__card__name">
+                            Quantidade M: <%= produto.m_quantidade_disponivel %>
+                        </div>
+                        <div class="lista__products__card__name">
+                            Quantidade G: <%= produto.g_quantidade_disponivel %>
+                        </div>
+                        <!-- <div class="lista__products__card__name">
+                            <%= produto.image_url %>
+                        </div> -->
+                        <div class="lista__products__card__name">
+                            <p>Disponibilidade: <%= produto.ativo %></p><br>
+                        </div>
+                        <div class="btn">
+                            <button value="<%= produto.id %>" onclick="deletar()" class="btn btn-primary"> Deletar </button><br><br>
+                            <button value="<%= produto.id %>" onclick="alterar()" class="btn btn-primary"> Alterar </button>
+                        </div>
+            
+                    </div>
+                    <%})} %>
+                  </div>
+
+                  <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+                
+            </div>
+          </div>          
+
+          
         </div>
       </div>
     </div>
