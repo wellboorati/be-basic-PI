@@ -30,7 +30,7 @@
 
                                 <form
                                     class="form row justify-content-center" action="/registration" method="post" enctype="multipart/form-data">
-                                    <div class="col-12 mb-3">
+                                    <!-- <div class="col-12 mb-3">
                                                                 <label for="name" class="formLabel">Nome</label>
                                                                 <input type="text" placeholder="Digite seu nome completo (sem abreviações)" name="name" id="name"
                                                                   class="form__control w-100" />
@@ -134,7 +134,7 @@
                                                                   <option value="SP"></option>
                                                                   <option value="TO"></option>
                                                                 </datalist>
-                                                              </div>
+                                                              </div> -->
                                     <div class="col-12 mb-3" id="file-js-example">
                                         <label for="avatar" class="formLabel">Imagem URL</label>
                                         <input type="file" name="avatar" placeholder="avatar" id="avatar" accept="image/*" class="form__control w-100"/>
@@ -157,33 +157,34 @@
                         </div>
 
 
+                            </div>
+
+                        </div>
                     </div>
+                </section>
+                <script>
+                                  const fileInput = document.querySelector('#file-js-example input[type=file]');
+                                  fileInput.onchange = () => {
+                                    if (fileInput.files.length > 0) {
+                                      const fileName = document.querySelector('#file-js-example .file-name');
+                                      fileName.textContent = fileInput.files[0].name;
+                                      const submitButton = document.querySelector('#file-js-submit');
+                                      submitButton.removeAttribute('disabled')
+                                    }
+                                  }
+                </script>
 
-                </div>
-            </div>
-        </section>
-        <!-- <script>
-                  const fileInput = document.querySelector('#file-js-example input[type=file]');
-                  fileInput.onchange = () => {
-                    if (fileInput.files.length > 0) {
-                      const fileName = document.querySelector('#file-js-example .file-name');
-                      fileName.textContent = fileInput.files[0].name;
-                      const submitButton = document.querySelector('#file-js-submit');
-                      submitButton.removeAttribute('disabled')
-                    }
-                  }
-                </script> -->
+                <%- include('partials/trending.ejs') %>
 
+                <%- include('partials/benefits.ejs') %>
 
-        <%- include('partials/trending.ejs') %>
+                <%- include('partials/instagram.ejs') %>
 
-        <%- include('partials/benefits.ejs') %>
+            </main>
 
-        <%- include('partials/instagram.ejs') %>
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs') %>
 
-    </main>
-
-    <!-- FOOTER -->
-    <%- include('partials/footer.ejs') %>
-
-</body></html>
+        </body>
+    </html>
+</body>

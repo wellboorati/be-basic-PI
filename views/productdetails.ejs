@@ -9,43 +9,34 @@
      <main>
 
         <section class="products">
-            <div class="container">
+
+            <!-- CÓDIGO ORIGIRAL -->
+
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col text-center">
 
                         <div class="product-details">
                             <div>
-                                <img src=<%= detalheproduto.image_url %>> alt="">
+                                <a href="#"> <img src=<%= detalheproduto.image_url %> alt=""></a>
                             </div>
-                            <!-- <div>
-                                <img src="/images/produto-aberto-2.png" alt="">
-                            </div>
-                            <div>
-                                <img src="/images/produto-aberto-3.png" alt="">
-                            </div>
-                            <div>
-                                <img src="/images/produto-aberto-4.png" alt="">
-                            </div>
-                            <div>
-                                <img src="/images/produto-aberto-5.png" alt="">
-                            </div> -->
                         </div>
 
                         <div class="row justify-content-center mb-5">
                             <div class="col col-lg-4">
                                 <div class="products__details">
                                     <div class="products__details__name">
-                                        MOHAN
+                                        <%= detalheproduto.nome %>
                                     </div>
                                     <div class="products__details__description">
-                                        Recycle Boucle Knit Cardigan Pink
+                                        Camiseta Básica
                                     </div>
                                     <div class="products__details__price mb-3">
-                                        R$120
+                                        <%= detalheproduto.preco %>
                                     </div>
                                     <div class="products__details__color d-flex gap-3 align-items-center mb-3">
                                         <div class="products__details__color__label">
-                                            <!-- Cores
+                                            Cores
                                         </div>
                                         <div class="products__details__color__pallete d-flex">
                                             <div class="products__details__color__pallete__item">
@@ -60,10 +51,6 @@
                                                 <input type="radio" id="cor-3" name="color">
                                                 <label for="cor-3">Branco</label>
                                             </div>
-                                            <div class="products__details__color__pallete__item">
-                                                <input type="radio" id="cor-4" name="color">
-                                                <label for="cor-4">Azul</label>
-                                            </div> -->
                                         </div>
                                     </div>
                                     <div class="products__details__size d-flex gap-3 align-items-center mb-3">
@@ -72,15 +59,15 @@
                                         </div>
                                         <div class="products__details__size__sizes d-flex">
                                             <div class="products__details__size__sizes__item">
-                                                <input type="radio" id="p_quantidade_disponivel" name="size">
+                                                <input type="radio" id="tamanho-1" name="size">
                                                 <label for="tamanho-1">P</label>
                                             </div>
                                             <div class="products__details__size__sizes__item">
-                                                <input type="radio" id="m_quantidade_disponivel" name="size">
+                                                <input type="radio" id="tamanho-2" name="size">
                                                 <label for="tamanho-2">M</label>
                                             </div>
                                             <div class="products__details__size__sizes__item">
-                                                <input type="radio" id="g_quantidade_disponivel" name="size">
+                                                <input type="radio" id="tamanho-3" name="size">
                                                 <label for="tamanho-3">G</label>
                                             </div>
                                         </div>
@@ -109,16 +96,101 @@
 
                     </div>
                 </div>
+            </div> -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+
+                        <div class="product-details">
+                            <div>
+                                <a href="#"> <img src=<%= detalheproduto.image_url %> alt=""></a>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center mb-5">
+                            <div class="col col-lg-4">
+                                <div class="products__details">
+                                    <div class="products__details__name">
+                                        <%= detalheproduto.nome %>
+                                    </div>
+                                    <div class="products__details__description">
+                                        Camiseta Básica
+                                    </div>
+                                    <div class="products__details__price mb-3">
+                                        <%= detalheproduto.preco %>
+                                    </div>
+
+                                    </div>
+                                    <div class="products__details__size d-flex gap-3 align-items-center mb-3">
+                                        <div class="products__details__size__label">
+                                            Tamanho
+                                        </div>
+                                        <div class="products__details__size__sizes d-flex">
+                                            <div class="products__details__size__sizes__item">
+                                                <input type="radio" id="p_quantidade_disponivel" name="size">
+                                                <label for="tamanho-1">P</label>
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity" min="0" max="99" name="quantity" value="1" type="number" id="qtd1">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('P', document.getElementById('qtd1').value, '120', 1)"> Comprar </button>
+                                            </div>
+
+                                            <div class="products__details__size__sizes__item">
+                                                <input type="radio" id="p_quantidade_disponivel" name="size">
+                                                <label for="tamanho-1">M</label>
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity" min="0" max="99" name="quantity" value="1" type="number" id="qtd2">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+
+                                                </div>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('M', document.getElementById('qtd2').value, '120', 2)"> Comprar </button>
+                                            </div>
+                                            <div class="products__details__size__sizes__item">
+                                                <input type="radio" id="p_quantidade_disponivel" name="size">
+                                                <label for="tamanho-1">G</label>
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity" min="0" max="99" name="quantity" value="1" type="number" id="qtd3">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+
+                                                </div>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('G', document.getElementById('qtd3').value, '120', 3)"> Comprar </button>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <a href="/carrinho"> Ver Carrinho de compras </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
             </div>
         </section>
 
+
         <script>
+
             function AddCarrinho(produto, qtd, valor, posicao)
             {
                 localStorage.setItem("produto" + posicao, produto);
                 localStorage.setItem("qtd" + posicao, qtd);
                 valor = valor * qtd;
-                localStorage.setItem("valor" + posicao, valor);
+                localStorage.setItem("valor" + posicao, valor)
+                // localStorage.setItem("URL" + posicao, url_image);
                 alert("Produto adicionado ao carrinho!");
             }
         </script>

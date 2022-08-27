@@ -4,50 +4,87 @@ const produtosEstoqueController = {
   cadastro_produtos_estoque: async (req, res) => {
     const {
       fornecedor_id,
+      categoria_id,
       nome,
       preco,
-      quantidade,
+      cor,
+      p_quantidade_disponivel,
+      m_quantidade_disponivel,
+      g_quantidade_disponivel,
+      image_url,
       ativo,
     } = req.body;
 
 
-    const produtosEstoque = await database.Produto_estoque.create({
+    const produtosEstoque = await database.Produto_estoque.create(
 
-      fornecedor_id,
-      nome,
-      preco,
-      quantidade_disponivel: quantidade,
-      ativo,
-    });
+      {
+        fornecedor_id,
+        categoria_id,
+        nome,
+        preco,
+        cor,
+        p_quantidade_disponivel,
+        m_quantidade_disponivel,
+        g_quantidade_disponivel,
+        image_url,
+        ativo,
+      });
 
-
-    return res.redirect("/listarprodutos");
+      return res.redirect("/listarprodutos");
   },
 
   productInventoryPage: (req, res) => {
-    return res.render("produtosestoque");//ou res.json
+    return res.render("produtosestoque");
   },
 
-  // listarProdutos: async (req,res)=>{
-  //   const produtos = await database.Produto_estoque.findAll()
-  //   return res.json(produtos);
-  // },
+
   listarProdutos: async (req,res) => {
     const produtos = await database.Produto_estoque.findAll()
     return res.render("listarprodutos",{produtos},);
   },
 
-  listarProdutos: async (req,res)=>{
-    //const produtos = await database.Produto_estoque.findAll()
-    //return res.json(produtos);
-    return res.render("listarProdutos");
+  deletarProdutos:async (req,res)=>{
+    const { id } = req.params
+    try {
+      const excluir = await database.Produto_estoque.destroy({
+        where: {id: Number(id)}})
+
+      return res.status(200).json({ mensagem: `id ${id} deletado` })
+
+  } catch (error) {
+      return res.status(500).json(error.message)
   }
+},
 
-  // deletarProdutos:async (req,res)=>{
-  //   //lógica de deletar
+ atualizarProdutos:async (req, res)=> {
+  const { id } = req.params
+  const {
+      nome, preco, cor, p_quantidade_disponivel,m_quantidade_disponivel,
+      g_quantidade_disponivel,ativo } = req.body;
 
-  //   return res.json();
-  // },
+  try {
+      const alterar = await database.Produto_estoque.update({ nome, preco, cor, p_quantidade_disponivel,m_quantidade_disponivel,
+        g_quantidade_disponivel,ativo },
+          {where: { id }})
+
+          return res.status(200).json({mensagem:`id ${id} alterado`})
+
+  } catch (error) {
+      return res.status(500).json(error.message)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 };
 
 module.exports = produtosEstoqueController;

@@ -21,8 +21,8 @@ const admnistrador = require('../controllers/admnistradorController')
 
 
 /* Home pages */
-router.get('/', mainController.homePage)
-router.get('/nossa-historia', mainController.nossaHistoriaPage)
+router.get('/', mainController.homePage);
+router.get('/nossa-historia', mainController.nossaHistoriaPage);
 
 // PAINEL DO USUÁRIO
 // router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro)
@@ -53,7 +53,7 @@ router.get('/adminpageCadastros/:id/adminpagePedidos/:id', admnistrador.encontre
 router.get('/adminpageProduto', admnistrador.todosOsProdutos)
 router.get('/adminpageProduto/:id', admnistrador.encontreUmCadastro)
 router.put('/adminpageProduto/:id', admnistrador.atualizarUmProduto)
-router.delete('/adminpageProduto/:id', admnistrador.deletarUmProduto)
+// router.delete('/adminpageProduto/:id', admnistrador.deletarUmProduto)
 
 // ADMINISTRADOR - Fornecedores
 
@@ -64,7 +64,8 @@ router.get('/categorias', mainController.categoriesPage)
 // router.get('/produtos', mainController.productsPage)
 
 router.get('/produtos', produtoController.listarTodosOsProdutos)
-router.get('/detalheproduto/:id', produtoController.listarProduto)
+router.get('/productdetails', produtoController.listarProduto)
+// router.get('/productdetails', produtoController.productDetailsPage)
 
 // router.get('/categorias', produtoController.categorias)
 
@@ -73,7 +74,7 @@ router.get('/forma-de-pagamento', mainController.pagamentoPage)
 
 //checkout
 router.get('/checkout', mainController.checkoutPage)
-router.get('/productdetails', mainController.productdetailsPage)
+
 
 router.get('/login', loginController.loginPage)
 router.post('/login', loginController.login)
@@ -98,7 +99,8 @@ router.post('/adressregistration', adressRegistrationController.cadastro_enderec
 router.get('/produtosestoque', produtosEstoqueController.productInventoryPage)
 router.post ('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
 router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
-// router.delete('/deletarprodutos',produtosEstoqueController.deletarProdutos)
+router.delete('/deletarprodutos/:id',produtosEstoqueController.deletarProdutos)
+router.put('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
 
 
 

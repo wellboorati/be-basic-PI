@@ -42,9 +42,7 @@ const mainController = {
     },
 
     
-    productdetailsPage: (req, res) => {
-        return res.render('productdetails')
-    },
+    
 
     page404: (req, res) => {
         return res.render('404')
