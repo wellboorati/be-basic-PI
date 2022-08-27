@@ -48,12 +48,12 @@ const produtosEstoqueController = {
     const { id } = req.params
     try {
       const excluir = await database.Produto_estoque.destroy({
-        where: {id: Number(id)}})
+        where: {id}})
 
       return res.status(200).json({ mensagem: `id ${id} deletado` })
 
   } catch (error) {
-      return res.status(500).json(error.message)
+      return res.status(400).json(error.message)
   }
 },
 
