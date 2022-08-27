@@ -1,0 +1,78 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+
+<!-- HEADER -->
+<%- include('partials/menu.ejs') %>
+
+<main>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="text-center text-uppercase">Administrativo</h2>
+                    <hr />
+
+                    <div class="mt-4 row justify-content-center">
+                        <div class="col col-lg-3">
+                            <%- include('partials/menuAdmin') %>
+                        </div>
+                        <div class="col col-lg-9">
+
+                            <form action="produtosestoque" method="post" class="form row justify-content-center">
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="nome">Nome</label>
+                                    <input type="text" required name="nome" id="nome" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="email">Email</label>
+                                    <input type="email" required name="email" id="email" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="sexo">Sexo</label>
+                                    <input type="text" required name="sexo" id="sexo" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="cpf">CPF</label>
+                                    <input type="number" required name="p_quantidade_disponivel" id="cpf" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="data_nasc">Data de Nasc.</label>
+                                    <input type="number" required name="data_nasc" id="data_nasc" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="formLabel" for="telefone">Telefone</label>
+                                    <input type="number"required name="telefone" id="telefone" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 mb-5">
+                                    <label class="formLabel" for="administrativo">Administrativo</label>
+                                    <input list="administrativo" required name="administrativo" class="form__control w-100"/>
+                                    <datalist id="administrativo">
+                                        <option value="Sim" selected></option>
+                                        <option value="Não"></option>
+                                    </datalist>
+                                </div>
+                                <div class="col-12 mb-5">
+                                    <label class="formLabel" for="imagem">Imagem</label>
+                                    <input type="image" required name="imagem" class="form__control w-100"/>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn form__submit">Alterar Dados</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>

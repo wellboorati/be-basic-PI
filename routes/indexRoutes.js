@@ -44,7 +44,8 @@ router.get('/adminpage',mainController.adminPage)
 // ADMINISTRADOR - cadastros / Pedidos / Fornecedores
 router.get('/adminpageCadastros', admnistrador.encontreTodosOsCadastros)
 router.get('/adminpageCadastros/:id', admnistrador.encontreUmCadastro)
-router.put('/adminpageCadastros/:id', admnistrador.atualizarUmCadastro)
+// router.put('/adminpageCadastros/:id', admnistrador.atualizarUmCadastro)
+router.get('/adminpageCadastrosAltera/1', admnistrador.atualizarUmCadastro)
 // ADMINISTRADOR - Pedidos
 router.get('/adminpagePedidos', admnistrador.todosOsPedidos)
 router.get('/adminpageCadastros/:id/adminpagePedidos/:id', admnistrador.encontreUmPedido)
@@ -84,17 +85,15 @@ router.post('/registration', upload.single('avatar'), registrationController.cad
 router.get('/fornecedor', fornecedorController.fornecedorRegistration)
 router.post('/fornecedor', fornecedorController.cadastro_fornecedor);
 
-
-
 router.get('/adressregistration', adressRegistrationController.adressRegistrationPage)
 router.post('/adressregistration', adressRegistrationController.cadastro_endereco);
 
 
 router.get('/produtosestoque', produtosEstoqueController.productInventoryPage)
-router.post ('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
+router.post('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
 router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
 router.delete('/deletarprodutos/:id',produtosEstoqueController.deletarProdutos)
-router.put('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
+router.get('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
 
 
 

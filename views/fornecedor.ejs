@@ -11,10 +11,15 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <h2 class="text-uppercase text-center">Endereço de entrega</h2>
+                <h2 class="text-uppercase text-center">Fornecedores</h2>
                 <hr />
-                <div class="mt-4 row justify-content-center">
-                  <div class="col col-lg-6">
+                <div class="mt-4 row">
+
+                  <div class="col-12 col-lg-3 text-start">
+                      <%- include('partials/menuAdmin') %>
+                  </div>
+
+                  <div class="col col-lg-9">
 
                     <% if (typeof errors !=='undefined' ) { %>
                       <ul>
@@ -25,6 +30,47 @@
                           <% } %>
                       </ul>
                       <% } %>
+
+                      <div class="table-responsive">
+                        <table class="table table-striped" border="1">
+                            <thead>
+                                <tr>
+                                    <th>Nome da empresa</th>
+                                    <th>Nome do contato</th>
+                                    <th>Produto</th>
+                                    <th>Telefone</th>
+                                    <th>Email</th>
+                                    <th>Endereço</th>
+                                    <th>Número</th>
+                                    <th>Complemento</th>
+                                    <th>Bairro</th>
+                                    <th>Cidade</th>
+                                    <th>Estado</th>
+                                    <th>Alterar</th>
+                                    <th>Excluir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>Nome da empresa</td>
+                                  <td>Nome do contato</td>
+                                  <td>Produto</td>
+                                  <td>Telefone</td>
+                                  <td>Email</td>
+                                  <td>Endereço</td>
+                                  <td>Número</td>
+                                  <td>Complemento</td>
+                                  <td>Bairro</td>
+                                  <td>Cidade</td>
+                                  <td>Estado</td>
+                                  <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
+                                  <td><button class="btn btn-primary"> Deletar </button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br><br><br>
 
                         <form class="form row justify-content-center">
                           <div class="col-12 mb-3">
@@ -102,7 +148,7 @@
                             </datalist>
                           </div>
                           <div class="col-12 text-center">
-                            <button type="submit" class="btn form__submit">Finalizar Cadastro</button>
+                            <button type="submit" class="btn form__submit">Alterar Fornecedor</button>
                           </div>
                         </form>
                   </div>

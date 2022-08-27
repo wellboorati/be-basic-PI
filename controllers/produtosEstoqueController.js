@@ -68,7 +68,8 @@ const produtosEstoqueController = {
         g_quantidade_disponivel,ativo },
           {where: { id }})
 
-          return res.status(200).json({mensagem:`id ${id} alterado`})
+          // return res.status(200).json({mensagem:`id ${id} alterado`})
+          return res.render('alterarprodutos')
 
   } catch (error) {
       return res.status(500).json(error.message)

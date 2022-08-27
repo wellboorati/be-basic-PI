@@ -28,162 +28,143 @@
                                     </ul>
                                 <% } %>
 
-                                <form
-                                    class="form row justify-content-center" action="/registration" method="post" enctype="multipart/form-data">
-                                    <!-- <div class="col-12 mb-3">
-                                                                <label for="name" class="formLabel">Nome</label>
-                                                                <input type="text" placeholder="Digite seu nome completo (sem abreviações)" name="name" id="name"
-                                                                  class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="email" class="formLabel">Email</label>
-                                                                <input type="email" placeholder="Digite seu email" name="email" id="email"
-                                                                  class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="gender" class="formLabel">Sexo</label>
-                                                                <input list="gender" name="gender" placeholder="Masculino / Feminino"
-                                                                class="form__control w-100" /><br>
-                                                                <datalist id="gender">
-                                                                  <option value="Masculino"></option>
-                                                                  <option value="Feminino"></option>
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="cpf" class="formLabel">CPF</label>
-                                                                <input type="text" placeholder="Ex: 000.000.000-00" name="cpf" id="cpf"
-                                                                  pattern="[0-9]{11}"
-                                                                  class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="birthdate" class="formLabel">Seu aniversário</label>
-                                                                <input id="date" type="date" name="birthdate" value="2000-01-01"
-                                                                class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="telefone" class="formLabel">Telefone</label>
-                                                                <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone"
-                                                                class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="senha" class="formLabel">Senha</label>
-                                                                <input type="password" placeholder="Mínimo de 8 caracteres" name="password"
-                                                                  id="password"
-                                                                  class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="senha" class="formLabel">Confirme sua Senha</label>
-                                                                <input type="password" placeholder="Mínimo de 8 caracteres" name="confirm_password"
-                                                                  id="confirm_password"
-                                                                  class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="address" class="formLabel">Endereço</label>
-                                                                <input type="text" name="address" placeholder="Rua / Avenida / Praça" id="address"
-                                                                class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="number" class="formLabel">Número</label>
-                                                                <input type="text" name="number" placeholder="Número" id="number"
-                                                                class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="complemento" class="formLabel">Complemento</label>
-                                                                <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep"
-                                                                class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="bairro" class="formLabel">Bairro</label>
-                                                                <input type="text" name="bairro" placeholder="Bairro" id="bairro"
-                                                                class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="city" class="formLabel">Cidade</label>
-                                                                <input type="text" name="city" placeholder="Cidade" id="cidade"
-                                                                class="form__control w-100" />
-                                                              </div>
-                                                              <div class="col-12 mb-3">
-                                                                <label for="state" class="formLabel">Estado</label>
-                                                                <input list="state" name="state"
-                                                                class="form__control w-100" />
-                                                                <datalist id="state">
-                                                                  <option value="AC"></option>
-                                                                  <option value="AL"></option>
-                                                                  <option value="AM"></option>
-                                                                  <option value="AP"></option>
-                                                                  <option value="BA"></option>
-                                                                  <option value="CE"></option>
-                                                                  <option value="DF"></option>
-                                                                  <option value="ES"></option>
-                                                                  <option value="GO"></option>
-                                                                  <option value="MA"></option>
-                                                                  <option value="MG"></option>
-                                                                  <option value="MS"></option>
-                                                                  <option value="MT"></option>
-                                                                  <option value="PA"></option>
-                                                                  <option value="PB"></option>
-                                                                  <option value="PE"></option>
-                                                                  <option value="PI"></option>
-                                                                  <option value="PR"></option>
-                                                                  <option value="RJ"></option>
-                                                                  <option value="RO"></option>
-                                                                  <option value="RN"></option>
-                                                                  <option value="RR"></option>
-                                                                  <option value="RS"></option>
-                                                                  <option value="SC"></option>
-                                                                  <option value="SE"></option>
-                                                                  <option value="SP"></option>
-                                                                  <option value="TO"></option>
-                                                                </datalist>
-                                                              </div> -->
-                                    <div class="col-12 mb-3" id="file-js-example">
-                                        <label for="avatar" class="formLabel">Imagem URL</label>
-                                        <input type="file" name="avatar" placeholder="avatar" id="avatar" accept="image/*" class="form__control w-100"/>
+                                <form class="form row justify-content-center" action="/registration" method="post" enctype="multipart/form-data">
+                                    <div class="col-12 mb-3">
+                                        <label for="name" class="formLabel">Nome</label>
+                                        <input type="text" placeholder="Digite seu nome completo (sem abreviações)" name="name" id="name" class="form__control w-100"/>
                                     </div>
-                                    <span class="file-name">
-                                        No file uploaded
-                                    </span>
-                                    <div class="col-12 my-4 text-center">
-                                        <p>Ao continuar com o acesso, você está concordando com a nossa
-                                            <a href="#">Política de
-                                                                                Privacidade</a>
-                                        </p>
+                                    <div class="col-12 mb-3">
+                                        <label for="email" class="formLabel">Email</label>
+                                        <input type="email" placeholder="Digite seu email" name="email" id="email" class="form__control w-100"/>
                                     </div>
-                                    <div class="col-12 text-center">
-                                        <button type="submit" class="btn form__submit" value="Upload">Finalizar Cadastro</button>
-                                        <!-- <button type="submit" class="btn form__submit" value="Upload" disabled id="file-js-submit">Finalizar Cadastro</button> -->
+                                    <div class="col-12 mb-3">
+                                        <label for="gender" class="formLabel">Sexo</label>
+                                        <input list="gender" name="gender" placeholder="Masculino / Feminino" class="form__control w-100"/><br>
+                                            <datalist id="gender">
+                                                <option value="Masculino"></option>
+                                                <option value="Feminino"></option>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="cpf" class="formLabel">CPF</label>
+                                                <input type="text" placeholder="Ex: 000.000.000-00" name="cpf" id="cpf" pattern="[0-9]{11}" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="birthdate" class="formLabel">Seu aniversário</label>
+                                                <input id="date" type="date" name="birthdate" value="2000-01-01" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="telefone" class="formLabel">Telefone</label>
+                                                <input type="text" placeholder="Ex: (xx) xxxxx-xxxx" name="telefone" id="telefone" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="senha" class="formLabel">Senha</label>
+                                                <input type="password" placeholder="Mínimo de 8 caracteres" name="password" id="password" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="senha" class="formLabel">Confirme sua Senha</label>
+                                                <input type="password" placeholder="Mínimo de 8 caracteres" name="confirm_password" id="confirm_password" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="address" class="formLabel">Endereço</label>
+                                                <input type="text" name="address" placeholder="Rua / Avenida / Praça" id="address" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="number" class="formLabel">Número</label>
+                                                <input type="text" name="number" placeholder="Número" id="number" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="complemento" class="formLabel">Complemento</label>
+                                                <input type="text" name="complemento" placeholder="Casa / Apartamento" id="cep" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="bairro" class="formLabel">Bairro</label>
+                                                <input type="text" name="bairro" placeholder="Bairro" id="bairro" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="city" class="formLabel">Cidade</label>
+                                                <input type="text" name="city" placeholder="Cidade" id="cidade" class="form__control w-100"/>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="state" class="formLabel">Estado</label>
+                                                <input list="state" name="state" class="form__control w-100"/>
+                                                <datalist id="state">
+                                                    <option value="AC"></option>
+                                                    <option value="AL"></option>
+                                                    <option value="AM"></option>
+                                                    <option value="AP"></option>
+                                                    <option value="BA"></option>
+                                                    <option value="CE"></option>
+                                                    <option value="DF"></option>
+                                                    <option value="ES"></option>
+                                                    <option value="GO"></option>
+                                                    <option value="MA"></option>
+                                                    <option value="MG"></option>
+                                                    <option value="MS"></option>
+                                                    <option value="MT"></option>
+                                                    <option value="PA"></option>
+                                                    <option value="PB"></option>
+                                                    <option value="PE"></option>
+                                                    <option value="PI"></option>
+                                                    <option value="PR"></option>
+                                                    <option value="RJ"></option>
+                                                    <option value="RO"></option>
+                                                    <option value="RN"></option>
+                                                    <option value="RR"></option>
+                                                    <option value="RS"></option>
+                                                    <option value="SC"></option>
+                                                    <option value="SE"></option>
+                                                    <option value="SP"></option>
+                                                    <option value="TO"></option>
+                                                </datalist>
+                                            </div>
+                                            <div class="col-12 mb-3" id="file-js-example">
+                                                <label for="avatar" class="formLabel">Imagem URL</label>
+                                                <input type="file" name="avatar" placeholder="avatar" id="avatar" accept="image/*" class="form__control w-100"/>
+                                            </div>
+                                            <span class="file-name">
+                                                No file uploaded
+                                            </span>
+                                            <div class="col-12 my-4 text-center">
+                                                <p>Ao continuar com o acesso, você está concordando com a nossa
+                                                    <a href="#">Política de Privacidade</a>
+                                                </p>
+                                            </div>
+                                            <div class="col-12 text-center">
+                                                <button type="submit" class="btn form__submit" value="Upload">Finalizar Cadastro</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
+                                </div>
+
+
                             </div>
+
                         </div>
-
-
                     </div>
+                </section>
+                <script>
+                                  const fileInput = document.querySelector('#file-js-example input[type=file]');
+                                  fileInput.onchange = () => {
+                                    if (fileInput.files.length > 0) {
+                                      const fileName = document.querySelector('#file-js-example .file-name');
+                                      fileName.textContent = fileInput.files[0].name;
+                                      const submitButton = document.querySelector('#file-js-submit');
+                                      submitButton.removeAttribute('disabled')
+                                    }
+                                  }
+                </script>
 
-                </div>
-            </div>
-        </section>
-        <!-- <script>
-                  const fileInput = document.querySelector('#file-js-example input[type=file]');
-                  fileInput.onchange = () => {
-                    if (fileInput.files.length > 0) {
-                      const fileName = document.querySelector('#file-js-example .file-name');
-                      fileName.textContent = fileInput.files[0].name;
-                      const submitButton = document.querySelector('#file-js-submit');
-                      submitButton.removeAttribute('disabled')
-                    }
-                  }
-                </script> -->
+                <%- include('partials/trending.ejs') %>
 
+                <%- include('partials/benefits.ejs') %>
 
-        <%- include('partials/trending.ejs') %>
+                <%- include('partials/instagram.ejs') %>
 
-        <%- include('partials/benefits.ejs') %>
+            </main>
 
-        <%- include('partials/instagram.ejs') %>
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs') %>
 
-    </main>
-
-    <!-- FOOTER -->
-    <%- include('partials/footer.ejs') %>
-
-</body></html>
+        </body>
+    </html>
+</body>

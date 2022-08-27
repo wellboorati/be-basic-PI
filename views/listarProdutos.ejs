@@ -7,14 +7,14 @@
 
 <main>
   <section>
-    <% if(produtos){ %>
-        <% produtos.forEach(produto => {%>
+    
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center">        
         <div class="col text-center">
           <h2 class="text-uppercase text-center">Lista de Produtos Cadastrados</h2>
           <hr/>
 
+<<<<<<< HEAD
           <div class="list__products">
             <div class="lista__products__card">
                 <div class="lista__products__card__pic">
@@ -206,20 +206,66 @@
                 </div>
             </div>
           </div>
+=======
+          <div class="row">
+            <div class="col-12 col-lg-3 text-start">
+                <%- include('partials/menuAdmin') %>
+            </div>
+            <div class="col-12 col-lg-9">
+>>>>>>> 38f6f016b1ac102493103f1ae599b15d932a7c64
 
-          <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+                <div class="list__products">
+                    <% if(produtos){ %>
+                        <% produtos.forEach(produto => {%>
+                    <div class="lista__products__card">
+                        <div class="lista__products__card__pic">
+                            <a href="#"><img src="
+                                https://cdn.shopify.com/s/files/1/0544/3731/4735/products/camiseta-minimal-426603_2048x2048.webp?v=1660209882" alt=""></a>
+                        </div>
+                        <p class="mt-3">
+                            <strong>Código do Fornecedor:</strong> <%= produto.fornecedor_id %><br>
+                            <strong>Código da Categoria:</strong> <%= produto.categoria_id %><br>
+                            <strong>Produto:</strong> <%= produto.nome %><br>
+                            <strong>Cor:</strong> <%= produto.cor %><br>
+                            <strong>Quantidade P:</strong> <%= produto.p_quantidade_disponivel %><br>
+                            <strong>Quantidade M:</strong> <%= produto.m_quantidade_disponivel %><br>
+                            <strong>Quantidade G:</strong> <%= produto.g_quantidade_disponivel %><br>
+                            <strong>Disponibilidade:</strong> <%= produto.ativo %><br>
+                            <span class="lista__products__card__price"><strong>Preço:</strong> R$ <%= produto.preco %></span><br>
+                            
+                        </p>
+                        <div class="btn">
+                            <button value="<%= produto.id %>" onclick="return deletar()" class="btn btn-primary"> Deletar </button><br><br>
+                            <button value="<%= produto.id %>" onclick="alterar()" class="btn btn-primary"> Alterar </button>
+                        </div>
+            
+                    </div>
+                    <%})} %>
+                  </div>
+
+                  <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+                
+            </div>
+          </div>          
+
+          
         </div>
       </div>
     </div>
   </section>
 
 </main>
+<<<<<<< HEAD
 <script>function deletar(id){
     return fetch(`http://localhost:3000/deletarprodutos/${id}`, {method:"DELETE"})
     .then(response => console.log(response))
     .catch(e => console.log(e))
 }</script>
 <!-- <script src="./partials/alterar.js"></script> -->
+=======
+<script src="./scripts/deletar.js"></script>
+<script src="./scripts/alterar.js"></script>
+>>>>>>> 38f6f016b1ac102493103f1ae599b15d932a7c64
 </body>
 <!-- FOOTER -->
 <%- include('partials/footer.ejs') %>

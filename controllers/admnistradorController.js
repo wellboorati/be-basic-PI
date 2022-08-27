@@ -6,7 +6,8 @@ class admnistrador{
     static async encontreTodosOsCadastros(req, res) {
         try{
             const todosOsCadastros = await database.Clientes.findAll()
-            return res.status(200).json(todosOsCadastros)
+            //return res.status(200).json(todosOsCadastros)
+            return res.render('adminpageCadastros')
         } catch (error) {
             return res.status(500).json(error.message)
         }
@@ -36,7 +37,8 @@ class admnistrador{
                 const usuarioEndereco = await database.Cliente_endereco.update({ endereco, numero, complemento, bairro, cidade , estado, cep },
                     {where: { id }})
 
-                    return res.status(200).json(usuario)
+                    // return res.status(200).json(usuario)
+                    return res.render('adminpageCadastrosAltera')
 
             } catch (error) {
                 return res.status(500).json(error.message)
@@ -47,7 +49,8 @@ class admnistrador{
         static async todosOsPedidos(req, res) {
             try{
                 const meuPedido = await database.Pedido.findAll()
-                return res.status(200).json(meuPedido)
+                //return res.status(200).json(meuPedido)
+                return res.render("adminpagePedidos")
             } catch (error) {
                 return res.status(500).json(error.message)
             }
@@ -98,7 +101,8 @@ class admnistrador{
         static async encontreTodosOsFornecedores(req, res) {
             try{
                 const todosOsFornecedores = await database.Fornecedores.findAll()
-                return res.status(200).json(todosOsFornecedores)
+                // return res.status(200).json(todosOsFornecedores)
+                return res.render("fornecedor")
             } catch (error) {
                 return res.status(500).json(error.message)
             }

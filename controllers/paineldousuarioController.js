@@ -7,7 +7,8 @@ class paineldousuario{
         try{
             const meuCadastro = await database.Clientes.findOne( {
                 where: { id }})
-                return res.status(200).json(meuCadastro)
+                //return res.status(200).json(meuCadastro)
+                return res.render("meucadastro", { meuCadastro });
         } catch (error) {
             return res.status(500).json(error.message)
         }
