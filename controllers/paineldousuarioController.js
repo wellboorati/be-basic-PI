@@ -1,3 +1,4 @@
+const { render } = require('ejs');
 const database = require('../models');
 
 
@@ -12,7 +13,7 @@ class paineldousuario{
         } catch (error) {
             return res.status(500).json(error.message)
         }
-        }
+    }
 
         static async atualizarMeuCadastro (req, res) {
             const { id } = req.params
@@ -27,7 +28,8 @@ class paineldousuario{
                 const usuarioEndereco = await database.Cliente_endereco.update({ endereco, numero, complemento, bairro, cidade , estado, cep },
                     {where: { id }})
 
-                    return res.status(200).json(usuario)
+                    //return res.status(200).json(usuario)
+                    return res.render('meucadastroaltera', { usuario })
 
             } catch (error) {
                 return res.status(500).json(error.message)
@@ -42,7 +44,8 @@ class paineldousuario{
                             cliente_id: Number(cliente_id),
                             id: Number(id)
                         }})
-                        return res.status(200).json(meuPedido)
+                        // return res.status(200).json(meuPedido)
+                        return res.render("meuPedido", { meuPedido })
                 } catch (error) {
                     return res.status(500).json(error.message)
                 }

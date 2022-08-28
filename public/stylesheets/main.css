@@ -961,3 +961,13 @@ footer {
 
   }
 }
+
+.usuario-avatar {
+  width:200px;
+  display:block;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border:2px solid #000;
+  padding:20px;
+  box-sizing: border-box;
+}
