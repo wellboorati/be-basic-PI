@@ -3,7 +3,7 @@ function auth(req, res, next){
         return next()
     }
     else {
-    return res.redirect('login').send("você precisa estar logado para ter acesso")
+    return res.send("você precisa estar logado para ter acesso")
     // return res.render("login")
     }
 }

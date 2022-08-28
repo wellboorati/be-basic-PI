@@ -25,7 +25,7 @@ router.get('/', mainController.homePage);
 router.get('/nossa-historia', mainController.nossaHistoriaPage);
 
 // PAINEL DO USUÁRIO
-router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro)
+// router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro)
 router.get('/paineldousuario', mainController.painelPage)
 
 // PAINEL DO USUÁRIO - meu cadastro
@@ -86,6 +86,7 @@ router.get('/checkout', mainController.checkoutPage)
 
 router.get('/login', loginController.loginPage)
 router.post('/login', loginController.login)
+router.post('/logout', loginController.doLogout)
 
 router.get('/404', mainController.page404)
 
