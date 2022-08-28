@@ -28,13 +28,13 @@
                                             <th>Foto</th>
                                             <th>Nome</th>
                                             <th>Email</th>
-                                            <!-- <th>Sexo</th> -->
+                                            <th>Sexo</th>
                                             <th>CPF</th>
                                             <!-- <th>Data de Nasc.</th> -->
                                             <th>Telefone</th>
-                                            <!-- <th>Administrador</th> -->
-                                            <th>Imagem</th>
-                                            <th>Data de criação</th>
+                                            <th>Administrador</th>
+                                            <!-- <th>Imagem</th> -->
+                                            <!-- <th>Data de criação</th> -->
                                             <th>Atualizar</th>
                                             <th>Excluir</th>
                                         </tr>
@@ -43,89 +43,21 @@
                                         <% todosOsCadastros.forEach(todosOsCadastros => {%>
                                     <tbody>
                                         <tr>
-<<<<<<< HEAD
+
                                             <td class="table__image"><img src=<%= todosOsCadastros.image_url %> alt=""></td>
                                             <td><%= todosOsCadastros.nome %></td>
                                             <td><%= todosOsCadastros.email %></td>
-                                            <!-- <td><%= todosOsCadastros.sexo %></td> -->
+                                            <td><%= todosOsCadastros.sexo %></td>
                                             <td><%= todosOsCadastros.cpf %></td>
                                             <!-- <td><%= todosOsCadastros.data_nascimento %></td> -->
                                             <td><%= todosOsCadastros.telefone %></td>
-                                            <!-- <td><%= todosOsCadastros.admnistrador %></td> -->
-                                            
+                                            <td><%= todosOsCadastros.admnistrador %></td>
                                             <td><a href="/adminpageCadastrosAltera?id=<%= todosOsCadastros.id %>" class="btn btn-primary"> Alterar </button></td>
-                                            <td><button class="btn btn-primary"> Deletar </button></td>
-=======
-                                            <td>O administrador</td>
-                                            <td>administrador@gmail.com</td>
-                                            <td>masculino</td>
-                                            <td>80543633039</td>
-                                            <td>12/02/1992</td>
-                                            <td>(34) 998765432</td>
-                                            <td>Sim</td>
-                                            <td>(imagem)</td>
-                                            <td>12/08/2022</td>
-                                            <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
                                             <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>O administrador</td>
-                                            <td>administrador@gmail.com</td>
-                                            <td>masculino</td>
-                                            <td>80543633039</td>
-                                            <td>12/02/1992</td>
-                                            <td>(34) 998765432</td>
-                                            <td>Sim</td>
-                                            <td>(imagem)</td>
-                                            <td>12/08/2022</td>
-                                            <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
-                                            <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>O administrador</td>
-                                            <td>administrador@gmail.com</td>
-                                            <td>masculino</td>
-                                            <td>80543633039</td>
-                                            <td>12/02/1992</td>
-                                            <td>(34) 998765432</td>
-                                            <td>Sim</td>
-                                            <td>(imagem)</td>
-                                            <td>12/08/2022</td>
-                                            <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
-                                            <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>O administrador</td>
-                                            <td>administrador@gmail.com</td>
-                                            <td>masculino</td>
-                                            <td>80543633039</td>
-                                            <td>12/02/1992</td>
-                                            <td>(34) 998765432</td>
-                                            <td>Sim</td>
-                                            <td>(imagem)</td>
-                                            <td>12/08/2022</td>
-                                            <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
-                                            <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>O administrador</td>
-                                            <td>administrador@gmail.com</td>
-                                            <td>masculino</td>
-                                            <td>80543633039</td>
-                                            <td>12/02/1992</td>
-                                            <td>(34) 998765432</td>
-                                            <td>Sim</td>
-                                            <td>(imagem)</td>
-                                            <td>12/08/2022</td>
-                                            <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
-                                            <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td>
->>>>>>> da7854a9bba54f6748f9cb324408c324a26c9041
-                                        </tr>
 
                                     </tbody>
                                     <%})} %>
-                                    
-                                    
+
                                 </table>
                             </div>
 

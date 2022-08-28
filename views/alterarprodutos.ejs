@@ -23,11 +23,11 @@
                                 <form action="produtosestoque" method="post" class="form row justify-content-center">
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="fornecedor_id">Id Fornecedor</label>
-                                        <input type="number" value="1" required placeholder="Digite o Id do Fornecedor" name="fornecedor_id" id="fornecedor_id" class="form__control w-100"/>
+                                        <input type="number" value="<%= alterar.fornecedor_id %>" required placeholder="Digite o Id do Fornecedor" name="fornecedor_id" id="fornecedor_id" class="form__control w-100"/>
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="categoria_id">Id Categoria</label>
-                                        <input type="number" value="1" required placeholder="Digite a categoria" name="categoria_id" id="fornecedor_id" class="form__control w-100"/>
+                                        <input type="number" value="<%= alterar.categoria_id %>" required placeholder="Digite a categoria" name="categoria_id" id="fornecedor_id" class="form__control w-100"/>
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="nome">Nome</label>

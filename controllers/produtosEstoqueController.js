@@ -31,7 +31,7 @@ const produtosEstoqueController = {
         ativo,
       });
 
-      return res.redirect("/listarprodutos");
+      return res.redirect("listarProdutos");
   },
 
   productInventoryPage: (req, res) => {
@@ -41,7 +41,7 @@ const produtosEstoqueController = {
 
   listarProdutos: async (req,res) => {
     const produtos = await database.Produto_estoque.findAll()
-    return res.render("listarprodutos",{produtos},);
+    return res.render("listarProdutos", { produtos });
   },
 
   deletarProdutos:async (req,res)=>{
@@ -60,8 +60,8 @@ const produtosEstoqueController = {
  atualizarProdutos:async (req, res)=> {
   const { id } = req.params
   const {
-      nome, preco, cor, p_quantidade_disponivel,m_quantidade_disponivel,
-      g_quantidade_disponivel,ativo } = req.body;
+      nome, preco, cor, p_quantidade_disponivel, m_quantidade_disponivel,
+      g_quantidade_disponivel, ativo } = req.body;
 
   try {
       const alterar = await database.Produto_estoque.update({ nome, preco, cor, p_quantidade_disponivel,m_quantidade_disponivel,
@@ -69,21 +69,12 @@ const produtosEstoqueController = {
           {where: { id }})
 
           // return res.status(200).json({mensagem:`id ${id} alterado`})
-          return res.render('alterarprodutos')
+          return res.render('alterarprodutos', {alterar})
 
   } catch (error) {
       return res.status(500).json(error.message)
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 };
