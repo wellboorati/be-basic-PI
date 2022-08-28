@@ -199,6 +199,7 @@ body.home .navbar {
   margin:40px auto;
   gap: 10px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .navBarBainel__item {
@@ -259,7 +260,7 @@ body.home .navbar {
     width:100%;
     bottom:0;
     left:0;
-    height: 56px;
+    padding: 10px 0;
   }
 }
 
