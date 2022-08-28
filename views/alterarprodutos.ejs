@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h2 class="text-uppercase text-center">Preencha abaixo os dados dos Produtos</h2>
+                        <h2 class="text-uppercase text-center">Preencha abaixo os dados do Produto</h2>
                         <hr/>
                         <div class="mt-4 row">
                             <div class="col col-lg-3">
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="nome">Nome</label>
-                                        <input type="text" value="camiseta x"required placeholder="Digite o nome do produto" name="nome" id="nome" class="form__control w-100"/>
+                                        <input type="text" value="camiseta x" required placeholder="Digite o nome do produto" name="nome" id="nome" class="form__control w-100"/>
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="preco">Preço</label>
@@ -44,37 +44,39 @@
                                     <div class="col-12 mb-3">
                                         <label class="formLabel" for="quantidade_p">Quantidade Disponivel P</label>
                                         <input type="number" value="10" required placeholder="Digite a quantidade" name="p_quantidade_disponivel" id="quantidade_p" class="form__control w-100"/>
-                                    </p>
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label class="formLabel" for="quantidade_m">Quantidade Disponivel M</label>
-                                    <input type="number" value="10" required placeholder="Digite a quantidade disponivel" name=" m_quantidade_disponivel" id="quantidade_m" class="form__control w-100"/>
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label class="formLabel" for="quantidade_g">Quantidade Disponivel G</label>
-                                    <input type="number" value="10" required placeholder="Digite a quantidade disponivel" name="g_quantidade_disponivel" id="quantidade_g" class="form__control w-100"/>
-                                </div>
-                                <!-- <div class="col-12 mb-3">
-                                    <label class="formLabel" for="imagem">Imagem</label>
-                                    <input type="image" required placeholder="" name="image_url" id="imagem" class="form__control w-100"/>
-                                </div> -->
-                                <div class="col-12 mb-5">
-                                    <label class="formLabel" for="ativo">Disponibilidade</label>
-                                    <input list="ativo" required name="ativo" placeholder="Ativo / Inativo" class="form__control w-100"/>
-                                    <datalist id="ativo">
-                                        <option value="Ativo" selected></option>
-                                        <option value="Inativo"></option>
-                                    </datalist>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn form__submit">Finalizar Cadastro</button>
-                                </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="formLabel" for="quantidade_m">Quantidade Disponivel M</label>
+                                        <input type="number" value="10" required placeholder="Digite a quantidade disponivel" name=" m_quantidade_disponivel" id="quantidade_m" class="form__control w-100"/>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="formLabel" for="quantidade_g">Quantidade Disponivel G</label>
+                                        <input type="number" value="10" required placeholder="Digite a quantidade disponivel" name="g_quantidade_disponivel" id="quantidade_g" class="form__control w-100"/>
+                                    </div>
+                                    <div class="col-12 mb-5">
+                                        <label class="formLabel" for="ativo">Disponibilidade</label>
+                                        <input list="ativo" required name="ativo" placeholder="Ativo / Inativo" class="form__control w-100"/>
+                                        <datalist id="ativo">
+                                            <option value="Ativo" selected></option>
+                                            <option value="Inativo"></option>
+                                        </datalist>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn form__submit">Alterar Dados</button>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
-</body></section><%- include('partials/trending.ejs') %><%- include('partials/benefits.ejs') %><%- include('partials/instagram.ejs') %></main><!-- FOOTER --><%- include('partials/footer.ejs') %></body></html>
+    </section>
+
+    <%- include('partials/trending.ejs') %>
+    <%- include('partials/benefits.ejs') %>
+    <%- include('partials/instagram.ejs') %>
+
+</main>
+
+<%- include('partials/footer.ejs') %></body></html>

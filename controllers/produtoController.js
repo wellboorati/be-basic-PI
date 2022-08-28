@@ -42,6 +42,24 @@ static async listarProduto(req, res) {
   }
   }
 
+  // static async carrinhoPage (req, res) {
+  //   return res.render('carrinho')
+  // }
+
+  static async produtoCarrinho(req, res) {
+    const { id } = req.query
+    try{
+        const detalheproduto = await database.Produto_estoque.findOne( {
+            where: {
+                id
+            }})
+            return res.status(200).render("carrinho", {detalheproduto})
+            // return res.status(200).json(detalheproduto)
+    } catch (error) {
+        return res.status(500).json(error.message)
+    }
+    }
+
 
 static async productDetailsPage(req, res) {
   return res.render('productdetails')

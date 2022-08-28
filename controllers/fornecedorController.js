@@ -47,6 +47,7 @@ const fornecedorController = {
       cidade: fornecedor.cidade,
       estado: fornecedor.estado,
     });
+
   },
 
   fornecedorRegistration: (req, res) => {

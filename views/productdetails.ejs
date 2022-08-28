@@ -132,10 +132,10 @@
                                                 <label for="tamanho-1">P</label>
                                                 <div class="number-input">
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-                                                    <input class="quantity" min="0" max="99" name="quantity" value="1" type="number" id="qtd1">
+                                                    <input class="quantity" min="0" max="99" name="quantity" value="0" type="number" id="qtd1">
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                                                 </div>
-                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('P', document.getElementById('qtd1').value, '120', 1)"> Comprar </button>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho P', document.getElementById('qtd1').value, <%= detalheproduto.preco %>, 1)"> Comprar </button>
                                             </div>
 
                                             <div class="products__details__size__sizes__item">
@@ -143,11 +143,11 @@
                                                 <label for="tamanho-1">M</label>
                                                 <div class="number-input">
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
-                                                    <input class="quantity" min="0" max="99" name="quantity" value="1" type="number" id="qtd2">
+                                                    <input class="quantity" min="0" max="99" name="quantity" value="0" type="number" id="qtd2">
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
 
                                                 </div>
-                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('M', document.getElementById('qtd2').value, '120', 2)"> Comprar </button>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho M', document.getElementById('qtd2').value, <%= detalheproduto.preco %>, 2)"> Comprar </button>
                                             </div>
                                             <div class="products__details__size__sizes__item">
                                                 <input type="radio" id="p_quantidade_disponivel" name="size">
@@ -158,14 +158,14 @@
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
 
                                                 </div>
-                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('G', document.getElementById('qtd3').value, '120', 3)"> Comprar </button>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho G', document.getElementById('qtd3').value, <%= detalheproduto.preco %>, 3)"> Comprar </button>
                                             </div>
 
                                         </div>
 
                                     </div>
                                     <div>
-                                        <a href="/carrinho"> Ver Carrinho de compras </a>
+                                        <a href="/carrinho?id=<%= detalheproduto.id %>"> Ver Carrinho de compras </a>
                                     </div>
 
                                 </div>
@@ -190,10 +190,12 @@
                 localStorage.setItem("qtd" + posicao, qtd);
                 valor = valor * qtd;
                 localStorage.setItem("valor" + posicao, valor)
-                // localStorage.setItem("URL" + posicao, url_image);
+
                 alert("Produto adicionado ao carrinho!");
             }
         </script>
+
+
 
         <%- include('partials/trending.ejs') %>
 

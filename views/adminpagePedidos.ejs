@@ -16,24 +16,18 @@
 
                     <div class="mt-4 row justify-content-center">
                         <div class="col col-lg-3">
-                            <ul class="navBarPainel">
-                                <li><a href="/" class="nav-link">Produtos</a></li>
-                                <li><a href="/" class="nav-link">Controle Categoria</a></li>
-                                <li><a href="/" class="nav-link">Vendas</a></li>
-                                <li><a href="/" class="nav-link">Clientes</a></li>
-                                <li><a href="/" class="nav-link">Fornecedores</a></li>
-                                <li><a href="/" class="nav-link">Pedido</a></li>                            
-                                <li><a href="/" class="nav-link">Estoque</a></li>
-                                <li><a href="/" class="nav-link">Pagamentos</a></li>
-                            </ul>
+                            <%- include('partials/menuAdmin') %>
                         </div>
                         <div class="col col-lg-9">
 
                             <h3 class="text-uppercase">Total de vendas</h3>
-        
+
                             <div class="table-responsive">
                                 <table class="table table-striped" border="1">
                                     <thead>
+
+                                        
+
                                         <tr>
                                             <th>Pedido</th>
                                             <th>Valor Total do Pedido</th>
@@ -44,44 +38,21 @@
                                             <th>Cupom de Desconto</th>
                                         </tr>
                                     </thead>
+                                    <% if(todosOsPedidos){ %>
+                                        <% todosOsPedidos.forEach(todosOsPedidos => {%>
                                     <tbody>
                                         <tr>
-                                            <td>1111123</td>
-                                            <td class="text-center">R$ 22,00</td>
-                                            <td>31/06/2022</td>
-                                            <td>31/08/2022</td>
-                                            <td>R$ 15,00</td>
-                                            <td>Enviado</td>
-                                            <td>COMPREHJ</td>
+                                            <td><%= todosOsPedidos.cliente_id %></td>
+                                            <td class="text-center">R$<%= todosOsPedidos.valor_total_pedido %></td>
+                                            <td><%= todosOsPedidos.data_pedido %></td>
+                                            <td><%= todosOsPedidos.data_entrega %></td>
+                                            <td><%= todosOsPedidos.valor_frete %></td>
+                                            <td><%= todosOsPedidos.status_pedido %></td>
+                                            <td><%= todosOsPedidos.cupom_desconto %></td>
                                         </tr>
-                                        <tr>
-                                            <td>1111123</td>
-                                            <td>R$ 22,00</td>
-                                            <td>31/06/2022</td>
-                                            <td>31/08/2022</td>
-                                            <td>R$ 15,00</td>
-                                            <td>Enviado</td>
-                                            <td>COMPREHJ</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1111123</td>
-                                            <td>R$ 22,00</td>
-                                            <td>31/06/2022</td>
-                                            <td>31/08/2022</td>
-                                            <td>R$ 15,00</td>
-                                            <td>Enviado</td>
-                                            <td>COMPREHJ</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1111123</td>
-                                            <td>R$ 22,00</td>
-                                            <td>31/06/2022</td>
-                                            <td>31/08/2022</td>
-                                            <td>R$ 15,00</td>
-                                            <td>Enviado</td>
-                                            <td>COMPREHJ</td>
-                                        </tr>
+
                                     </tbody>
+                                    <%})} %>
                                 </table>
                             </div>
 

@@ -219,6 +219,13 @@ body.home .navbar {
   text-align: center;
 }
 
+.table__image img{
+  max-width:5rem;
+  max-height:5rem;
+  width: auto;
+  height: auto;
+}
+
 /**
 * Formulário
 */
@@ -546,7 +553,7 @@ section {
 .products__details__size__sizes .products__details__size__sizes__item [type="radio"]:not(:checked) + label:after {
   content: '';
     width: 24px;
-    height: 24px;    
+    height: 24px;
     position: absolute;
     top: -6px;
     left: 8px;
@@ -643,6 +650,13 @@ input[type=number]::-webkit-outer-spin-button {
   display:flex;
   gap: 0 10px;
   align-items: center;
+}
+
+.products__checkout__item__pic img {
+  max-width:10rem;
+  max-height:10rem;
+  width: auto;
+  height: auto;
 }
 
 .products__checkout__item__info__name {
