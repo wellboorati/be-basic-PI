@@ -40,7 +40,7 @@ router.put('/redefinirSenha/:id', paineldousuario.redefinirSenha)
 
 
 // ADMNISTRADOR
-router.get('/adminpage',mainController.adminPage)
+router.get('/adminpage', admnistrador.todosOsPedidos)
 // ADMINISTRADOR - cadastros / Pedidos / Fornecedores
 router.get('/adminpageCadastros', admnistrador.encontreTodosOsCadastros)
 router.get('/adminpageCadastros/:id', admnistrador.encontreUmCadastro)

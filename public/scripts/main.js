@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.product-details').slick({
+    $('.product-details-').slick({
       dots: true,
       arrows: false,
       infinite: false,

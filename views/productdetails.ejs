@@ -99,26 +99,26 @@
             </div> -->
 
             <div class="container">
-                <div class="row">
-                    <div class="col text-center">
+                <div class="row justify-content-center">
+                    <div class="col col-lg-6 text-center">
 
                         <div class="product-details">
                             <div>
-                                <a href="#"> <img src=<%= detalheproduto.image_url %> alt=""></a>
+                                <a href="#" class="product-details-link"> <img src=<%= detalheproduto.image_url %> alt=""></a>
                             </div>
                         </div>
 
-                        <div class="row justify-content-center mb-5">
-                            <div class="col col-lg-4">
+                        <div class="row justify-content-center mt-4 mb-5">
+                            <div class="col col-lg-7">
                                 <div class="products__details">
                                     <div class="products__details__name">
-                                        <%= detalheproduto.nome %>
+                                        <strong><%= detalheproduto.nome %></strong>
                                     </div>
                                     <div class="products__details__description">
                                         Camiseta Básica
                                     </div>
                                     <div class="products__details__price mb-3">
-                                        <%= detalheproduto.preco %>
+                                        R$ <%= detalheproduto.preco %>
                                     </div>
 
                                     </div>
@@ -126,7 +126,7 @@
                                         <div class="products__details__size__label">
                                             Tamanho
                                         </div>
-                                        <div class="products__details__size__sizes d-flex">
+                                        <div class="products__details__size__sizes d-flex gap-3">
                                             <div class="products__details__size__sizes__item">
                                                 <input type="radio" id="p_quantidade_disponivel" name="size">
                                                 <label for="tamanho-1">P</label>
@@ -135,7 +135,7 @@
                                                     <input class="quantity" min="0" max="99" name="quantity" value="0" type="number" id="qtd1">
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                                                 </div>
-                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho P', document.getElementById('qtd1').value, <%= detalheproduto.preco %>, 1)"> Comprar </button>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho P', document.getElementById('qtd1').value, <%= detalheproduto.preco %>, 1)" class="mt-3 btn btn-secondary"> Comprar </button>
                                             </div>
 
                                             <div class="products__details__size__sizes__item">
@@ -147,7 +147,7 @@
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
 
                                                 </div>
-                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho M', document.getElementById('qtd2').value, <%= detalheproduto.preco %>, 2)"> Comprar </button>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho M', document.getElementById('qtd2').value, <%= detalheproduto.preco %>, 2)" class="mt-3 btn btn-secondary"> Comprar </button>
                                             </div>
                                             <div class="products__details__size__sizes__item">
                                                 <input type="radio" id="p_quantidade_disponivel" name="size">
@@ -158,14 +158,14 @@
                                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
 
                                                 </div>
-                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho G', document.getElementById('qtd3').value, <%= detalheproduto.preco %>, 3)"> Comprar </button>
+                                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('Tamanho G', document.getElementById('qtd3').value, <%= detalheproduto.preco %>, 3)" class="mt-3 btn btn-secondary"> Comprar </button>
                                             </div>
 
                                         </div>
 
                                     </div>
                                     <div>
-                                        <a href="/carrinho?id=<%= detalheproduto.id %>"> Ver Carrinho de compras </a>
+                                        <a href="/carrinho?id=<%= detalheproduto.id %>" class="mt-4 btn form__submit"> Ver Carrinho de compras </a>
                                     </div>
 
                                 </div>
