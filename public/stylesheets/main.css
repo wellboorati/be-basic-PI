@@ -159,17 +159,22 @@ body.home .navbar {
 }
 
 #navBarBeBasic .nav-link {
-  background-image: url(../images/bullet-full-red.svg);
+  /* background-image: url(../images/bullet-full-red.svg);
+  padding-left: 20px; */
   background-repeat: no-repeat;
   background-position: 0 center;
-  padding-left: 20px;
-  color: #563e3e;
+  color: #705858;
   font-weight: 600;
   text-shadow: 0 1px 1px #fff;
   font-size: 15px;
   border-bottom: 2px solid #DD8560;
   border-image: linear-gradient(to right, #dbc9c2, #ffecec) 1;
 }
+
+#navBarBeBasic .nav-link.logout {
+  color: #dbcac3;
+}
+
 
 #navBarBeBasic .nav-item:last-child a {border:0;}
 
