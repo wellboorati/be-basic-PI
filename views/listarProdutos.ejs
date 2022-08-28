@@ -1,4 +1,4 @@
-!-- header -->
+<!-- header -->
 <%- include('partials/header.ejs') %>
 
 <body>
@@ -39,29 +39,26 @@
                             <strong>Quantidade G:</strong> <%= produto.g_quantidade_disponivel %><br>
                             <strong>Disponibilidade:</strong> <%= produto.ativo %><br>
                             <span class="lista__products__card__price"><strong>Preço:</strong> R$ <%= produto.preco %></span><br>
-                            
+
                         </p>
                         <div class="btn">
-                            <form action="deletarprodutos/<%= produto.id %>" method="post">
+                            <form action="deletarprodutos/<%= produto.id %>" method="delete">
                               <input type="hidden" name="_method" value="DELETE">
                               <button value="<%= produto.id %>" onclick="return deletar(value)" class="btn btn-primary"> Deletar </button>
                             </form>
                             <br>
-                            <button value="<%= produto.id %>" onclick="alterar()" class="btn btn-primary"> Alterar </button>
+                            <form action="alterarprodutos/<%= produto.id %>" method="put">
+                              <input type="hidden" name="_method" value="put">
+                              <button value="<%= produto.id %>" onclick="return alterar(value)" class="btn btn-primary"> Alterar </button>
+                            </form>
                         </div>
-            
                     </div>
                     <%})} %>
                   </div>
 
                   <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
-                
             </div>
-          </div>   
-            
-                   
-
-          
+          </div>
         </div>
       </div>
     </div>
@@ -74,7 +71,6 @@
     .catch(e => console.log(e))
 }</script>
 
-<!-- <script src="./scripts/deletar.js"></script> -->
 <script src="./scripts/alterar.js"></script>
 
 </body>

@@ -56,6 +56,10 @@ const produtosEstoqueController = {
   }
 },
 
+produtoDeletado: (req, res) => {
+  return res.render("produtoDeletado");
+},
+
  atualizarProdutos:async (req, res)=> {
   const { id } = req.params
   const {

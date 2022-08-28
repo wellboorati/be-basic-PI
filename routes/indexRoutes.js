@@ -93,6 +93,7 @@ router.get('/produtosestoque', produtosEstoqueController.productInventoryPage)
 router.post('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
 router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
 router.delete('/deletarprodutos/:id',produtosEstoqueController.deletarProdutos)
+router.get('/deletarprodutos/:id',produtosEstoqueController.produtoDeletado)
 router.put('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
 
 

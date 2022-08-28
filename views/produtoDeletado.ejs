@@ -1,0 +1,30 @@
+<!-- header -->
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>
+
+<main>
+  <section>
+    <div class="container">
+        <% if(produtos){ %>
+            <% produtos.forEach(produto => {%>
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h2 class="text-uppercase text-center">Produto Deletado com sucesso!"<%= excluir.id %></h2>
+          <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+          <hr/>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+</body>
+<!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
