@@ -42,7 +42,11 @@
                             
                         </p>
                         <div class="btn">
-                            <button value="<%= produto.id %>" onclick="return deletar()" class="btn btn-primary"> Deletar </button><br><br>
+                            <form action="deletarprodutos/<%= produto.id %>" method="post">
+                              <input type="hidden" name="_method" value="DELETE">
+                              <button value="<%= produto.id %>" onclick="return deletar()" class="btn btn-primary"> Deletar </button>
+                            </form>
+                            <br>
                             <button value="<%= produto.id %>" onclick="alterar()" class="btn btn-primary"> Alterar </button>
                         </div>
             
