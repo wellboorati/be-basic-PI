@@ -425,8 +425,9 @@ section {
   height: auto;
 }
 
-.products__details {
-
+.product-details .product-details-link {
+  border-bottom:2px solid #000;
+  display: block;
 }
 
 .products__details__name {
