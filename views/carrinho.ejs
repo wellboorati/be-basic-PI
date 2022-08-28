@@ -105,10 +105,10 @@
 
             for (i = 1; i <= 99; i++) // verifica até 99 produtos registrados na localStorage
             {
-              var prod = localStorage.getItem("produto" + i + ""); // verifica se há recheio nesta posição.
+              var prod = localStorage.getItem("produto" + i + "" ); // verifica se há recheio nesta posição.
               if (prod != null) {
                 // exibe os dados da lista dentro da div itens
-                document.getElementById("quantidade").innerHTML += localStorage.getItem("qtd" + i) + " Unidades <%= detalheproduto.nome %>";
+                document.getElementById("quantidade").innerHTML += localStorage.getItem("qtd" + i) + " Unidades <%= detalheproduto.nome %>. ";
                 document.getElementById("tamanho").innerHTML += localStorage.getItem("produto" + i);
                 document.getElementById("valorfinal").innerHTML += " ";
                 document.getElementById("valorfinal").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";

@@ -39,13 +39,13 @@ class paineldousuario{
         static async encontreMeusPedidos(req, res) {
                 const { cliente_id, id } = req.params
                 try{
-                    const meuPedido = await database.Pedido.findOne( {
+                    const pedido = await database.Pedido.findOne( {
                         where: {
-                            cliente_id: Number(cliente_id),
-                            id: Number(id)
+                            cliente_id,
+                            id
                         }})
-                        // return res.status(200).json(meuPedido)
-                        return res.render("meuPedido", { meuPedido })
+                        // return res.status(200).json(pedido)
+                        return res.render("meuPedido", { pedido })
                 } catch (error) {
                     return res.status(500).json(error.message)
                 }
