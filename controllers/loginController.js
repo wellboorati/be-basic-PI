@@ -15,7 +15,7 @@ const loginController = {
         const senhaValida = senha === usuarioSalvo.senha;
         if (senhaValida) {
           if (usuarioSalvo.admnistrador) {
-            res.status(200).render("paineldousuario", {
+            res.status(200).render("adminpage", {
               usuarioSalvo: req.session.usuario
             });
           }
@@ -33,6 +33,12 @@ const loginController = {
       res.status(500).send("Algo deu errado, tente novamente.");
     }
   },
+
+  doLogout: async (req, res) => {
+    req.session.destroy()
+    res.redirect('/')
+  },
+
 
   updateSenha: async (id, senha) => {
     try {

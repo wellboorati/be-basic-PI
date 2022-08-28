@@ -25,7 +25,7 @@ router.get('/', mainController.homePage);
 router.get('/nossa-historia', mainController.nossaHistoriaPage);
 
 // PAINEL DO USUÁRIO
-// router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro)
+router.get('/paineldousuario', auth, paineldousuario.encontreMeuCadastro)
 router.get('/paineldousuario', mainController.painelPage)
 
 // PAINEL DO USUÁRIO - meu cadastro

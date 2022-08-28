@@ -49,30 +49,8 @@ const registrationController = {
       cep,
       });
 
-   return res.render('avatar', { image: `../images/userUpload/${filename}`, descricao: "descrição" })
-
-    // return res.redirect('/')
-    // return res.json({
-    //   id: usuario.id,
-    //   nome: usuario.nome,
-    //   senha: usuario.senha,
-    //   email: usuario.email,
-    //   sexo: usuario.sexo,
-    //   cpf: usuario.cpf,
-    //   data_nascimento: usuario.data_nascimento,
-    //   telefone: usuario.telefone,
-    //   image:usuario.image,
-    //   // admnistrador: false,
-    //   // id: endereco.id,
-    //   endereco: endereco.endereco,
-    //   numero: endereco.numero,
-    //   complemento: endereco.complemento,
-    //   bairro: endereco.bairro,
-    //   cidade: endereco.cidade,
-    //   estado: endereco.estado,
-    //   cep: endereco.cep,
-    // });
-  },
+   return res.render("/")
+ },
 
   registrationPage: (req, res) => {
     return res.render("registration");
