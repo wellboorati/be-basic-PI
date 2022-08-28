@@ -13,13 +13,11 @@
               <div class="col">
                 <h2 class="text-uppercase text-center">Fornecedores</h2>
                 <hr />
+
+                <%- include('partials/menuAdmin.ejs') %>
+
                 <div class="mt-4 row">
-
-                  <div class="col-12 col-lg-3 text-start">
-                      <%- include('partials/menuAdmin') %>
-                  </div>
-
-                  <div class="col col-lg-9">
+                  <div class="col">
 
                     <% if (typeof errors !=='undefined' ) { %>
                       <ul>
@@ -30,6 +28,8 @@
                           <% } %>
                       </ul>
                       <% } %>
+
+                      <a class="btn form__submit my-3 d-none d-lg-table" href="/">Cadastrar Novo Fornecedor</a>
 
                       <div class="table-responsive">
                         <table class="table table-striped" border="1">
@@ -159,14 +159,13 @@
               </div>
             </div>
           </div>
+
+          
+
+        <a class="btn form__submit mt-5" href="/">Cadastrar Novo Fornecedor</a>
+
         </section>
 
-
-        <%- include('partials/trending.ejs') %>
-
-        <%- include('partials/benefits.ejs') %>
-
-        <%- include('partials/instagram.ejs') %>
 
       </main>
 
@@ -178,5 +177,3 @@
   </html>
 
 
-
-  <!-- PODE USAR PARA FONTE O MEDIA QUERY, ONDE SERÁ O BREAK POINT DE VOCÊS?  -->

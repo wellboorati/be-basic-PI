@@ -195,11 +195,20 @@ body.home .navbar {
 .navBarPainel {
   padding:0;
   list-style:none;
-  margin-left: 15px;
+  display: inline-flex;
+  margin:40px auto;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.navBarBainel__item {
+  border: 1px solid #000;
+}
+
+.navBarBainel__item:last-child {}
+
 .navBarPainel .nav-link {
-  background-image: url(../images/bullet-gray.svg);
   background-repeat: no-repeat;
   background-position: 0 center;
   padding-left: 20px;
@@ -258,7 +267,7 @@ body.home .navbar {
     width:100%;
     bottom:0;
     left:0;
-    height: 56px;
+    padding: 10px 0;
   }
 }
 
@@ -339,7 +348,7 @@ section {
 
 .list__products {
     display: flex;
-    gap: 30px 30px;
+    gap: 50px 50px;
     margin-top: 30px;
     flex-wrap: wrap;
     justify-content: center;

@@ -14,6 +14,7 @@
           <h2 class="text-uppercase text-center">Lista de Produtos Cadastrados</h2>
           <hr/>
 
+<<<<<<< HEAD
 
 
           <div class="list__products">
@@ -212,6 +213,14 @@
                 <%- include('partials/menuAdmin') %>
             </div>
             <div class="col-12 col-lg-9">
+=======
+          <%- include('partials/menuAdmin.ejs') %>
+          
+          <a class="btn form__submit my-3 d-none d-lg-table" href="/produtosestoque">Cadastrar Novo Produto</a>
+       
+          <div class="row">
+            <div class="col">
+>>>>>>> da7854a9bba54f6748f9cb324408c324a26c9041
 
                 <div class="list__products">
                     <% if(produtos){ %>
@@ -234,7 +243,11 @@
 
                         </p>
                         <div class="btn">
-                            <button value="<%= produto.id %>" onclick="return deletar()" class="btn btn-primary"> Deletar </button><br><br>
+                            <form action="deletarprodutos/<%= produto.id %>" method="post">
+                              <input type="hidden" name="_method" value="DELETE">
+                              <button value="<%= produto.id %>" onclick="return deletar()" class="btn btn-primary"> Deletar </button>
+                            </form>
+                            <br>
                             <button value="<%= produto.id %>" onclick="alterar()" class="btn btn-primary"> Alterar </button>
                         </div>
 
@@ -243,6 +256,14 @@
                   </div>
 
                   <a class="btn form__submit mt-5" href="/produtosestoque">Cadastrar Novo Produto</a>
+<<<<<<< HEAD
+=======
+                
+            </div>
+          </div>   
+            
+                   
+>>>>>>> da7854a9bba54f6748f9cb324408c324a26c9041
 
             </div>
           </div>
@@ -254,6 +275,7 @@
   </section>
 
 </main>
+<<<<<<< HEAD
 
 <script>
 function deletar(id){
@@ -264,6 +286,13 @@ function deletar(id){
 </script>
 <!-- <script src="./partials/alterar.js"></script> -->
 
+=======
+<script>function deletar(id){
+    return fetch(`http://localhost:3000/deletarprodutos/${id}`, {method:"DELETE"})
+    .then(response => console.log(response))
+    .catch(e => console.log(e))
+}</script>
+>>>>>>> da7854a9bba54f6748f9cb324408c324a26c9041
 <script src="./scripts/deletar.js"></script>
 <script src="./scripts/alterar.js"></script>
 
