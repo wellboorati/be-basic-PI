@@ -35,7 +35,6 @@
                                             <th>Administrador</th>
                                             <!-- <th>Imagem</th> -->
                                             <!-- <th>Data de criação</th> -->
-                                            <th>Atualizar</th>
                                             <th>Excluir</th>
                                         </tr>
                                     </thead>
@@ -52,8 +51,12 @@
                                             <!-- <td><%= todosOsCadastros.data_nascimento %></td> -->
                                             <td><%= todosOsCadastros.telefone %></td>
                                             <td><%= todosOsCadastros.admnistrador %></td>
-                                            <td><a href="/adminpageCadastrosAltera?id=<%= todosOsCadastros.id %>" class="btn btn-primary"> Alterar </button></td>
-                                            <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td>
+                                            <td>
+                                                <form action="/deletarprodutos/<%= todosOsCadastros.id %>" method="post">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button class="btn btn-primary" onclick="return deletar()"> Deletar </button>
+                                                </form>
+                                            </td>
 
                                     </tbody>
                                     <%})} %>

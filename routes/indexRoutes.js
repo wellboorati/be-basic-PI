@@ -44,6 +44,7 @@ router.get('/adminpage', admnistrador.todosOsPedidos)
 // ADMINISTRADOR - cadastros / Pedidos / Fornecedores
 router.get('/adminpageCadastros', admnistrador.encontreTodosOsCadastros)
 router.get('/adminpageCadastros/:id', admnistrador.encontreUmCadastro)
+router.delete('/deletarprodutos/:id',admnistrador.deletarUmCadastro)
 // router.put('/adminpageCadastros/:id', admnistrador.atualizarUmCadastro)
 router.get('/adminpageCadastrosAltera', admnistrador.encontreUmCadastro)
 router.put('/adminpageCadastrosAltera', admnistrador.atualizarUmCadastro)

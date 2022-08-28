@@ -61,6 +61,20 @@ class admnistrador {
     }
   }
 
+  static async deletarUmCadastro(req, res) {
+    const { id } = req.params
+    try {
+      const excluir = await database.Clientes.destroy({
+        where: {id}})
+
+      return res.status(200).json({ mensagem: `id ${id} deletado` })
+
+    } catch (error) {
+        return res.status(400).json(error.message)
+    }
+  }
+  
+
   // PEDIDO
   static async todosOsPedidos(req, res) {
     try {
