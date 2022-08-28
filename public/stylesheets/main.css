@@ -197,12 +197,15 @@ body.home .navbar {
   list-style:none;
   display: inline-flex;
   margin:40px auto;
-  border:1px solid #000;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.navBarBainel__item {border-right: 1px solid #000;}
+.navBarBainel__item {
+  border: 1px solid #000;
+}
 
-.navBarBainel__item:last-child {border:0;}
+.navBarBainel__item:last-child {}
 
 .navBarPainel .nav-link {
   background-repeat: no-repeat;

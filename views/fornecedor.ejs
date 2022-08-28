@@ -13,13 +13,11 @@
               <div class="col">
                 <h2 class="text-uppercase text-center">Fornecedores</h2>
                 <hr />
+
+                <%- include('partials/menuAdmin.ejs') %>
+                
                 <div class="mt-4 row">
-
-                  <div class="col-12 col-lg-3 text-start">
-                      <%- include('partials/menuAdmin') %>
-                  </div>
-
-                  <div class="col col-lg-9">
+                  <div class="col">
 
                     <% if (typeof errors !=='undefined' ) { %>
                       <ul>

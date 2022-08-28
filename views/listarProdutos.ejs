@@ -14,12 +14,7 @@
           <h2 class="text-uppercase text-center">Lista de Produtos Cadastrados</h2>
           <hr/>
 
-          <ul class="navBarPainel">
-            <li class="navBarBainel__item"><a href="/listarprodutos" class="nav-link">Produtos</a></li>
-            <li class="navBarBainel__item"><a href="/adminpageCadastros" class="nav-link">Clientes</a></li>     
-            <li class="navBarBainel__item"><a href="/fornecedor" class="nav-link">Fornecedores</a></li>
-            <li class="navBarBainel__item"><a href="/adminpagePedidos" class="nav-link">Pedidos</a></li>
-          </ul>
+          <%- include('partials/menuAdmin.ejs') %>
           
           <a class="btn form__submit my-3 d-table" href="/produtosestoque">Cadastrar Novo Produto</a>
        
