@@ -55,7 +55,7 @@ class admnistrador {
       // );
 
       // return res.status(200).json(usuario)
-      return res.render("adminpageCadastros");
+      return res.render("adminpageCadastros", {usuario});
     } catch (error) {
       return res.status(500).json(error.message);
     }
@@ -114,7 +114,7 @@ class admnistrador {
     } = req.body;
 
     try {
-      const produtos = await database.Clientes.update(
+      const produtos = await database.Produto_estoque.update(
         {
           fornecedor_id,
           categoria_id,

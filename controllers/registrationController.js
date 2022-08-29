@@ -5,7 +5,7 @@ const upload = multer({ dest: 'public/images/userUpload/' })
 
 const registrationController = {
   cadastro: async (req, res) => {
-    const { filename, size } = req.file;
+    const { filename } = req.file;
     const {
       name,
       email,

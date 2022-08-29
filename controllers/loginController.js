@@ -1,6 +1,7 @@
 
 const database = require("../models");
 
+
 const loginController = {
   login: async (req, res) => {
     try {
@@ -11,6 +12,8 @@ const loginController = {
       req.session.usuario = usuarioSalvo;
       console.log(senha);
       console.log(usuarioSalvo.senha);
+      console.log(req.session);
+
       if (usuarioSalvo) {
         const senhaValida = senha === usuarioSalvo.senha;
         if (senhaValida) {
@@ -19,6 +22,11 @@ const loginController = {
               usuarioSalvo: req.session.usuario
             });
           }
+          // if (carrinhoDeCompraRedirect) {
+          //   res.status(200).render("carrinho", {
+          //     usuarioSalvo: req.session.usuario
+          //   })
+          // }
           res.status(200).render("index", {
             usuarioSalvo: req.session.usuario
           });

@@ -1,0 +1,47 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+
+    <!-- HEADER -->
+    <%- include('partials/menu.ejs') %>    
+
+    <main>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="text-uppercase text-center">Você precisa estar logado para ter acesso ao carrinho</h2>
+                        <hr />
+                        <div class="mt-4 row justify-content-center">
+                            <div class="col col-lg-6">
+                                <form class="form row justify-content-center" method="post">
+
+                                    <div class="col-12 mb-4 text-center">
+
+                                        <p class="f14"><a href="/login">Faça seu login</a><br>
+                                            <a href="/registration">Ainda não tem conta? Clique aqui</a></p>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/trending.ejs') %>
+
+        <%- include('partials/benefits.ejs') %>
+
+        <%- include('partials/instagram.ejs') %>
+
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+
+</body></html>

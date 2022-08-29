@@ -65,6 +65,10 @@ static async productDetailsPage(req, res) {
   return res.render('productdetails')
 }
 
+static async usuarioNaoLogado(req, res) {
+  return res.render('logado')
+}
+
 }
 
 module.exports = produtoController;

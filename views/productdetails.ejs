@@ -165,7 +165,8 @@
 
                                     </div>
                                     <div>
-                                        <a href="/carrinho?id=<%= detalheproduto.id %>" class="mt-4 btn form__submit"> Ver Carrinho de compras </a>
+                                        <a href="/carrinho?id=<%= detalheproduto.id %>&carrinho=true"  class="mt-4 btn form__submit">Ver Carrinho de compras</a>
+
                                     </div>
 
                                 </div>
@@ -183,6 +184,10 @@
 
 
         <script>
+
+            function adicionarPagina() {
+                sessionStorage.setItem("carrinho", true)
+            }
 
             function AddCarrinho(produto, qtd, valor, posicao)
             {

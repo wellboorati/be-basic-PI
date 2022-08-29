@@ -69,7 +69,9 @@ router.get('/produtos', produtoController.listarTodosOsProdutos)
 router.get('/productdetails', produtoController.listarProduto)
 
 // router.get('/carrinho', produtoController.carrinhoPage)
-router.get('/carrinho', produtoController.produtoCarrinho)
+// router.get('/carrinho', produtoController.produtoCarrinho)
+router.get('/carrinho', auth, produtoController.produtoCarrinho)
+router.get('/logado', produtoController.usuarioNaoLogado)
 
 
 
