@@ -13,13 +13,11 @@
               <div class="col">
                 <h2 class="text-uppercase text-center">Fornecedores</h2>
                 <hr />
+
+                <%- include('partials/menuAdmin.ejs') %>
+
                 <div class="mt-4 row">
-
-                  <div class="col-12 col-lg-3 text-start">
-                      <%- include('partials/menuAdmin') %>
-                  </div>
-
-                  <div class="col col-lg-9">
+                  <div class="col">
 
                     <% if (typeof errors !=='undefined' ) { %>
                       <ul>
@@ -30,6 +28,8 @@
                           <% } %>
                       </ul>
                       <% } %>
+
+                      <a class="btn form__submit mb-5 d-none d-lg-table" href="/">Cadastrar Novo Fornecedor</a>
 
                       <div class="table-responsive">
                         <table class="table table-striped" border="1">
@@ -50,29 +50,37 @@
                                     <th>Excluir</th>
                                 </tr>
                             </thead>
+                            <% if(todosOsFornecedores){ %>
+                              <% todosOsFornecedores.forEach(todosOsFornecedores => {%>
                             <tbody>
                                 <tr>
-                                  <td>Nome da empresa</td>
-                                  <td>Nome do contato</td>
-                                  <td>Produto</td>
-                                  <td>Telefone</td>
-                                  <td>Email</td>
-                                  <td>Endereço</td>
-                                  <td>Número</td>
-                                  <td>Complemento</td>
-                                  <td>Bairro</td>
-                                  <td>Cidade</td>
-                                  <td>Estado</td>
+                                  <td><%= todosOsFornecedores.nome_empresa %></td>
+                                  <td><%= todosOsFornecedores.nome_contato %></td>
+                                  <td><%= todosOsFornecedores.produto %></td>
+                                  <td><%= todosOsFornecedores.telefone %></td>
+                                  <td><%= todosOsFornecedores.email %></td>
+                                  <td><%= todosOsFornecedores.endereco %></td>
+                                  <td><%= todosOsFornecedores.numero %></td>
+                                  <td><%= todosOsFornecedores.complemento %></td>
+                                  <td><%= todosOsFornecedores.bairro %></td>
+                                  <td><%= todosOsFornecedores.cidade %></td>
+                                  <td><%= todosOsFornecedores.estado %></td>
                                   <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
                                   <td><button class="btn btn-primary"> Deletar </button></td>
                                 </tr>
                             </tbody>
+                            <%})} %>
                         </table>
-                    </div>
+                    
+                        
+                    
+                      </div>
+
+                      <a class="btn form__submit mt-5 mx-auto d-table" href="/">Cadastrar Novo Fornecedor</a>
 
                     <br><br><br>
 
-                        <form class="form row justify-content-center">
+                        <!-- <form class="form row justify-content-center">
                           <div class="col-12 mb-3">
                             <label for="empresa" class="formLabel">Empresa (Sem Abreviações)*</label>
                             <input type="text" placeholder="Digique seu nome completo" empresa="empresa"
@@ -150,20 +158,19 @@
                           <div class="col-12 text-center">
                             <button type="submit" class="btn form__submit">Alterar Fornecedor</button>
                           </div>
-                        </form>
+                        </form> -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          
+
+        
+
         </section>
 
-
-        <%- include('partials/trending.ejs') %>
-
-        <%- include('partials/benefits.ejs') %>
-
-        <%- include('partials/instagram.ejs') %>
 
       </main>
 
@@ -175,5 +182,3 @@
   </html>
 
 
-
-  <!-- PODE USAR PARA FONTE O MEDIA QUERY, ONDE SERÁ O BREAK POINT DE VOCÊS?  -->

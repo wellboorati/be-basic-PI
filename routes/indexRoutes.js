@@ -40,18 +40,22 @@ router.put('/redefinirSenha/:id', paineldousuario.redefinirSenha)
 
 
 // ADMNISTRADOR
-router.get('/adminpage',mainController.adminPage)
+router.get('/adminpage', admnistrador.todosOsPedidos)
 // ADMINISTRADOR - cadastros / Pedidos / Fornecedores
 router.get('/adminpageCadastros', admnistrador.encontreTodosOsCadastros)
 router.get('/adminpageCadastros/:id', admnistrador.encontreUmCadastro)
 // router.put('/adminpageCadastros/:id', admnistrador.atualizarUmCadastro)
-router.get('/adminpageCadastrosAltera/1', admnistrador.atualizarUmCadastro)
+router.get('/adminpageCadastrosAltera', admnistrador.encontreUmCadastro)
+router.put('/adminpageCadastrosAltera', admnistrador.atualizarUmCadastro)
 // ADMINISTRADOR - Pedidos
 router.get('/adminpagePedidos', admnistrador.todosOsPedidos)
 router.get('/adminpageCadastros/:id/adminpagePedidos/:id', admnistrador.encontreUmPedido)
 
 // ADMINISTRADOR - Produtos
-
+router.get('/adminpageProduto', admnistrador.todosOsProdutos)
+router.get('/adminpageProduto/:id', admnistrador.encontreUmCadastro)
+// router.put('/adminpageProduto/:id', admnistrador.atualizarUmProduto)
+// router.delete('/adminpageProduto/:id', admnistrador.deletarUmProduto)
 
 // ADMINISTRADOR - Fornecedores
 
@@ -62,6 +66,15 @@ router.get('/categorias', mainController.categoriesPage)
 // router.get('/produtos', mainController.productsPage)
 
 router.get('/produtos', produtoController.listarTodosOsProdutos)
+router.get('/productdetails', produtoController.listarProduto)
+
+// router.get('/carrinho', produtoController.carrinhoPage)
+router.get('/carrinho', produtoController.produtoCarrinho)
+
+
+
+// router.get('/productdetails', produtoController.productDetailsPage)
+
 // router.get('/categorias', produtoController.categorias)
 
 router.get('/resetpassword', mainController.resetPasswordPage)
@@ -69,7 +82,7 @@ router.get('/forma-de-pagamento', mainController.pagamentoPage)
 
 //checkout
 router.get('/checkout', mainController.checkoutPage)
-router.get('/productdetails', mainController.productdetailsPage)
+
 
 router.get('/login', loginController.loginPage)
 router.post('/login', loginController.login)
@@ -82,7 +95,8 @@ router.post('/registration', upload.single('avatar'), registrationController.cad
 // router.post('/registration', upload.single('file'), registrationController.cadastro);
 // router.post('/registration', validateRegister, registrationController.cadastro);
 
-router.get('/fornecedor', fornecedorController.fornecedorRegistration)
+// FORNECEDORES
+router.get('/fornecedor', admnistrador.encontreTodosOsFornecedores)
 router.post('/fornecedor', fornecedorController.cadastro_fornecedor);
 
 router.get('/adressregistration', adressRegistrationController.adressRegistrationPage)
@@ -91,10 +105,11 @@ router.post('/adressregistration', adressRegistrationController.cadastro_enderec
 
 router.get('/produtosestoque', produtosEstoqueController.productInventoryPage)
 router.post('/produtosestoque',produtosEstoqueController.cadastro_produtos_estoque)
-router.get('/listarprodutos',produtosEstoqueController.listarProdutos )
+router.get('/listarProdutos',produtosEstoqueController.listarProdutos )
 router.delete('/deletarprodutos/:id',produtosEstoqueController.deletarProdutos)
 router.get('/deletarprodutos/:id',produtosEstoqueController.produtoDeletado)
-router.put('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
+// router.put('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
+// router.get('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
 
 
 
@@ -102,7 +117,7 @@ router.put('/alterarprodutos/:id',produtosEstoqueController.atualizarProdutos)
 // router.post('/cadastro', mainController.doRegister) /* POST cadastro page. */
 
 
-router.get('/carrinho', mainController.carrinhoPage) /* GET carrinho page. */
+ /* GET carrinho page. */
 // router.get('/carrinho', auth, mainController.carrinhoPage) /* GET carrinho page. */
 // router.get('/carrinho/add/:id', mainController.addToCart) /* GET carrinho add. */
 

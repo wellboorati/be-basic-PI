@@ -17,9 +17,9 @@ const mainController = {
         return res.render('paineldousuario')
     },
 
-    carrinhoPage: (req, res) => {
-        return res.render('carrinho')
-    },
+    // carrinhoPage: (req, res) => {
+    //     return res.render('carrinho')
+    // },
 
     pagamentoPage: (req, res) => {
         return res.render('forma-pagamento')
@@ -42,9 +42,7 @@ const mainController = {
     },
 
     
-    productdetailsPage: (req, res) => {
-        return res.render('productdetails')
-    },
+    
 
     page404: (req, res) => {
         return res.render('404')

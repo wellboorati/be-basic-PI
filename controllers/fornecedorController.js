@@ -48,7 +48,6 @@ const fornecedorController = {
       estado: fornecedor.estado,
     });
 
-    
   },
 
   fornecedorRegistration: (req, res) => {

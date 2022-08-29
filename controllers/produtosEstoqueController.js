@@ -31,7 +31,7 @@ const produtosEstoqueController = {
         ativo,
       });
 
-      return res.redirect("/listarprodutos");
+      return res.redirect("listarProdutos");
   },
 
   productInventoryPage: (req, res) => {
@@ -60,36 +60,44 @@ produtoDeletado: (req, res) => {
   return res.render("produtoDeletado");
 },
 
- atualizarProdutos:async (req, res)=> {
-  const { id } = req.params
-  const {
-      nome, preco, cor, p_quantidade_disponivel,m_quantidade_disponivel,
-      g_quantidade_disponivel,ativo } = req.body;
+//  atualizarProdutos:async (req, res)=> {
+//   const { id } = req.query;
 
-  try {
-      const alterar = await database.Produto_estoque.update({ nome, preco, cor, p_quantidade_disponivel,m_quantidade_disponivel,
-        g_quantidade_disponivel,ativo },
-          {where: { id }})
+//   try {
+//       const alterar = await database.Produto_estoque.findOne({
+//           where: { id },
+//       });
+//           return res.status(200).render("alterarprodutos",{alterar})
+//   } catch (error) {
+//       return res.status(500).json(error.message);
+//   }
+// },
 
-          // return res.status(200).json({mensagem:`id ${id} alterado`})
-          return res.render('alterarprodutos')
+// atualizarProduto:async (req, res)=> {
+//   const { id } = req.query;
+//   const {
+//   nome, preco, cor, p_quantidade_disponivel, m_quantidade_disponivel,
+//   g_quantidade_disponivel, ativo } = req.body;
+//   }
 
-  } catch (error) {
-      return res.status(500).json(error.message)
+//   try {
+//     const usuario = await database.Produto_estoque.update(
+//       { nome, preco, cor, p_quantidade_disponivel, m_quantidade_disponivel,
+//         g_quantidade_disponivel, ativo },
+//       { where: { id } }
+//       )
+//       return res.render("adminpageCadastros");
+//     } catch (error) {
+//       return res.status(500).json(error.message);
+//     }
   }
-}
 
 
 
 
-
-
-
-
-
-
-
-};
 
 module.exports = produtosEstoqueController;
+
+
+
 

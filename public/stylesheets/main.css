@@ -159,17 +159,22 @@ body.home .navbar {
 }
 
 #navBarBeBasic .nav-link {
-  background-image: url(../images/bullet-full-red.svg);
+  /* background-image: url(../images/bullet-full-red.svg);
+  padding-left: 20px; */
   background-repeat: no-repeat;
   background-position: 0 center;
-  padding-left: 20px;
-  color: #563e3e;
+  color: #705858;
   font-weight: 600;
   text-shadow: 0 1px 1px #fff;
   font-size: 15px;
   border-bottom: 2px solid #DD8560;
   border-image: linear-gradient(to right, #dbc9c2, #ffecec) 1;
 }
+
+#navBarBeBasic .nav-link.logout {
+  color: #dbcac3;
+}
+
 
 #navBarBeBasic .nav-item:last-child a {border:0;}
 
@@ -195,11 +200,20 @@ body.home .navbar {
 .navBarPainel {
   padding:0;
   list-style:none;
-  margin-left: 15px;
+  display: inline-flex;
+  margin:40px auto;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.navBarBainel__item {
+  border: 1px solid #000;
+}
+
+.navBarBainel__item:last-child {}
+
 .navBarPainel .nav-link {
-  background-image: url(../images/bullet-gray.svg);
   background-repeat: no-repeat;
   background-position: 0 center;
   padding-left: 20px;
@@ -217,6 +231,13 @@ body.home .navbar {
 .table th,
 .table td {
   text-align: center;
+}
+
+.table__image img{
+  max-width:5rem;
+  max-height:5rem;
+  width: auto;
+  height: auto;
 }
 
 /**
@@ -251,7 +272,7 @@ body.home .navbar {
     width:100%;
     bottom:0;
     left:0;
-    height: 56px;
+    padding: 10px 0;
   }
 }
 
@@ -332,7 +353,7 @@ section {
 
 .list__products {
     display: flex;
-    gap: 30px 30px;
+    gap: 50px 50px;
     margin-top: 30px;
     flex-wrap: wrap;
     justify-content: center;
@@ -396,8 +417,17 @@ section {
     font-weight: bold;
 }
 
-.products__details {
 
+.product-details img {
+  max-width:30rem;
+  max-height:30rem;
+  width: auto;
+  height: auto;
+}
+
+.product-details .product-details-link {
+  border-bottom:2px solid #000;
+  display: block;
 }
 
 .products__details__name {
@@ -538,7 +568,7 @@ section {
 .products__details__size__sizes .products__details__size__sizes__item [type="radio"]:not(:checked) + label:after {
   content: '';
     width: 24px;
-    height: 24px;    
+    height: 24px;
     position: absolute;
     top: -6px;
     left: 8px;
@@ -635,6 +665,13 @@ input[type=number]::-webkit-outer-spin-button {
   display:flex;
   gap: 0 10px;
   align-items: center;
+}
+
+.products__checkout__item__pic img {
+  max-width:10rem;
+  max-height:10rem;
+  width: auto;
+  height: auto;
 }
 
 .products__checkout__item__info__name {

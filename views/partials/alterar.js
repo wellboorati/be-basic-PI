@@ -1,5 +1,5 @@
 function alterar(id,body){
-    fetch(`http://localhost:3000/alterarprodutos/${id}`, {method:"put", 
+    fetch(`http://localhost:3000/alterarprodutos/${id}`, {method:"put",
     body
 })
     .then(response => console.log(response))

@@ -17,7 +17,7 @@ Desfazendo as de seeders no banco: npx sequelize db:seed:undo:all
 
 
 
-OBSERVAÇÃO PARA DETALHES DO PRODUTOS: 
+OBSERVAÇÃO PARA DETALHES DO PRODUTOS:
 quantidade_p > 0 ? <button class=“tamanho”> : null
 
-Utilizar condicional para enviar ao carrinho somente se tiver. 
+Utilizar condicional para enviar ao carrinho somente se tiver.
