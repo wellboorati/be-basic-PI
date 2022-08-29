@@ -35,7 +35,6 @@
                                             <th>Administrador</th>
                                             <!-- <th>Imagem</th> -->
                                             <!-- <th>Data de criação</th> -->
-                                            <th>Atualizar</th>
                                             <th>Excluir</th>
                                         </tr>
                                     </thead>
@@ -52,8 +51,17 @@
                                             <!-- <td><%= todosOsCadastros.data_nascimento %></td> -->
                                             <td><%= todosOsCadastros.telefone %></td>
                                             <td><%= todosOsCadastros.admnistrador %></td>
-                                            <td><a href="/adminpageCadastrosAltera?id=<%= todosOsCadastros.id %>" class="btn btn-primary"> Alterar </button></td>
+<<<<<<< HEAD
+                                            <td><button><a href="/adminpageCadastrosAltera?id=<%= todosOsCadastros.id %>" class="btn btn-primary"> Alterar </button></td>
                                             <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td>
+=======
+                                            <td>
+                                                <form action="/deletarprodutos/<%= todosOsCadastros.id %>" method="post">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button class="btn btn-primary" onclick="return deletar()"> Deletar </button>
+                                                </form>
+                                            </td>
+>>>>>>> b5751efec2107bc03ff2d45e4de3fbbd4bdc9095
 
                                     </tbody>
                                     <%})} %>
@@ -74,7 +82,7 @@
 <%- include('partials/footer.ejs') %>
 
 <script src="./scripts/deletar.js"></script>
-<script src="./scripts/alterar.js"></script>
+<!-- <script src="./scripts/alterar.js"></script> -->
 
 </body>
 </html>

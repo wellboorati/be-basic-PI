@@ -55,11 +55,25 @@ class admnistrador {
       // );
 
       // return res.status(200).json(usuario)
-      return res.render("adminpageCadastros");
+      return res.render("adminpageCadastros", {usuario});
     } catch (error) {
       return res.status(500).json(error.message);
     }
   }
+
+  static async deletarUmCadastro(req, res) {
+    const { id } = req.params
+    try {
+      const excluir = await database.Clientes.destroy({
+        where: {id}})
+
+      return res.status(200).json({ mensagem: `id ${id} deletado` })
+
+    } catch (error) {
+        return res.status(400).json(error.message)
+    }
+  }
+  
 
   // PEDIDO
   static async todosOsPedidos(req, res) {
@@ -114,7 +128,7 @@ class admnistrador {
     } = req.body;
 
     try {
-      const produtos = await database.Clientes.update(
+      const produtos = await database.Produto_estoque.update(
         {
           fornecedor_id,
           categoria_id,

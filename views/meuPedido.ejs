@@ -1,0 +1,69 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<body>
+
+<!-- HEADER -->
+<%- include('partials/menu.ejs') %>
+
+<main>
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="text-center text-uppercase">Painel de controle</h2>
+                    <hr />
+
+                    <%- include('partials/menuCadastro.ejs') %>
+
+                    <div class="mt-4 row justify-content-center">
+                        <div class="col">
+
+                            <h3 class="text-uppercase">Pedidos</h3>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped" border="1">
+                                    <thead>
+                                        <tr>
+                                            <th>Valor do pedido</th>
+                                            <th>Data de entrega</th>
+                                            <th>Data do pedido</th>
+                                            <th>Frete</th>
+                                            <th>Cupom de desconto</th>
+                                            <th>Status do pedido</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+
+                                            <td><%= pedido.valor_total_pedido %></td>
+                                            <td><%= pedido.data_entrega %></td>
+                                            <td><%= pedido.data_pedido %></td>
+                                            <td><%= pedido.valor_frete %></td>
+                                            <td><%= pedido.cupom_desconto %></td>
+                                            <td><%= pedido.status_pedido %></td>
+
+                                    </tbody>
+
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- FOOTER -->
+<%- include('partials/footer.ejs') %>
+
+<script src="./scripts/deletar.js"></script>
+<script src="./scripts/alterar.js"></script>
+
+</body>
+</html>

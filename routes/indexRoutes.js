@@ -44,6 +44,7 @@ router.get('/adminpage', admnistrador.todosOsPedidos)
 // ADMINISTRADOR - cadastros / Pedidos / Fornecedores
 router.get('/adminpageCadastros', admnistrador.encontreTodosOsCadastros)
 router.get('/adminpageCadastros/:id', admnistrador.encontreUmCadastro)
+router.delete('/deletarprodutos/:id',admnistrador.deletarUmCadastro)
 // router.put('/adminpageCadastros/:id', admnistrador.atualizarUmCadastro)
 router.get('/adminpageCadastrosAltera', admnistrador.encontreUmCadastro)
 router.put('/adminpageCadastrosAltera', admnistrador.atualizarUmCadastro)
@@ -69,7 +70,9 @@ router.get('/produtos', produtoController.listarTodosOsProdutos)
 router.get('/productdetails', produtoController.listarProduto)
 
 // router.get('/carrinho', produtoController.carrinhoPage)
-router.get('/carrinho', produtoController.produtoCarrinho)
+// router.get('/carrinho', produtoController.produtoCarrinho)
+router.get('/carrinho', auth, produtoController.produtoCarrinho)
+router.get('/logado', produtoController.usuarioNaoLogado)
 
 
 
@@ -86,6 +89,7 @@ router.get('/checkout', mainController.checkoutPage)
 
 router.get('/login', loginController.loginPage)
 router.post('/login', loginController.login)
+router.post('/logout', loginController.doLogout)
 
 router.get('/404', mainController.page404)
 

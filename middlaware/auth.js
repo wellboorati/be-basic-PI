@@ -1,9 +1,11 @@
 function auth(req, res, next){
+    console.log(req.query)
+
     if(typeof(req.session.usuario) != 'undefined'){
         return next()
     }
     else {
-    return res.send("você precisa estar logado para ter acesso")
+        res.render('logado',  {query : { id: req.query.id, carrinho: true }})
     // return res.render("login")
     }
 }
