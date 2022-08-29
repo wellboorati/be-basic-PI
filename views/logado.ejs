@@ -19,9 +19,14 @@
                                 <form class="form row justify-content-center" method="post">
 
                                     <div class="col-12 mb-4 text-center">
-
-                                        <p class="f14"><a href="/login">Faça seu login</a><br>
+                                        <% console.log('LOGADO', query) %>
+                                        <% if (query.carrinho) { %>
+                                            <p class="f14"><a href="/login?id=<%= query.id %>&carrinho=true">Faça seu login</a><br>
+                                                <a href="/registration">Ainda não tem conta? Clique aqui</a></p>
+                                        <% } else { %>
+                                            <p class="f14"><a href="/login">Faça seu login</a><br>
                                             <a href="/registration">Ainda não tem conta? Clique aqui</a></p>
+                                        <% } %>
                                     </div>
 
                                 </form>

@@ -5,7 +5,7 @@ function auth(req, res, next){
         return next()
     }
     else {
-        res.render('logado', {carrinho: true})
+        res.render('logado',  {query : { id: req.query.id, carrinho: true }})
     // return res.render("login")
     }
 }

@@ -1,5 +1,6 @@
 
 const database = require("../models");
+const localStorage = require('localStorage');
 
 
 const loginController = {
@@ -22,11 +23,10 @@ const loginController = {
               usuarioSalvo: req.session.usuario
             });
           }
-          // if (carrinhoDeCompraRedirect) {
-          //   res.status(200).render("carrinho", {
-          //     usuarioSalvo: req.session.usuario
-          //   })
-          // }
+          
+          if (req.query.carrinho) {  
+            res.redirect(`/carrinho?id=${req.query.id}`);
+          }
           res.status(200).render("index", {
             usuarioSalvo: req.session.usuario
           });
