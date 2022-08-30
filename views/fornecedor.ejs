@@ -16,71 +16,94 @@
 
                 <%- include('partials/menuAdmin.ejs') %>
 
-                <div class="mt-4 row">
-                  <div class="col">
+                  <div class="mt-4 row">
+                    <div class="col">
 
-                    <% if (typeof errors !=='undefined' ) { %>
-                      <ul>
-                        <% for(let error in errors ) {%>
-                          <li>
-                            <%= errors[error].msg %>
-                          </li>
-                          <% } %>
-                      </ul>
-                      <% } %>
+                      <% if (typeof errors !=='undefined' ) { %>
+                        <ul>
+                          <% for(let error in errors ) {%>
+                            <li>
+                              <%= errors[error].msg %>
+                            </li>
+                            <% } %>
+                        </ul>
+                        <% } %>
 
-                      <a class="btn form__submit mb-5 d-none d-lg-table" href="/">Cadastrar Novo Fornecedor</a>
+                          <a class="btn form__submit mb-5 d-none d-lg-table" href="/">Cadastrar Novo Fornecedor</a>
 
-                      <div class="table-responsive">
-                        <table class="table table-striped" border="1">
-                            <thead>
+                          <div class="table-responsive">
+                            <table class="table table-striped" border="1">
+                              <thead>
                                 <tr>
-                                    <th>Nome da empresa</th>
-                                    <th>Nome do contato</th>
-                                    <th>Produto</th>
-                                    <th>Telefone</th>
-                                    <th>Email</th>
-                                    <th>Endereço</th>
-                                    <th>Número</th>
-                                    <th>Complemento</th>
-                                    <th>Bairro</th>
-                                    <th>Cidade</th>
-                                    <th>Estado</th>
-                                    <th>Alterar</th>
-                                    <th>Excluir</th>
+                                  <th>Nome da empresa</th>
+                                  <th>Nome do contato</th>
+                                  <th>Produto</th>
+                                  <th>Telefone</th>
+                                  <th>Email</th>
+                                  <th>Endereço</th>
+                                  <th>Número</th>
+                                  <th>Complemento</th>
+                                  <th>Bairro</th>
+                                  <th>Cidade</th>
+                                  <th>Estado</th>
+                                  <th>Alterar</th>
+                                  <th>Excluir</th>
                                 </tr>
-                            </thead>
-                            <% if(todosOsFornecedores){ %>
-                              <% todosOsFornecedores.forEach(todosOsFornecedores => {%>
-                            <tbody>
-                                <tr>
-                                  <td><%= todosOsFornecedores.nome_empresa %></td>
-                                  <td><%= todosOsFornecedores.nome_contato %></td>
-                                  <td><%= todosOsFornecedores.produto %></td>
-                                  <td><%= todosOsFornecedores.telefone %></td>
-                                  <td><%= todosOsFornecedores.email %></td>
-                                  <td><%= todosOsFornecedores.endereco %></td>
-                                  <td><%= todosOsFornecedores.numero %></td>
-                                  <td><%= todosOsFornecedores.complemento %></td>
-                                  <td><%= todosOsFornecedores.bairro %></td>
-                                  <td><%= todosOsFornecedores.cidade %></td>
-                                  <td><%= todosOsFornecedores.estado %></td>
-                                  <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar </button></td>
-                                  <td><button class="btn btn-primary"> Deletar </button></td>
-                                </tr>
-                            </tbody>
-                            <%})} %>
-                        </table>
-                    
-                        
-                    
-                      </div>
+                              </thead>
+                              <% if(todosOsFornecedores){ %>
+                                <% todosOsFornecedores.forEach(todosOsFornecedores=> {%>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <%= todosOsFornecedores.nome_empresa %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.nome_contato %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.produto %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.telefone %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.email %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.endereco %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.numero %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.complemento %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.bairro %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.cidade %>
+                                      </td>
+                                      <td>
+                                        <%= todosOsFornecedores.estado %>
+                                      </td>
+                                      <td><a href="/adminpageCadastrosAltera/1" class="btn btn-primary"> Alterar
+                                          </button></td>
+                                      <td><button class="btn btn-primary"> Deletar </button></td>
+                                    </tr>
+                                  </tbody>
+                                  <%})} %>
+                            </table>
 
-                      <a class="btn form__submit mt-5 mx-auto d-table" href="/">Cadastrar Novo Fornecedor</a>
 
-                    <br><br><br>
 
-                        <!-- <form class="form row justify-content-center">
+                          </div>
+
+                          <a class="btn form__submit mt-5 mx-auto d-table" href="/">Cadastrar Novo Fornecedor</a>
+
+                          <br><br><br>
+
+                          <!-- <form class="form row justify-content-center">
                           <div class="col-12 mb-3">
                             <label for="empresa" class="formLabel">Empresa (Sem Abreviações)*</label>
                             <input type="text" placeholder="Digique seu nome completo" empresa="empresa"
@@ -159,15 +182,15 @@
                             <button type="submit" class="btn form__submit">Alterar Fornecedor</button>
                           </div>
                         </form> -->
+                    </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
 
-          
 
-        
+
+
 
         </section>
 
@@ -180,5 +203,3 @@
   </body>
 
   </html>
-
-

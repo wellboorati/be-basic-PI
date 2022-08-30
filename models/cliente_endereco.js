@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Cliente_endereco extends Model {
     /**
@@ -11,27 +9,29 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Cliente_endereco.hasMany(models.Pedido, {
-        foreignKey: 'endereco_cliente_id'
-      })
-
+        foreignKey: "endereco_cliente_id",
+      });
 
       Cliente_endereco.belongsTo(models.Clientes, {
-        foreignKey: 'cliente_id'
-      })
+        foreignKey: "cliente_id",
+      });
     }
   }
-  Cliente_endereco.init({
-    endereco: DataTypes.STRING,
-    numero: DataTypes.STRING,
-    complemento: DataTypes.STRING,
-    bairro: DataTypes.STRING,
-    cidade: DataTypes.STRING,
-    estado: DataTypes.STRING,
-    cep: DataTypes.STRING,
-    endereco_entrega: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'Cliente_endereco',
-  });
+  Cliente_endereco.init(
+    {
+      endereco: DataTypes.STRING,
+      numero: DataTypes.STRING,
+      complemento: DataTypes.STRING,
+      bairro: DataTypes.STRING,
+      cidade: DataTypes.STRING,
+      estado: DataTypes.STRING,
+      cep: DataTypes.STRING,
+      endereco_entrega: DataTypes.BOOLEAN,
+    },
+    {
+      sequelize,
+      modelName: "Cliente_endereco",
+    }
+  );
   return Cliente_endereco;
 };

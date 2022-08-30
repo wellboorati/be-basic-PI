@@ -1,70 +1,63 @@
-
 const mainController = {
+  homePage: (req, res) => {
+    return res.render("index");
+  },
 
-    homePage: (req, res) => {
-    return res.render('index')
-    },
+  nossaHistoriaPage: (req, res) => {
+    return res.render("nossa-historia");
+  },
 
-    nossaHistoriaPage: (req, res) => {
-        return res.render('nossa-historia')
-    },
+  adminPage: (req, res) => {
+    return res.render("adminpage");
+  },
 
-    adminPage: (req, res) => {
-        return res.render('adminpage')
-    },
+  painelPage: (req, res) => {
+    return res.render("paineldousuario");
+  },
 
-    painelPage: (req, res) => {
-        return res.render('paineldousuario')
-    },
+  // carrinhoPage: (req, res) => {
+  //     return res.render('carrinho')
+  // },
 
-    // carrinhoPage: (req, res) => {
-    //     return res.render('carrinho')
-    // },
+  pagamentoPage: (req, res) => {
+    return res.render("forma-pagamento");
+  },
 
-    pagamentoPage: (req, res) => {
-        return res.render('forma-pagamento')
-    },
+  productsPage: (req, res) => {
+    return res.render("produtos");
+  },
 
-    productsPage: (req, res) => {
-        return res.render('produtos')
-    },
+  categoriesPage: (req, res) => {
+    return res.render("categorias");
+  },
 
-    categoriesPage: (req, res) => {
-        return res.render('categorias')
-    },
+  resetPasswordPage: (req, res) => {
+    return res.render("resetpassword");
+  },
 
-    resetPasswordPage: (req, res) => {
-        return res.render('resetpassword')
-    },
+  checkoutPage: (req, res) => {
+    return res.render("checkout");
+  },
 
-    checkoutPage: (req, res) => {
-        return res.render('checkout')
-    },
+  page404: (req, res) => {
+    return res.render("404");
+  },
+  // productInventoryPage: (req, res) => {
+  //     return res.render('produtosEstoque')
+  //     },
+  listarProdutos: (req, res) => {
+    return res.render("listarProdutos");
+  },
 
-    
-    
-
-    page404: (req, res) => {
-        return res.render('404')
-    },
-    // productInventoryPage: (req, res) => {
-    //     return res.render('produtosEstoque')
-    //     },
-        listarProdutos: (req, res) => {
-            return res.render('listarProdutos')
-            }
-
-    // loginPage: (req, res) => {
-    //     return res.render('login')
-    // },
-    // registrationPage: (req, res) => {
-    //     return res.render('registration')
-    // },
-    // adressRegistrationPage: (req, res) => {
-    //     return res.render('adressregistration')
-    // },
-
+  // loginPage: (req, res) => {
+  //     return res.render('login')
+  // },
+  // registrationPage: (req, res) => {
+  //     return res.render('registration')
+  // },
+  // adressRegistrationPage: (req, res) => {
+  //     return res.render('adressregistration')
+  // },
 };
 
 module.exports = mainController;
-

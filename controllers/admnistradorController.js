@@ -5,7 +5,7 @@ class admnistrador {
     try {
       const todosOsCadastros = await database.Clientes.findAll();
       //return res.status(200).json(todosOsCadastros)
-      return res.status(200).render("adminpageCadastros", {todosOsCadastros})
+      return res.status(200).render("adminpageCadastros", { todosOsCadastros });
     } catch (error) {
       return res.status(500).json(error.message);
     }
@@ -17,7 +17,7 @@ class admnistrador {
       const umCadastro = await database.Clientes.findOne({
         where: { id },
       });
-      return res.status(200).render("adminpageCadastrosAltera", {umCadastro})
+      return res.status(200).render("adminpageCadastrosAltera", { umCadastro });
       // return res.status(200).json(umCadastro);
     } catch (error) {
       return res.status(500).json(error.message);
@@ -55,32 +55,31 @@ class admnistrador {
       // );
 
       // return res.status(200).json(usuario)
-      return res.render("adminpageCadastros", {usuario});
+      return res.render("adminpageCadastros", { usuario });
     } catch (error) {
       return res.status(500).json(error.message);
     }
   }
 
   static async deletarUmCadastro(req, res) {
-    const { id } = req.params
+    const { id } = req.params;
     try {
       const excluir = await database.Clientes.destroy({
-        where: {id}})
+        where: { id },
+      });
 
-      return res.status(200).json({ mensagem: `id ${id} deletado` })
-
+      return res.status(200).json({ mensagem: `id ${id} deletado` });
     } catch (error) {
-        return res.status(400).json(error.message)
+      return res.status(400).json(error.message);
     }
   }
-  
 
   // PEDIDO
   static async todosOsPedidos(req, res) {
     try {
       const todosOsPedidos = await database.Pedido.findAll();
       //return res.status(200).json(meuPedido)
-      return res.status(200).render("adminpagePedidos", {todosOsPedidos})
+      return res.status(200).render("adminpagePedidos", { todosOsPedidos });
       // return res.render("adminpagePedidos");
     } catch (error) {
       return res.status(500).json(error.message);
@@ -154,7 +153,7 @@ class admnistrador {
   static async encontreTodosOsFornecedores(req, res) {
     try {
       const todosOsFornecedores = await database.Fornecedores.findAll();
-      return res.status(200).render("fornecedor", {todosOsFornecedores})
+      return res.status(200).render("fornecedor", { todosOsFornecedores });
       // return res.render("fornecedor");
     } catch (error) {
       return res.status(500).json(error.message);

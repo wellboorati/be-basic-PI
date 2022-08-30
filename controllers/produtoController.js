@@ -26,20 +26,20 @@ class produtoController {
     }
   }
 
-
-static async listarProduto(req, res) {
-  const { id } = req.query
-  try{
-      const detalheproduto = await database.Produto_estoque.findOne( {
-          where: {
-              id
-          }})
-          console.log(detalheproduto)
-          return res.status(200).render("productdetails", {detalheproduto})
-          // return res.status(200).json(meuPedido)
-  } catch (error) {
-      return res.status(500).json(error.message)
-  }
+  static async listarProduto(req, res) {
+    const { id } = req.query;
+    try {
+      const detalheproduto = await database.Produto_estoque.findOne({
+        where: {
+          id,
+        },
+      });
+      console.log(detalheproduto);
+      return res.status(200).render("productdetails", { detalheproduto });
+      // return res.status(200).json(meuPedido)
+    } catch (error) {
+      return res.status(500).json(error.message);
+    }
   }
 
   // static async carrinhoPage (req, res) {
@@ -47,28 +47,27 @@ static async listarProduto(req, res) {
   // }
 
   static async produtoCarrinho(req, res) {
-    const { id } = req.query
-    try{
-        const detalheproduto = await database.Produto_estoque.findOne( {
-            where: {
-                id
-            }})
-            return res.status(200).render("carrinho", {detalheproduto})
-            // return res.status(200).json(detalheproduto)
+    const { id } = req.query;
+    try {
+      const detalheproduto = await database.Produto_estoque.findOne({
+        where: {
+          id,
+        },
+      });
+      return res.status(200).render("carrinho", { detalheproduto });
+      // return res.status(200).json(detalheproduto)
     } catch (error) {
-        return res.status(500).json(error.message)
+      return res.status(500).json(error.message);
     }
-    }
+  }
 
+  static async productDetailsPage(req, res) {
+    return res.render("productdetails");
+  }
 
-static async productDetailsPage(req, res) {
-  return res.render('productdetails')
-}
-
-static async usuarioNaoLogado(req, res) {
-  return res.render('logado')
-}
-
+  static async usuarioNaoLogado(req, res) {
+    return res.render("logado");
+  }
 }
 
 module.exports = produtoController;

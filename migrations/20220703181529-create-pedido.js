@@ -1,52 +1,52 @@
-'use strict';
+"use strict";
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Pedidos', {
+    await queryInterface.createTable("Pedidos", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       cliente_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Clientes', key: 'id'}
+        references: { model: "Clientes", key: "id" },
       },
       endereco_cliente_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Cliente_enderecos', key: 'id'}
+        references: { model: "Cliente_enderecos", key: "id" },
       },
       valor_total_pedido: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       data_entrega: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       data_pedido: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       valor_frete: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       cupom_desconto: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       status_pedido: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Pedidos');
-  }
+    await queryInterface.dropTable("Pedidos");
+  },
 };

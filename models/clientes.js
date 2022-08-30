@@ -2,7 +2,6 @@
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Clientes extends Model {
-
     static associate(models) {
       Clientes.hasMany(models.Cliente_endereco, {
         foreignKey: "cliente_id",
@@ -24,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       data_nascimento: DataTypes.DATE,
       telefone: DataTypes.STRING,
       admnistrador: DataTypes.BOOLEAN,
-      image_url: DataTypes.STRING
+      image_url: DataTypes.STRING,
     },
     {
       sequelize,

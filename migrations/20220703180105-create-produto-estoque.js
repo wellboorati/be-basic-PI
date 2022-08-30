@@ -1,58 +1,58 @@
-'use strict';
+"use strict";
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Produto_estoque', {
+    await queryInterface.createTable("Produto_estoque", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       fornecedor_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Fornecedores', key: 'id'}
+        references: { model: "Fornecedores", key: "id" },
       },
       categoria_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Categoria', key: 'id'}
+        references: { model: "Categoria", key: "id" },
       },
       nome: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       preco: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       cor: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       p_quantidade_disponivel: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       m_quantidade_disponivel: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       g_quantidade_disponivel: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       image_url: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       ativo: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Produto_estoque');
-  }
+    await queryInterface.dropTable("Produto_estoque");
+  },
 };

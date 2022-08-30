@@ -1,7 +1,7 @@
 const database = require("../models");
-const { validationResult } = require('express-validator');
-const multer = require('multer')
-const upload = multer({ dest: 'public/images/userUpload/' })
+const { validationResult } = require("express-validator");
+const multer = require("multer");
+const upload = multer({ dest: "public/images/userUpload/" });
 
 const registrationController = {
   cadastro: async (req, res) => {
@@ -33,8 +33,8 @@ const registrationController = {
       data_nascimento: birthdate,
       telefone,
       admnistrador: false,
-     image_url: filename
-    })
+      image_url: filename,
+    });
 
     console.log(usuario);
 
@@ -47,15 +47,14 @@ const registrationController = {
       cidade: city,
       estado: state,
       cep,
-      });
+    });
 
-   return res.redirect("/login")
- },
+    return res.redirect("/login");
+  },
 
   registrationPage: (req, res) => {
     return res.render("registration");
   },
-
 };
 
 module.exports = registrationController;

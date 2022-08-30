@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Itens_pedido extends Model {
     /**
@@ -11,19 +9,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Itens_pedido.belongsTo(models.Produto_estoque, {
-        foreignKey: 'produto_estoque_id'
-      })
+        foreignKey: "produto_estoque_id",
+      });
       Itens_pedido.belongsTo(models.Pedido, {
-        foreignKey: 'pedido_id'
-      })
+        foreignKey: "pedido_id",
+      });
     }
   }
-  Itens_pedido.init({
-    quantidade: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'Itens_pedido',
-    tableName: 'Itens_pedido',
-  });
+  Itens_pedido.init(
+    {
+      quantidade: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: "Itens_pedido",
+      tableName: "Itens_pedido",
+    }
+  );
   return Itens_pedido;
 };

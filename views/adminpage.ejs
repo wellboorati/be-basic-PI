@@ -1,41 +1,42 @@
 <!-- header -->
 <%- include('partials/header.ejs') %>
 
-<body>
+    <body>
 
-<!-- HEADER -->
-<%- include('partials/menu.ejs') %>
+        <!-- HEADER -->
+        <%- include('partials/menu.ejs') %>
 
-<main>
-    <section>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <h2 class="text-center text-uppercase">Administrativo</h2>
-                    <hr />
+            <main>
+                <section>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <h2 class="text-center text-uppercase">Administrativo</h2>
+                                <hr />
 
-                    <%- include('partials/menuAdmin') %>
+                                <%- include('partials/menuAdmin') %>
 
-                    <div class="mt-4 row justify-content-center">
-                        <div class="col col-lg-12">
+                                    <div class="mt-4 row justify-content-center">
+                                        <div class="col col-lg-12">
 
-                            <h3 class="text-uppercase text-center">Total de vendas</h3>
+                                            <h3 class="text-uppercase text-center">Total de vendas</h3>
 
-                            <div class="table-responsive">
-                                
+                                            <div class="table-responsive">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                             </div>
-
                         </div>
                     </div>
+                </section>
+            </main>
 
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs') %>
 
-    <!-- FOOTER -->
-<%- include('partials/footer.ejs') %>
+    </body>
 
-</body>
-</html>
+    </html>

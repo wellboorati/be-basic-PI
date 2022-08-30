@@ -1,88 +1,111 @@
 <!-- header -->
 <%- include('partials/header.ejs') %>
 
-<body>
+    <body>
 
-<!-- HEADER -->
-<%- include('partials/menu.ejs') %>
+        <!-- HEADER -->
+        <%- include('partials/menu.ejs') %>
 
-<main>
-    <section>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <h2 class="text-center text-uppercase">Administrativo</h2>
-                    <hr />
+            <main>
+                <section>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <h2 class="text-center text-uppercase">Administrativo</h2>
+                                <hr />
 
-                    <%- include('partials/menuAdmin.ejs') %>
+                                <%- include('partials/menuAdmin.ejs') %>
 
-                    <div class="mt-4 row justify-content-center">
-                        <div class="col">
+                                    <div class="mt-4 row justify-content-center">
+                                        <div class="col">
 
-                            <h3 class="text-uppercase">Clientes</h3>
+                                            <h3 class="text-uppercase">Clientes</h3>
 
-                            <div class="table-responsive">
-                                <table class="table table-striped" border="1">
-                                    <thead>
-                                        <tr>
-                                            <th>Foto</th>
-                                            <th>Nome</th>
-                                            <th>Email</th>
-                                            <th>Sexo</th>
-                                            <th>CPF</th>
-                                            <!-- <th>Data de Nasc.</th> -->
-                                            <th>Telefone</th>
-                                            <th>Administrador</th>
-                                            <!-- <th>Imagem</th> -->
-                                            <!-- <th>Data de criação</th> -->
-                                            <th>Excluir</th>
-                                        </tr>
-                                    </thead>
-                                    <% if(todosOsCadastros){ %>
-                                        <% todosOsCadastros.forEach(todosOsCadastros => {%>
-                                    <tbody>
-                                        <tr>
+                                            <div class="table-responsive">
+                                                <table class="table table-striped" border="1">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Foto</th>
+                                                            <th>Nome</th>
+                                                            <th>Email</th>
+                                                            <th>Sexo</th>
+                                                            <th>CPF</th>
+                                                            <!-- <th>Data de Nasc.</th> -->
+                                                            <th>Telefone</th>
+                                                            <th>Administrador</th>
+                                                            <!-- <th>Imagem</th> -->
+                                                            <!-- <th>Data de criação</th> -->
+                                                            <th>Excluir</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <% if(todosOsCadastros){ %>
+                                                        <% todosOsCadastros.forEach(todosOsCadastros=> {%>
+                                                            <tbody>
+                                                                <tr>
 
-                                            <td class="table__image"><img src=<%= todosOsCadastros.image_url %> alt=""></td>
-                                            <td><%= todosOsCadastros.nome %></td>
-                                            <td><%= todosOsCadastros.email %></td>
-                                            <td><%= todosOsCadastros.sexo %></td>
-                                            <td><%= todosOsCadastros.cpf %></td>
-                                            <!-- <td><%= todosOsCadastros.data_nascimento %></td> -->
-                                            <td><%= todosOsCadastros.telefone %></td>
-                                            <td><%= todosOsCadastros.admnistrador %></td>
+                                                                    <td class="table__image"><img
+                                                                            src=<%=todosOsCadastros.image_url %> alt="">
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= todosOsCadastros.nome %>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= todosOsCadastros.email %>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= todosOsCadastros.sexo %>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= todosOsCadastros.cpf %>
+                                                                    </td>
+                                                                    <!-- <td><%= todosOsCadastros.data_nascimento %></td> -->
+                                                                    <td>
+                                                                        <%= todosOsCadastros.telefone %>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%= todosOsCadastros.admnistrador %>
+                                                                    </td>
 
-                                            <td><button><a href="/adminpageCadastrosAltera?id=<%= todosOsCadastros.id %>" class="btn btn-primary"> Alterar </button></td>
-                                            <!-- <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td> -->
+                                                                    <td><button><a
+                                                                                href="/adminpageCadastrosAltera?id=<%= todosOsCadastros.id %>"
+                                                                                class="btn btn-primary"> Alterar
+                                                                        </button></td>
+                                                                    <!-- <td><button class="btn btn-primary" onclick="return deletar()"> Deletar </button></td> -->
 
-                                            <td>
-                                                <form action="/deletarprodutos/<%= todosOsCadastros.id %>" method="post">
-                                                    <input type="hidden" name="_method" value="DELETE">
-                                                    <button class="btn btn-primary" onclick="return deletar()"> Deletar </button>
-                                                </form>
-                                            </td>
+                                                                    <td>
+                                                                        <form
+                                                                            action="/deletarprodutos/<%= todosOsCadastros.id %>"
+                                                                            method="post">
+                                                                            <input type="hidden" name="_method"
+                                                                                value="DELETE">
+                                                                            <button class="btn btn-primary"
+                                                                                onclick="return deletar()"> Deletar
+                                                                            </button>
+                                                                        </form>
+                                                                    </td>
 
 
-                                    </tbody>
-                                    <%})} %>
+                                                            </tbody>
+                                                            <%})} %>
 
-                                </table>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                             </div>
-
                         </div>
                     </div>
+                </section>
+            </main>
 
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs') %>
 
-    <!-- FOOTER -->
-<%- include('partials/footer.ejs') %>
+                <script src="./scripts/deletar.js"></script>
+                <!-- <script src="./scripts/alterar.js"></script> -->
 
-<script src="./scripts/deletar.js"></script>
-<!-- <script src="./scripts/alterar.js"></script> -->
+    </body>
 
-</body>
-</html>
+    </html>

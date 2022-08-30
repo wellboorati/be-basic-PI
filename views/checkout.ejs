@@ -1,167 +1,175 @@
 <!-- header -->
 <%- include('partials/header.ejs') %>
 
-<body>
+  <body>
 
     <!-- header -->
     <%- include('partials/menu.ejs') %>
 
-    <main>
+      <main>
         <section>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col">
-                        <h2 class="text-uppercase text-center">Checkout</h2>
-                        <hr/>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col">
+                <h2 class="text-uppercase text-center">Checkout</h2>
+                <hr />
 
-                        <div class="mt-3 row justify-content-center">
-                          <div class="col col-lg-6 ">                            
-                            <p class="position-relative address-checkout">
-                              <a href="/adressregistration" class="address-checkout-link">Editar endereço</a>
-                              <strong>Nome da pessoa:</strong><br>
-                              606-3727 Ullamcorper. Street<br>
-                              Roseville NH 11523<br>
-                              (786) 713-8616
-                            </p>
+                <div class="mt-3 row justify-content-center">
+                  <div class="col col-lg-6 ">
+                    <p class="position-relative address-checkout">
+                      <a href="/adressregistration" class="address-checkout-link">Editar endereço</a>
+                      <strong>Nome da pessoa:</strong><br>
+                      606-3727 Ullamcorper. Street<br>
+                      Roseville NH 11523<br>
+                      (786) 713-8616
+                    </p>
 
-                            <hr class="separate" />
+                    <hr class="separate" />
 
-                            <div class="card-chosen">
-                              <a href="#" class="card-chosen-link">Editar forma de pagamento</a>
-                              <div class="card-chosen-flag">
-                                <img src="/images/bandeira-mastercard.png" alt="">
-                              </div>
-                              <div class="card-chosen-number">
-                                Master Card terminando em <strong>...20</strong>
+                    <div class="card-chosen">
+                      <a href="#" class="card-chosen-link">Editar forma de pagamento</a>
+                      <div class="card-chosen-flag">
+                        <img src="/images/bandeira-mastercard.png" alt="">
+                      </div>
+                      <div class="card-chosen-number">
+                        Master Card terminando em <strong>...20</strong>
+                      </div>
+                    </div>
+
+                    <hr class="separate" />
+
+                    <div class="products__checkout mt-3">
+
+                      <div class="products__checkout__item">
+                        <div class="products__checkout__item__pic">
+                          <img src="/images/produto-checkout.png" alt="" />
+                        </div>
+                        <div class="products__checkout__item__info">
+                          <div class="products__checkout__item__info__name">
+                            Lamerei
+                          </div>
+                          <div class="products__checkout__item__info__description">
+                            Recycle Boucle Knit Cardigan Pink
+                          </div>
+                          <div class="products__checkout__item__info__amount">
+
+                            <div class="products__details__amount d-flex my-2 gap-3 align-items-center">
+                              <div class="products__details__amount__amounts">
+                                <div class="number-input">
+                                  <button onclick="this.parentNode.querySelector('input[name=quantity]').stepDown()"
+                                    class="minus"></button>
+                                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                    class="plus"></button>
+                                </div>
                               </div>
                             </div>
 
-                            <hr class="separate" />
-
-                            <div class="products__checkout mt-3">
-
-                              <div class="products__checkout__item">
-                                <div class="products__checkout__item__pic">
-                                  <img src="/images/produto-checkout.png" alt="" />
-                                </div>
-                                <div class="products__checkout__item__info">
-                                  <div class="products__checkout__item__info__name">
-                                    Lamerei
-                                  </div>
-                                  <div class="products__checkout__item__info__description">
-                                    Recycle Boucle Knit Cardigan Pink
-                                  </div>
-                                  <div class="products__checkout__item__info__amount">
-                                  
-                                    <div class="products__details__amount d-flex my-2 gap-3 align-items-center">
-                                      <div class="products__details__amount__amounts">
-                                          <div class="number-input">
-                                              <button onclick="this.parentNode.querySelector('input[name=quantity]').stepDown()" class="minus"></button>
-                                              <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                          </div>
-                                      </div>
-                                  </div>
-
-                                  </div>
-                                  <div class="products__checkout__item__info__price">
-                                    $120
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="products__checkout__item">
-                                <div class="products__checkout__item__pic">
-                                  <img src="/images/produto-checkout.png" alt="" />
-                                </div>
-                                <div class="products__checkout__item__info">
-                                  <div class="products__checkout__item__info__name">
-                                    Lamerei
-                                  </div>
-                                  <div class="products__checkout__item__info__description">
-                                    Recycle Boucle Knit Cardigan Pink
-                                  </div>
-                                  <div class="products__checkout__item__info__amount">
-                                  
-                                    <div class="products__details__amount d-flex my-2 gap-3 align-items-center">
-                                      <div class="products__details__amount__amounts">
-                                          <div class="number-input">
-                                              <button onclick="this.parentNode.querySelector('input[name=quantity]').stepDown()" class="minus"></button>
-                                              <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                          </div>
-                                      </div>
-                                  </div>
-
-                                  </div>
-                                  <div class="products__checkout__item__info__price">
-                                    $120
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="products__checkout__item">
-                                <div class="products__checkout__item__pic">
-                                  <img src="/images/produto-checkout.png" alt="" />
-                                </div>
-                                <div class="products__checkout__item__info">
-                                  <div class="products__checkout__item__info__name">
-                                    Lamerei
-                                  </div>
-                                  <div class="products__checkout__item__info__description">
-                                    Recycle Boucle Knit Cardigan Pink
-                                  </div>
-                                  <div class="products__checkout__item__info__amount">
-                                  
-                                    <div class="products__details__amount d-flex my-2 gap-3 align-items-center">
-                                      <div class="products__details__amount__amounts">
-                                          <div class="number-input">
-                                              <button onclick="this.parentNode.querySelector('input[name=quantity]').stepDown()" class="minus"></button>
-                                              <input class="quantity" min="0" name="quantity" value="1" type="number">
-                                              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                                          </div>
-                                      </div>
-                                  </div>
-
-                                  </div>
-                                  <div class="products__checkout__item__info__price">
-                                    $120
-                                  </div>
-                                </div>
-                              </div>
-                            
-                            </div>
-
-                            <hr class="d-none d-lg-block mt-lg-3 separate" />
-
-                            <div class="checkout__bottom text-center">
-
-                              <div class="products__checkout__total my-lg-2">
-                                <div class="products__checkout__total__label"><strong>Total</strong></div>
-                                <div class="products__checkout__total__price">R$200,00</div>
-                              </div>
-  
-                              <button type="submit" class="btn form__submit position-static">Finalizar compra</button>
-
-                            </div>
-                            
+                          </div>
+                          <div class="products__checkout__item__info__price">
+                            $120
                           </div>
                         </div>
+                      </div>
+
+                      <div class="products__checkout__item">
+                        <div class="products__checkout__item__pic">
+                          <img src="/images/produto-checkout.png" alt="" />
+                        </div>
+                        <div class="products__checkout__item__info">
+                          <div class="products__checkout__item__info__name">
+                            Lamerei
+                          </div>
+                          <div class="products__checkout__item__info__description">
+                            Recycle Boucle Knit Cardigan Pink
+                          </div>
+                          <div class="products__checkout__item__info__amount">
+
+                            <div class="products__details__amount d-flex my-2 gap-3 align-items-center">
+                              <div class="products__details__amount__amounts">
+                                <div class="number-input">
+                                  <button onclick="this.parentNode.querySelector('input[name=quantity]').stepDown()"
+                                    class="minus"></button>
+                                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                    class="plus"></button>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="products__checkout__item__info__price">
+                            $120
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="products__checkout__item">
+                        <div class="products__checkout__item__pic">
+                          <img src="/images/produto-checkout.png" alt="" />
+                        </div>
+                        <div class="products__checkout__item__info">
+                          <div class="products__checkout__item__info__name">
+                            Lamerei
+                          </div>
+                          <div class="products__checkout__item__info__description">
+                            Recycle Boucle Knit Cardigan Pink
+                          </div>
+                          <div class="products__checkout__item__info__amount">
+
+                            <div class="products__details__amount d-flex my-2 gap-3 align-items-center">
+                              <div class="products__details__amount__amounts">
+                                <div class="number-input">
+                                  <button onclick="this.parentNode.querySelector('input[name=quantity]').stepDown()"
+                                    class="minus"></button>
+                                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                    class="plus"></button>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="products__checkout__item__info__price">
+                            $120
+                          </div>
+                        </div>
+                      </div>
 
                     </div>
+
+                    <hr class="d-none d-lg-block mt-lg-3 separate" />
+
+                    <div class="checkout__bottom text-center">
+
+                      <div class="products__checkout__total my-lg-2">
+                        <div class="products__checkout__total__label"><strong>Total</strong></div>
+                        <div class="products__checkout__total__price">R$200,00</div>
+                      </div>
+
+                      <button type="submit" class="btn form__submit position-static">Finalizar compra</button>
+
+                    </div>
+
+                  </div>
                 </div>
+
+              </div>
             </div>
+          </div>
         </section>
 
         <%- include('partials/trending.ejs') %>
 
-        <%- include('partials/benefits.ejs') %>
+          <%- include('partials/benefits.ejs') %>
 
-        <%- include('partials/instagram.ejs') %>
+            <%- include('partials/instagram.ejs') %>
 
-    </main>
+      </main>
 
-    <!-- footer -->
-    <%- include('partials/footer.ejs') %>
+      <!-- footer -->
+      <%- include('partials/footer.ejs') %>
 
-</body></html>
+  </body>
+
+  </html>

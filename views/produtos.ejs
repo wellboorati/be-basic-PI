@@ -1,65 +1,67 @@
 <!-- header -->
 <%- include('partials/header.ejs') %>
 
-<body>
+    <body>
 
-    <!-- HEADER -->
-    <%- include('partials/menu.ejs') %>
+        <!-- HEADER -->
+        <%- include('partials/menu.ejs') %>
 
 
-    <main class="main__products">
+            <main class="main__products">
 
-        <section class="categories">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col col-lg-9">
-                        <h2 class="text-uppercase text-center">Nossa Coleção</h2>
-                        <hr/>
-                        <br>
-                        <div class="list__products list__category">
-                            <% if(produtos){ %>
-                                <% produtos.forEach(produto => {%>
-                                    <div class="lista__products__card">
-                                        <div class="lista__products__card__pic">
-                                            <!-- <a href="/productdetails"> <img src=<%= produto.image_url %> alt=""></a> -->
-                                            <a href="/productdetails?id=<%= produto.id %>"> <img src=<%= produto.image_url %> alt=""></a>
-                                        </div>
-                                        <div class="lista__products__card__name">
-                                            <%= produto.nome %>
-                                        </div>
-                                        <div class="lista__products__card__price">
-                                            R$<%= produto.preco %>
-                                        </div>
-                                    </div>
-                                    <!-- <button onclick="getProductById(produto.id)">Detalhes</button> -->
-                                    <!-- <a href="detalheproduto?<%= produto.id %>"></a> -->
-                            <% })} %>
+                <section class="categories">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col col-lg-9">
+                                <h2 class="text-uppercase text-center">Nossa Coleção</h2>
+                                <hr />
+                                <br>
+                                <div class="list__products list__category">
+                                    <% if(produtos){ %>
+                                        <% produtos.forEach(produto=> {%>
+                                            <div class="lista__products__card">
+                                                <div class="lista__products__card__pic">
+                                                    <!-- <a href="/productdetails"> <img src=<%= produto.image_url %> alt=""></a> -->
+                                                    <a href="/productdetails?id=<%= produto.id %>"> <img
+                                                            src=<%=produto.image_url %> alt=""></a>
+                                                </div>
+                                                <div class="lista__products__card__name">
+                                                    <%= produto.nome %>
+                                                </div>
+                                                <div class="lista__products__card__price">
+                                                    R$<%= produto.preco %>
+                                                </div>
+                                            </div>
+                                            <!-- <button onclick="getProductById(produto.id)">Detalhes</button> -->
+                                            <!-- <a href="detalheproduto?<%= produto.id %>"></a> -->
+                                            <% })} %>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <script>
-            function getProductById(id)
-            {
-                fetch(`http://localhost:3000/productdetails/${id}`)
-                .then(response => console.log(response))
-                .catch(e => console.log(e))
-            }
-        </script>
+                <script>
+                    function getProductById(id) {
+                        fetch(`http://localhost:3000/productdetails/${id}`)
+                            .then(response => console.log(response))
+                            .catch(e => console.log(e))
+                    }
+                </script>
 
-        <%- include('partials/trending.ejs') %>
+                <%- include('partials/trending.ejs') %>
 
-        <%- include('partials/benefits.ejs') %>
+                    <%- include('partials/benefits.ejs') %>
 
-        <%- include('partials/instagram.ejs') %>
+                        <%- include('partials/instagram.ejs') %>
 
-        /produtos?categoria=2
-    </main>
+                            /produtos?categoria=2
+            </main>
 
-    <!-- FOOTER -->
-    <%- include('partials/footer.ejs') %>
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs') %>
 
 
-</body></html>
+    </body>
+
+    </html>

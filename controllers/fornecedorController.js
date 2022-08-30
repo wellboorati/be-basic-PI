@@ -1,5 +1,5 @@
 const database = require("../models");
-const { validationResult } = require('express-validator');
+const { validationResult } = require("express-validator");
 
 const fornecedorController = {
   cadastro_fornecedor: async (req, res) => {
@@ -18,17 +18,17 @@ const fornecedorController = {
     } = req.body;
 
     const fornecedor = await database.Fornecedores.create({
-    nome_empresa: empresa,
-    nome_contato: nome,
-    produto,
-    telefone,
-    email,
-    endereco,
-    numero,
-    complemento,
-    bairro,
-    cidade,
-    estado,
+      nome_empresa: empresa,
+      nome_contato: nome,
+      produto,
+      telefone,
+      email,
+      endereco,
+      numero,
+      complemento,
+      bairro,
+      cidade,
+      estado,
     });
 
     console.log(fornecedor);
@@ -47,13 +47,11 @@ const fornecedorController = {
       cidade: fornecedor.cidade,
       estado: fornecedor.estado,
     });
-
   },
 
   fornecedorRegistration: (req, res) => {
     return res.render("fornecedor");
   },
-
 };
 
 module.exports = fornecedorController;

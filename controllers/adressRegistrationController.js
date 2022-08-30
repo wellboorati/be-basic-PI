@@ -2,25 +2,16 @@ const database = require("../models");
 
 const adressRegistrationController = {
   cadastro_endereco: async (req, res) => {
-    const {
-    address,
-    number,
-    complemento,
-    bairro,
-    city,
-    state,
-    CEP,
-    } = req.body;
-
+    const { address, number, complemento, bairro, city, state, CEP } = req.body;
 
     const endereco = await database.Cliente_endereco.create({
-    endereco: address,
-    numero: number,
-    complemento,
-    bairro,
-    cidade: city,
-    estado: state,
-    CEP,
+      endereco: address,
+      numero: number,
+      complemento,
+      bairro,
+      cidade: city,
+      estado: state,
+      CEP,
     });
 
     console.log(endereco);
@@ -37,10 +28,9 @@ const adressRegistrationController = {
     });
   },
 
-   adressRegistrationPage: (req, res) => {
+  adressRegistrationPage: (req, res) => {
     return res.render("adressregistration");
   },
 };
-
 
 module.exports = adressRegistrationController;
