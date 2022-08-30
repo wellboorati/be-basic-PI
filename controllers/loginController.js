@@ -1,7 +1,5 @@
 
 const database = require("../models");
-const localStorage = require('localStorage');
-
 
 const loginController = {
   login: async (req, res) => {
@@ -23,8 +21,7 @@ const loginController = {
               usuarioSalvo: req.session.usuario
             });
           }
-          
-          if (req.query.carrinho) {  
+          if (req.query.carrinho) {
             res.redirect(`/carrinho?id=${req.query.id}`);
           }
           res.status(200).render("index", {

@@ -22,36 +22,7 @@
                             <h3 class="text-uppercase text-center">Total de vendas</h3>
 
                             <div class="table-responsive">
-                                <table class="table table-striped" border="1">
-                                    <thead>
-
-
-                                        <tr>
-                                            <th>Pedido</th>
-                                            <th>Valor Total do Pedido</th>
-                                            <th>Data do Pedido</th>
-                                            <th>Data de entrega</th>
-                                            <th>Valor Frete</th>
-                                            <th>Status do Pedido</th>
-                                            <th>Cupom de Desconto</th>
-                                        </tr>
-                                    </thead>
-                                    <% if(todosOsPedidos){ %>
-                                        <% todosOsPedidos.forEach(todosOsPedidos => {%>
-                                    <tbody>
-                                        <tr>
-                                            <td><%= todosOsPedidos.cliente_id %></td>
-                                            <td class="text-center">R$<%= todosOsPedidos.valor_total_pedido %></td>
-                                            <td><%= todosOsPedidos.data_pedido %></td>
-                                            <td><%= todosOsPedidos.data_entrega %></td>
-                                            <td><%= todosOsPedidos.valor_frete %></td>
-                                            <td><%= todosOsPedidos.status_pedido %></td>
-                                            <td><%= todosOsPedidos.cupom_desconto %></td>
-                                        </tr>
-
-                                    </tbody>
-                                    <%})} %>
-                                </table>
+                                
                             </div>
 
                         </div>

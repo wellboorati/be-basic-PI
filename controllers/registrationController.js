@@ -49,7 +49,7 @@ const registrationController = {
       cep,
       });
 
-   return res.render("/")
+   return res.redirect("/login")
  },
 
   registrationPage: (req, res) => {
