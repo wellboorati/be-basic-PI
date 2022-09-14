@@ -1,12 +1,10 @@
-DER: https://app.diagrams.net/#G1DAj-tyS_X5MNT-5soKUsl_oFennLdsIA
-
+# E-commerce de roupas masculinas chamado BeBasic
 
 # Loja de Roupa - Com foco em camisetas sem estampas. 
-Wireframe criado faltando apenas definição de footer e headers.
-Cor principal definida como #7a9da3
-Sites de referencia:
 
+Esse projeto é um monolito, ou seja, foi feito o front-end e o back-end na mesma aplicação. Foi inspirado em sites de camisetas básicas masculinas. 
+Front-end foi desenvolvido em HTML5, CSS3, e posteriormente passando para a view engine EJS. Linguagem de programação utilizada foi JavaScript. 
 
-https://www.prettylittlething.us/clothing/the-basics.html
+O Figma foi utilizado para prototipar o projeto.
 
-https://minimalclub.com.br/pages/home
+Foi escolhido utilizar o ejs para renderizar as views.
