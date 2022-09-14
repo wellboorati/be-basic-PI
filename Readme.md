@@ -30,25 +30,31 @@ Abaixo temos algumas telas do projeto desenvolvido:
 
 ![image](https://user-images.githubusercontent.com/99093477/190282201-18839025-06e6-4610-b986-0886d0cc3e9b.png)
 
-#Categorias
+
+# Categorias
 
 ![image](https://user-images.githubusercontent.com/99093477/190282237-bf68c8c0-87fb-4f98-8ddb-dd0dba7cceed.png)
 
-#Produtos
+
+# Produtos
 
 ![image](https://user-images.githubusercontent.com/99093477/190282299-c76620cb-9b57-460f-b8c6-8d94002050e5.png)
+
 
 # Check-out
 
 ![image](https://user-images.githubusercontent.com/99093477/190282362-21764cfa-30dd-4618-a59d-ae05007e0593.png)
 
+
 # Painel do admnistrador
 
 ![image](https://user-images.githubusercontent.com/99093477/190282422-7ddf445b-1b97-4e03-b494-d39e830feb46.png)
 
+
 # Visão Admnistrador dos clientes
 
 ![image](https://user-images.githubusercontent.com/99093477/190282473-efce00af-d333-40b2-8cae-71691caf4a2d.png)
+
 
 
 
