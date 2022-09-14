@@ -51,11 +51,14 @@ Abaixo temos algumas telas do projeto desenvolvido:
 ![image](https://user-images.githubusercontent.com/99093477/190282422-7ddf445b-1b97-4e03-b494-d39e830feb46.png)
 
 
-# Visão Admnistrador dos clientes
+# Visão Admnistrador da aba clientes
 
 ![image](https://user-images.githubusercontent.com/99093477/190282473-efce00af-d333-40b2-8cae-71691caf4a2d.png)
 
 
+# Visão Admnistrador da aba produtos
+
+![image](https://user-images.githubusercontent.com/99093477/190282743-76cb6f0a-f1b5-44ce-881f-9a3e8589add8.png)
 
 
 
