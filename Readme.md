@@ -22,11 +22,11 @@ Na aplicação, utilizamos o Sequelize como ORM (mapeamento objeto relacional).
 No ambiente Node.JS, nós fizemos todo o projeto utilizando o framework Express para construção do servidor web. Utilizamos também a arquitetura de software MVC (Model View Controller). 
 
 
-#Projeto
+# Projeto
 
 Abaixo temos algumas telas do projeto desenvolvido: 
 
-#Home 
+# Home 
 
 ![image](https://user-images.githubusercontent.com/99093477/190282201-18839025-06e6-4610-b986-0886d0cc3e9b.png)
 
